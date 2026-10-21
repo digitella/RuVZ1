@@ -1,0 +1,37 @@
+{
+  "lessonId": "l2",
+  "items": [
+    {
+      "id": "p201",
+      "ru": "Кофе, пожалуйста",
+      "en": "Coffee, please",
+      "ipa": "[KA-fye pa-ZHA-lu-sta]",
+      "hint": "Don't roll the 'r' excessively.",
+      "audio": "media/audio/p201.ogg"
+    },
+    {
+      "id": "p202",
+      "ru": "Спасибо",
+      "en": "Thank you",
+      "ipa": "[spa-SI-ba]",
+      "hint": "The final 'o' reduces to a short 'a'. Stress SI.",
+      "audio": "media/audio/p202.ogg"
+    },
+    {
+      "id": "p203",
+      "ru": "Бутерброд с сыром",
+      "en": "Sandwich with cheese",
+      "ipa": "[bu-ter-BROT s si-ROM]",
+      "hint": "'sy' - the 'y' sound is produced deep in the throat.",
+      "audio": "media/audio/p203.ogg"
+    },
+    {
+      "id": "p204",
+      "ru": "Сколько стоит?",
+      "en": "How much does it cost?",
+      "ipa": "[SKOL'-ka STOIT]",
+      "hint": "stoit - stress on the second syllable.",
+      "audio": "media/audio/p204.ogg"
+    }
+  ]
+}

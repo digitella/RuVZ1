@@ -1,0 +1,301 @@
+{
+  "1_Launch": [
+    {
+      "actor": {
+        "objectType": "Agent",
+        "account": {
+          "name": "cmi5-learner",
+          "homePage": "https://lms.example"
+        }
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/launched",
+        "display": {
+          "en-US": "launched"
+        }
+      },
+      "object": {
+        "id": "https://russianlaunchpad.example/course/a1a2",
+        "definition": {
+          "name": {
+            "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+          },
+          "type": "https://russianlaunchpad.example/activity/course"
+        }
+      },
+      "context": {
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md"
+            }
+          ],
+          "parent": [
+            {
+              "id": "https://russianlaunchpad.example/course/a1a2"
+            }
+          ]
+        },
+        "registration": "1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+        "extensions": {
+          "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md#cmi5_scenario": "https://russianlaunchpad.example/cmi5/move-on/pass"
+        }
+      },
+      "timestamp": "2026-10-21T10:00:00.000Z"
+    }
+  ],
+  "2_Interacted": [
+    {
+      "actor": {
+        "objectType": "Agent",
+        "account": {
+          "name": "cmi5-learner",
+          "homePage": "https://lms.example"
+        }
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/answered",
+        "display": {
+          "en-US": "answered"
+        }
+      },
+      "object": {
+        "id": "https://russianlaunchpad.example/xapi/activity/q303",
+        "definition": {
+          "name": {
+            "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+          },
+          "type": "https://russianlaunchpad.example/activity/course"
+        }
+      },
+      "context": {
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md"
+            }
+          ],
+          "parent": [
+            {
+              "id": "https://russianlaunchpad.example/course/a1a2"
+            }
+          ]
+        },
+        "registration": "1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+        "extensions": {
+          "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md#cmi5_scenario": "https://russianlaunchpad.example/cmi5/move-on/pass"
+        }
+      },
+      "timestamp": "2026-10-21T10:00:00.000Z",
+      "result": {
+        "response": "вид на жительство",
+        "success": true,
+        "score": {
+          "scaled": 1.0,
+          "raw": 1,
+          "min": 0,
+          "max": 1
+        }
+      }
+    }
+  ],
+  "3_Completed": [
+    {
+      "actor": {
+        "objectType": "Agent",
+        "account": {
+          "name": "cmi5-learner",
+          "homePage": "https://lms.example"
+        }
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/completed",
+        "display": {
+          "en-US": "completed"
+        }
+      },
+      "object": {
+        "id": "https://russianlaunchpad.example/course/a1a2",
+        "definition": {
+          "name": {
+            "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+          },
+          "type": "https://russianlaunchpad.example/activity/course"
+        }
+      },
+      "context": {
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md"
+            }
+          ],
+          "parent": [
+            {
+              "id": "https://russianlaunchpad.example/course/a1a2"
+            }
+          ]
+        },
+        "registration": "1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+        "extensions": {
+          "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md#cmi5_scenario": "https://russianlaunchpad.example/cmi5/move-on/pass"
+        }
+      },
+      "timestamp": "2026-10-21T10:00:00.000Z",
+      "result": {
+        "completion": true
+      }
+    }
+  ],
+  "4_Passed": [
+    {
+      "actor": {
+        "objectType": "Agent",
+        "account": {
+          "name": "cmi5-learner",
+          "homePage": "https://lms.example"
+        }
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/passed",
+        "display": {
+          "en-US": "passed"
+        }
+      },
+      "object": {
+        "id": "https://russianlaunchpad.example/course/a1a2",
+        "definition": {
+          "name": {
+            "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+          },
+          "type": "https://russianlaunchpad.example/activity/course"
+        }
+      },
+      "context": {
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md"
+            }
+          ],
+          "parent": [
+            {
+              "id": "https://russianlaunchpad.example/course/a1a2"
+            }
+          ]
+        },
+        "registration": "1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+        "extensions": {
+          "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md#cmi5_scenario": "https://russianlaunchpad.example/cmi5/move-on/pass"
+        }
+      },
+      "timestamp": "2026-10-21T10:00:00.000Z",
+      "result": {
+        "success": true,
+        "completion": true,
+        "score": {
+          "scaled": 0.9,
+          "raw": 9,
+          "min": 0,
+          "max": 10
+        }
+      }
+    }
+  ],
+  "5_Terminated": [
+    {
+      "actor": {
+        "objectType": "Agent",
+        "account": {
+          "name": "cmi5-learner",
+          "homePage": "https://lms.example"
+        }
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/terminated",
+        "display": {
+          "en-US": "terminated"
+        }
+      },
+      "object": {
+        "id": "https://russianlaunchpad.example/course/a1a2",
+        "definition": {
+          "name": {
+            "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+          },
+          "type": "https://russianlaunchpad.example/activity/course"
+        }
+      },
+      "context": {
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md"
+            }
+          ],
+          "parent": [
+            {
+              "id": "https://russianlaunchpad.example/course/a1a2"
+            }
+          ]
+        },
+        "registration": "1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+        "extensions": {
+          "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md#cmi5_scenario": "https://russianlaunchpad.example/cmi5/move-on/pass"
+        }
+      },
+      "timestamp": "2026-10-21T10:00:00.000Z",
+      "result": {
+        "duration": "PT22M05S"
+      }
+    }
+  ],
+  "MoveOn_Pass": [
+    {
+      "actor": {
+        "objectType": "Agent",
+        "account": {
+          "name": "cmi5-learner",
+          "homePage": "https://lms.example"
+        }
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/mastered",
+        "display": {
+          "en-US": "mastered"
+        }
+      },
+      "object": {
+        "id": "https://russianlaunchpad.example/course/a1a2",
+        "definition": {
+          "name": {
+            "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+          },
+          "type": "https://russianlaunchpad.example/activity/course"
+        }
+      },
+      "context": {
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md"
+            }
+          ],
+          "parent": [
+            {
+              "id": "https://russianlaunchpad.example/course/a1a2"
+            }
+          ]
+        },
+        "registration": "1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+        "extensions": {
+          "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md#cmi5_scenario": "https://russianlaunchpad.example/cmi5/move-on/pass"
+        }
+      },
+      "timestamp": "2026-10-21T10:00:00.000Z",
+      "result": {
+        "success": true
+      }
+    }
+  ]
+}

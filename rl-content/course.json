@@ -1,0 +1,257 @@
+{
+  "id": "russian-launchpad-a1a2",
+  "title": "Russian Launchpad: A1-A2 for Adult English Speakers",
+  "titleRu": "Russian Launchpad: курс А1-А2",
+  "version": "2.0.0",
+  "level": "A1-A2 (CEFR)",
+  "description": "An original communicative course for adult English-speaking beginners. Everyday Russian first, with a dedicated Immigration Test Lab module aligned to the A2-level Russian exam required for residence permits in the Russian Federation. All texts are original; only established TEFL/RFL methodology is used.",
+  "methodology": {
+    "approach": "communicative-task-based",
+    "principles": [
+      "dialogue-first presentation of grammar",
+      "spaced repetition of vocabulary across lessons",
+      "explicit Cyrillic decoding in Lesson 1",
+      "stress-aware pronunciation drills with audio comparison",
+      "exam-format practice in the Immigration Test Lab"
+    ]
+  },
+  "config": {
+    "languageTint": { "enabled": true, "russian": "teal", "english": "violet" },
+    "comments": { "defaultVisibility": "private_instructor", "publicCommentsEnabled": false },
+    "speech": { "mode": "hybrid", "typingFallback": true, "fileInputFallback": true },
+    "tracking": { "provider": "auto", "xapi": { "activityId": "https://russianlaunchpad.example/course/a1a2" } }
+  },
+  "lessons": [
+    {
+      "id": "l1",
+      "order": 1,
+      "title": "Lesson 1 - Privet! Meeting People",
+      "titleRu": "Urok 1 - Privet! Znakomstvo",
+      "objectives": [
+        "Greet people and say goodbye in formal and informal ways",
+        "Introduce yourself: name and origin",
+        "Recognize word stress and basic Cyrillic patterns"
+      ],
+      "dialogue": {
+        "id": "d1",
+        "title": "At a language exchange cafe",
+        "lines": [
+          { "speaker": "Anna", "ru": "Привет! Меня зовут Анна. А тебя?", "en": "Hi! My name is Anna. And yours?", "hint": "Informal greeting between peers." },
+          { "speaker": "Mark", "ru": "Привет, Анна. Меня зовут Марк. Я из Канады.", "en": "Hi, Anna. My name is Mark. I am from Canada.", "hint": "из + genitive = country of origin." },
+          { "speaker": "Anna", "ru": "Очень приятно! Ты учишь русский?", "en": "Nice to meet you! Are you studying Russian?", "hint": "Very + nominative adjective = 'very pleasant'." },
+          { "speaker": "Mark", "ru": "Да, немного. Я новичок.", "en": "Yes, a little. I am a beginner.", "hint": "немного = a little; новичок = newcomer." },
+          { "speaker": "Anna", "ru": "Отлично. Ну, пока!", "en": "Great. Well, bye!", "hint": "пока = bye (informal)." }
+        ]
+      },
+      "vocabulary": [
+        { "id": "v101", "ru": "привет", "en": "hi", "pos": "interjection", "hint": "Informal only. Not with officials or elders." },
+        { "id": "v102", "ru": "здравствуйте", "en": "hello (formal)", "pos": "interjection", "hint": "Stress on the second 'a': zdravstvUYte." },
+        { "id": "v103", "ru": "пока", "en": "bye", "pos": "interjection", "hint": "Informal goodbye." },
+        { "id": "v104", "ru": "до свидания", "en": "goodbye (formal)", "pos": "phrase", "hint": "Literally 'until a meeting'." },
+        { "id": "v105", "ru": "меня зовут", "en": "my name is", "pos": "phrase", "hint": "Literally 'they call me'." },
+        { "id": "v106", "ru": "приятно познакомиться", "en": "nice to meet you", "pos": "phrase", "hint": "Common set phrase." },
+        { "id": "v107", "ru": "русский", "en": "Russian (language/person)", "pos": "adjective/noun", "hint": "Russian language: russkiy yazyk." },
+        { "id": "v108", "ru": "новичок", "en": "beginner, newcomer", "pos": "noun", "hint": "Stress on the last syllable." },
+        { "id": "v109", "ru": "немного", "en": "a little", "pos": "adverb", "hint": "Colloquial alternative: chut-chut." },
+        { "id": "v110", "ru": "из", "en": "from (place)", "pos": "preposition", "hint": "Governed genitive: iz Kanady, iz Kitaya." }
+      ],
+      "grammar": [
+        {
+          "id": "g1a",
+          "title": "To be is invisible: present tense of 'byt'",
+          "summary": "Russian has no present-tense copula. 'Ya student' literally means 'I student'. Past and future use byl / budu.",
+          "examples": [
+            { "ru": "Я из Канады.", "en": "I am from Canada." },
+            { "ru": "Она врач.", "en": "She is a doctor." },
+            { "ru": "Вчера я был в Москве.", "en": "Yesterday I was in Moscow." }
+          ],
+          "conjugation": { "infinitive": "быть", "tense": "past", "forms": [ { "person": "ya", "ru": "был" }, { "person": "ty", "ru": "был" }, { "person": "on/ona", "ru": "был / была" }, { "person": "my", "ru": "были" }, { "person": "vy", "ru": "были" }, { "person": "oni", "ru": "были" } ] }
+        },
+        {
+          "id": "g1b",
+          "title": "Personal pronouns and ty vs vy",
+          "summary": "Use vy with adults you don't know, officials, and groups. Use ty with friends, children, casual peers.",
+          "examples": [
+            { "ru": "Как вас зовут?", "en": "What is your name? (formal)" },
+            { "ru": "А тебя?", "en": "And yours? (informal)" }
+          ],
+          "conjugation": { "infinitive": null, "tense": null, "forms": [ { "person": "1sg", "ru": "я" }, { "person": "2sg", "ru": "ты" }, { "person": "3sg", "ru": "он / она / оно" }, { "person": "1pl", "ru": "мы" }, { "person": "2pl", "ru": "вы" }, { "person": "3pl", "ru": "они" } ] }
+        }
+      ],
+      "pronunciation": [
+        { "id": "p101", "ru": "Здравствуйте", "en": "Hello (formal)", "ipa": "[ZDRA-stvuy-tye]", "hint": "The 'v' almost disappears: 'ZDRAS-tvuy-tye'. Stress on 'stvuy'.", "audio": "media/audio/p101.ogg" },
+        { "id": "p102", "ru": "Меня зовут Марк", "en": "My name is Mark", "ipa": "[mi-NYA za-VUT mark]", "hint": "Stress the second syllable of menya: mi-NYA.", "audio": "media/audio/p102.ogg" },
+        { "id": "p103", "ru": "Приятно познакомиться", "en": "Nice to meet you", "ipa": "[pri-YAT-na pa-zna-KOM-it-sya]", "hint": "Long word - drill it in three chunks.", "audio": "media/audio/p103.ogg" },
+        { "id": "p104", "ru": "До свидания", "en": "Goodbye (formal)", "ipa": "[da svi-DA-ni-ya]", "hint": "The 'o' in 'do' reduces to 'da'.", "audio": "media/audio/p104.ogg" }
+      ],
+      "speechBlanks": [
+        { "id": "s101", "sentence_ru": "Меня ___ Марк.", "answer": "зовут", "transcript": "Меня зовут Марк.", "en": "My name is Mark.", "hint": "Verb meaning 'they call'. Stress on the last syllable.", "audio": "media/audio/s101.ogg" },
+        { "id": "s102", "sentence_ru": "Я ___ из Канады.", "answer": "родом", "transcript": "Я родом из Канады.", "en": "I come from Canada.", "hint": "Word used with countries: 'Ya ~ iz ...'", "audio": "media/audio/s102.ogg" },
+        { "id": "s103", "sentence_ru": "___! Как дела?", "answer": "привет", "transcript": "Привет! Как дела?", "en": "Hi! How are you?", "hint": "Informal greeting starting with P.", "audio": "media/audio/s103.ogg" }
+      ],
+      "quiz": [
+        { "id": "q101", "type": "multiple_choice", "prompt": "Which greeting is formal?", "options": ["Привет", "Здравствуйте", "Пока"], "correct": 1, "explanation": "Zdravstvuyte is used with strangers, officials, elders." },
+        { "id": "q102", "type": "multiple_choice", "prompt": "Complete: Я ___ Германии.", "options": ["из", "от", "в"], "correct": 0, "explanation": "Origin uses iz + genitive: iz Germanii." },
+        { "id": "q103", "type": "fill_blank", "prompt": "Fill the gap: Меня ___ Анна. (they call)", "answer": "зовут", "explanation": "Menya zovut... = My name is..." },
+        { "id": "q104", "type": "multiple_choice", "prompt": "You say 'poka' when you...", "options": ["arrive", "leave informally", "order coffee"], "correct": 1, "explanation": "Poka is an informal goodbye." }
+      ]
+    },
+    {
+      "id": "l2",
+      "order": 2,
+      "title": "Lesson 2 - Cafe: Ordering Coffee and a Snack",
+      "titleRu": "Urok 2 - V kafe",
+      "objectives": [
+        "Order food and drinks politely",
+        "Ask for the bill and understand numbers up to 100",
+        "Use accusative case for what you want"
+      ],
+      "dialogue": {
+        "id": "d2",
+        "title": "At a coffee counter",
+        "lines": [
+          { "speaker": "Barista", "ru": "Добрый день! Что будете?", "en": "Good afternoon! What would you like?", "hint": "Standard service phrase." },
+          { "speaker": "Mark", "ru": "Кофе, пожалуйста. И бутерброд с сыром.", "en": "Coffee, please. And a sandwich with cheese.", "hint": "pozhaluysta = please / you're welcome." },
+          { "speaker": "Barista", "ru": "Конечно. С молоком и сахаром?", "en": "Of course. With milk and sugar?", "hint": "s + instrumental: s molokom." },
+          { "speaker": "Mark", "ru": "Только с молоком. Спасибо!", "en": "Only with milk. Thanks!", "hint": "tolko = only." },
+          { "speaker": "Barista", "ru": "Сто двадцать рублей.", "en": "That's 120 rubles.", "hint": "Numbers: sto = 100, dvesti = 200." },
+          { "speaker": "Mark", "ru": "Спасибо. Где туалет?", "en": "Thanks. Where is the restroom?", "hint": "Gde + nominative = Where is ...?" }
+        ]
+      },
+      "vocabulary": [
+        { "id": "v201", "ru": "кофе", "en": "coffee", "pos": "noun", "hint": "Indeclinable in everyday speech; masculine." },
+        { "id": "v202", "ru": "бутерброд", "en": "sandwich (with bread)", "pos": "noun", "hint": "Classic Russian snack: bread + cheese/sausage." },
+        { "id": "v203", "ru": "пожалуйста", "en": "please / you're welcome", "pos": "phrase", "hint": "One word does both jobs." },
+        { "id": "v204", "ru": "спасибо", "en": "thank you", "pos": "interjection", "hint": "Stress on the second 'i': spa-SI-ba." },
+        { "id": "v205", "ru": "счёт", "en": "the bill", "pos": "noun", "hint": "Also: chek (receipt)." },
+        { "id": "v206", "ru": "рубль", "en": "ruble", "pos": "noun", "hint": "Plural: rublya (2-4), rubley (5+)." },
+        { "id": "v207", "ru": "молоко", "en": "milk", "pos": "noun", "hint": "Neuter; stress on the last syllable." },
+        { "id": "v208", "ru": "сахар", "en": "sugar", "pos": "noun", "hint": "Written 'a', pronounced reduced." },
+        { "id": "v209", "ru": "вода", "en": "water", "pos": "noun", "hint": "butilirovannaya voda = bottled water." },
+        { "id": "v210", "ru": "меню", "en": "menu", "pos": "noun", "hint": "Indeclinable neuter." }
+      ],
+      "grammar": [
+        {
+          "id": "g2a",
+          "title": "Accusative for what you order",
+          "summary": "Inanimate masculine nouns keep the nominative form in accusative. Feminine -a becomes -u. This is how you say 'I want X'.",
+          "examples": [
+            { "ru": "Я хочу кофе.", "en": "I want (some) coffee." },
+            { "ru": "Я хочу булку.", "en": "I want a bun. (bulka -> bulku)" },
+            { "ru": "Дайте чай, пожалуйста.", "en": "Give me tea, please." }
+          ],
+          "conjugation": { "infinitive": "хотеть", "tense": "present", "forms": [ { "person": "ya", "ru": "хочу" }, { "person": "ty", "ru": "хочешь" }, { "person": "on/ona", "ru": "хочет" }, { "person": "my", "ru": "хотим" }, { "person": "vy", "ru": "хотите" }, { "person": "oni", "ru": "хотят" } ] }
+        },
+        {
+          "id": "g2b",
+          "title": "Numbers 1-100 and ruble agreement",
+          "summary": "After 2-4 use genitive singular (rublya), after 5+ use genitive plural (rubley). Learn 10, 20, 50, 100, 200.",
+          "examples": [
+            { "ru": "сто двадцать рублей", "en": "120 rubles" },
+            { "ru": "двадцать пять рублей", "en": "25 rubles" }
+          ],
+          "conjugation": { "infinitive": null, "tense": null, "forms": [ { "person": "1", "ru": "один" }, { "person": "2", "ru": "два" }, { "person": "5", "ru": "пять" }, { "person": "10", "ru": "десять" }, { "person": "20", "ru": "двадцать" }, { "person": "50", "ru": "пятьдесят" }, { "person": "100", "ru": "сто" } ] }
+        }
+      ],
+      "pronunciation": [
+        { "id": "p201", "ru": "Кофе, пожалуйста", "en": "Coffee, please", "ipa": "[KA-fye pa-ZHA-lu-sta]", "hint": "Don't roll the 'r' excessively.", "audio": "media/audio/p201.ogg" },
+        { "id": "p202", "ru": "Спасибо", "en": "Thank you", "ipa": "[spa-SI-ba]", "hint": "The final 'o' reduces to a short 'a'. Stress SI.", "audio": "media/audio/p202.ogg" },
+        { "id": "p203", "ru": "Бутерброд с сыром", "en": "Sandwich with cheese", "ipa": "[bu-ter-BROT s si-ROM]", "hint": "'sy' - the 'y' sound is produced deep in the throat.", "audio": "media/audio/p203.ogg" },
+        { "id": "p204", "ru": "Сколько стоит?", "en": "How much does it cost?", "ipa": "[SKOL'-ka STOIT]", "hint": "stoit - stress on the second syllable.", "audio": "media/audio/p204.ogg" }
+      ],
+      "speechBlanks": [
+        { "id": "s201", "sentence_ru": "Кофе, ___.", "answer": "пожалуйста", "transcript": "Кофе, пожалуйста.", "en": "Coffee, please.", "hint": "Magic word: please AND you're welcome.", "audio": "media/audio/s201.ogg" },
+        { "id": "s202", "sentence_ru": "Сколько ___ этот кофе?", "answer": "стоит", "transcript": "Сколько стоит этот кофе?", "en": "How much is this coffee?", "hint": "Verb 'to cost', 3rd person.", "audio": "media/audio/s202.ogg" },
+        { "id": "s203", "sentence_ru": "Я хочу бутерброд с ___.", "answer": "сыром", "transcript": "Я хочу бутерброд с сыром.", "en": "I want a sandwich with cheese.", "hint": "Instrumental of 'syр'.", "audio": "media/audio/s203.ogg" }
+      ],
+      "quiz": [
+        { "id": "q201", "type": "multiple_choice", "prompt": "'I want...' (a bun, fem. bulka)", "options": ["булка", "булку", "булке"], "correct": 1, "explanation": "Feminine -a -> -u in accusative." },
+        { "id": "q202", "type": "fill_blank", "prompt": "Please bring coffee: Кофе, ___ .", "answer": "пожалуйста", "explanation": "pozhaluysta follows the request." },
+        { "id": "q203", "type": "multiple_choice", "prompt": "How do you say 55?", "options": ["пятьдесят пять", "пять пятьдесят", "пять на десять"], "correct": 0, "explanation": "Tens then units: pyat-desyat pyat." },
+        { "id": "q204", "type": "multiple_choice", "prompt": "Where do you ask 'Gde tualet?'", "options": ["At a cafe", "On a plane", "At home"], "correct": 0, "explanation": "Polite way to find the restroom in public places." }
+      ]
+    },
+    {
+      "id": "l3",
+      "order": 3,
+      "title": "Lesson 3 - Directions & Transport (Immigration Test Lab)",
+      "titleRu": "Urok 3 - Doroga i transport: Imperatsiya ekzamen",
+      "objectives": [
+        "Ask for and give directions using gde / kak projti",
+        "Name city places needed for the A2 immigration exam interview",
+        "Handle typical exam questions about work and residence"
+      ],
+      "dialogue": {
+        "id": "d3",
+        "title": "Asking a passer-by",
+        "lines": [
+          { "speaker": "Mark", "ru": "Извините, как пройти к метро?", "en": "Excuse me, how do I get to the metro?", "hint": "kak projti k + dative." },
+          { "speaker": "Local", "ru": "Прямо и потом направо. Это рядом.", "en": "Straight and then right. It's nearby.", "hint": "pryamo = straight; napravo = to the right." },
+          { "speaker": "Mark", "ru": "Спасибо! А далеко отсюда?", "en": "Thanks! Is it far from here?", "hint": "daleko ot + genitive." },
+          { "speaker": "Local", "ru": "Нет, минут пять пешком.", "en": "No, about five minutes on foot.", "hint": "peshkom = on foot." },
+          { "speaker": "Mark", "ru": "Отлично. Всего доброго!", "en": "Great. Have a good day!", "hint": "Formal farewell." }
+        ]
+      },
+      "vocabulary": [
+        { "id": "v301", "ru": "метро", "en": "metro", "pos": "noun", "hint": "Indeclinable neuter." },
+        { "id": "v302", "ru": "автобус", "en": "bus", "pos": "noun", "hint": "na avtobuse = by bus." },
+        { "id": "v303", "ru": "остановка", "en": "stop (transport)", "pos": "noun", "hint": "Where you wait for a bus." },
+        { "id": "v304", "ru": "прямо", "en": "straight ahead", "pos": "adverb", "hint": "Opposite: nazad." },
+        { "id": "v305", "ru": "направо", "en": "to the right", "pos": "adverb", "hint": "Povorachivayte napravo = turn right." },
+        { "id": "v306", "ru": "рядом", "en": "nearby", "pos": "adverb", "hint": "ryadom s + instrumental = next to." },
+        { "id": "v307", "ru": "далеко", "en": "far", "pos": "adverb", "hint": "A daleko? = Is it far?" },
+        { "id": "v308", "ru": "пешком", "en": "on foot", "pos": "adverb", "hint": "No case change needed." },
+        { "id": "v309", "ru": "миграционная карта", "en": "migration card", "pos": "noun", "immigration": true, "hint": "Filled out at the airport; keep it until departure." },
+        { "id": "v310", "ru": "регистрация", "en": "(migration) registration", "pos": "noun", "immigration": true, "hint": "Registration at your place of stay within 7 working days." },
+        { "id": "v311", "ru": "разрешение на временное проживание", "en": "temporary residence permit (RVP)", "pos": "phrase", "immigration": true, "hint": "RVP - one-time, valid 3 years." },
+        { "id": "v312", "ru": "вид на жительство", "en": "residence permit (VNZh)", "pos": "phrase", "immigration": true, "hint": "VNZh - valid 5 years, renewable." },
+        { "id": "v313", "ru": "патент", "en": "work patent", "pos": "noun", "immigration": true, "hint": "For visa-free country citizens." },
+        { "id": "v314", "ru": "сертификат о владении языком", "en": "language proficiency certificate", "pos": "phrase", "immigration": true, "hint": "Certificate accepted by exam centers for migration purposes." }
+      ],
+      "grammar": [
+        {
+          "id": "g3a",
+          "title": "Prepositions of place: v / na + prepositional",
+          "summary": "Location uses v (inside) and na (on/at an open or event-like place) with the prepositional case. Where? - Gde?",
+          "examples": [
+            { "ru": "Я в кафе.", "en": "I am in a cafe." },
+            { "ru": "Он на работе.", "en": "He is at work." },
+            { "ru": "Мы на станции.", "en": "We are at the station." }
+          ],
+          "conjugation": { "infinitive": null, "tense": null, "forms": [ { "person": "rabota", "ru": "на работе" }, { "person": "stantsiya", "ru": "на станции" }, { "person": "kafe", "ru": "в кафе" }, { "person": "gorod", "ru": "в городе" } ] }
+        },
+        {
+          "id": "g3b",
+          "title": "Motion verbs basics: idti / ekhat",
+          "summary": "idti = going on foot; ekhat = going by vehicle. Unidirectional present forms.",
+          "examples": [
+            { "ru": "Я иду к метро пешком.", "en": "I'm walking to the metro." },
+            { "ru": "Мы едем на автобусе.", "en": "We are riding by bus." }
+          ],
+          "conjugation": { "infinitive": "идти / ехать", "tense": "present", "forms": [ { "person": "ya", "ru": "иду / еду" }, { "person": "ty", "ru": "идёшь / едешь" }, { "person": "on/ona", "ru": "идёт / едет" }, { "person": "my", "ru": "идём / едем" }, { "person": "vy", "ru": "идёте / едете" }, { "person": "oni", "ru": "идут / едут" } ] }
+        }
+      ],
+      "pronunciation": [
+        { "id": "p301", "ru": "Извините, как пройти к метро?", "en": "Excuse me, how do I get to the metro?", "ipa": "[iz-vi-NI-te kak pra-TII k mi-TRO]", "hint": "projti - stress on the last syllable: pra-TII.", "audio": "media/audio/p301.ogg" },
+        { "id": "p302", "ru": "Прямо и направо", "en": "Straight and then right", "ipa": "[PRYA-ma i na-PRA-və]", "hint": "Final 'o' reduces to 'ə'.", "audio": "media/audio/p302.ogg" },
+        { "id": "p303", "ru": "Минут пять пешком", "en": "About five minutes on foot", "ipa": "[mi-NUT pyat' pish-KOM]", "hint": "pyat ends with a soft sign - no audible 'b', just palatalization.", "audio": "media/audio/p303.ogg" },
+        { "id": "p304", "ru": "Разрешение на временное проживание", "en": "Temporary residence permit", "ipa": "[ra-zre-SHI-ni-je na vre-MYEN-na-je pra-zhy-VA-ni-je]", "hint": "Long official phrase - drill in three chunks: razresheniye / na vremyennoye / prozhivaniye.", "audio": "media/audio/p304.ogg" }
+      ],
+      "speechBlanks": [
+        { "id": "s301", "sentence_ru": "Как ___ к метро?", "answer": "пройти", "transcript": "Как пройти к метро?", "en": "How do I get to the metro?", "hint": "Infinitive of motion: to pass through.", "audio": "media/audio/s301.ogg" },
+        { "id": "s302", "sentence_ru": "Потом ___.", "answer": "направо", "transcript": "Потом направо.", "en": "Then to the right.", "hint": "Direction adverb starting with na-.", "audio": "media/audio/s302.ogg" },
+        { "id": "s303", "sentence_ru": "Я живу в России два ___ .", "answer": "года", "transcript": "Я живу в России два года.", "en": "I have lived in Russia for two years.", "hint": "Genitive singular after 'dva'.", "audio": "media/audio/s303.ogg" }
+      ],
+      "quiz": [
+        { "id": "q301", "type": "multiple_choice", "prompt": "'turn right'", "options": ["налево", "направо", "прямо"], "correct": 1, "explanation": "napravo = to the right." },
+        { "id": "q302", "type": "fill_blank", "prompt": "We are at the station: Мы ___ станции.", "answer": "на", "explanation": "na + prepositional for stations/open places." },
+        { "id": "q303", "type": "multiple_choice", "prompt": "EXAM FORMAT: Which document allows a foreigner to live in Russia for 5 years?", "options": ["миграционная карта", "патент", "вид на жительство"], "correct": 2, "hint": "Immigration Test Lab question.", "explanation": "VNZh (vid na zhitelstvo) is issued for 5 years." },
+        { "id": "q304", "type": "multiple_choice", "prompt": "EXAM FORMAT: You must register at your place of stay within...", "options": ["7 working days", "3 months", "1 year"], "correct": 0, "hint": "Migration registration rule.", "explanation": "Migration registration: within 7 working days of arrival." }
+      ]
+    }
+  ],
+  "media": {
+    "audioBase": "media/audio/",
+    "note": "All audio paths are relative. Missing files are replaced at build time with silent placeholder WAVs listed in media/audio-manifest.json so players never 404."
+  }
+}

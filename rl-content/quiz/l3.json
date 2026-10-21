@@ -1,0 +1,50 @@
+{
+  "lessonId": "l3",
+  "items": [
+    {
+      "id": "q301",
+      "type": "multiple_choice",
+      "prompt": "'turn right'",
+      "options": [
+        "налево",
+        "направо",
+        "прямо"
+      ],
+      "correct": 1,
+      "explanation": "napravo = to the right."
+    },
+    {
+      "id": "q302",
+      "type": "fill_blank",
+      "prompt": "We are at the station: Мы ___ станции.",
+      "answer": "на",
+      "explanation": "na + prepositional for stations/open places."
+    },
+    {
+      "id": "q303",
+      "type": "multiple_choice",
+      "prompt": "EXAM FORMAT: Which document allows a foreigner to live in Russia for 5 years?",
+      "options": [
+        "миграционная карта",
+        "патент",
+        "вид на жительство"
+      ],
+      "correct": 2,
+      "hint": "Immigration Test Lab question.",
+      "explanation": "VNZh (vid na zhitelstvo) is issued for 5 years."
+    },
+    {
+      "id": "q304",
+      "type": "multiple_choice",
+      "prompt": "EXAM FORMAT: You must register at your place of stay within...",
+      "options": [
+        "7 working days",
+        "3 months",
+        "1 year"
+      ],
+      "correct": 0,
+      "hint": "Migration registration rule.",
+      "explanation": "Migration registration: within 7 working days of arrival."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "lessonId": "l3",
+  "items": [
+    {
+      "id": "g3a",
+      "title": "Prepositions of place: v / na + prepositional",
+      "summary": "Location uses v (inside) and na (on/at an open or event-like place) with the prepositional case. Where? - Gde?",
+      "examples": [
+        {
+          "ru": "Я в кафе.",
+          "en": "I am in a cafe."
+        },
+        {
+          "ru": "Он на работе.",
+          "en": "He is at work."
+        },
+        {
+          "ru": "Мы на станции.",
+          "en": "We are at the station."
+        }
+      ],
+      "conjugation": {
+        "infinitive": null,
+        "tense": null,
+        "forms": [
+          {
+            "person": "rabota",
+            "ru": "на работе"
+          },
+          {
+            "person": "stantsiya",
+            "ru": "на станции"
+          },
+          {
+            "person": "kafe",
+            "ru": "в кафе"
+          },
+          {
+            "person": "gorod",
+            "ru": "в городе"
+          }
+        ]
+      }
+    },
+    {
+      "id": "g3b",
+      "title": "Motion verbs basics: idti / ekhat",
+      "summary": "idti = going on foot; ekhat = going by vehicle. Unidirectional present forms.",
+      "examples": [
+        {
+          "ru": "Я иду к метро пешком.",
+          "en": "I'm walking to the metro."
+        },
+        {
+          "ru": "Мы едем на автобусе.",
+          "en": "We are riding by bus."
+        }
+      ],
+      "conjugation": {
+        "infinitive": "идти / ехать",
+        "tense": "present",
+        "forms": [
+          {
+            "person": "ya",
+            "ru": "иду / еду"
+          },
+          {
+            "person": "ty",
+            "ru": "идёшь / едешь"
+          },
+          {
+            "person": "on/ona",
+            "ru": "идёт / едет"
+          },
+          {
+            "person": "my",
+            "ru": "идём / едем"
+          },
+          {
+            "person": "vy",
+            "ru": "идёте / едете"
+          },
+          {
+            "person": "oni",
+            "ru": "идут / едут"
+          }
+        ]
+      }
+    }
+  ]
+}

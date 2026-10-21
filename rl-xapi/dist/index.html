@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Russian Launchpad — xAPI bundle</title>
+  <link rel="stylesheet" href="css/player.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h2>🚀 Russian Launchpad — xAPI edition</h2>
+    <p class="muted" id="xapi-mode">Tracking: detecting…</p>
+    <div id="player-root"></div>
+    <div class="card no-tint">
+      <h3>Statement log (mock LRS / configured LRS)</h3>
+      <button class="btn small secondary" id="btn-refresh-log">Refresh</button>
+      <button class="btn small" id="btn-export-log">Export JSON</button>
+      <pre id="log-dump" style="max-height:40vh;overflow:auto"></pre>
+    </div>
+  </div>
+
+  <script src="js/runtime-config.js"></script>
+  <script src="js/mock-api.js"></script>
+  <script src="js/tint.js"></script>
+  <script src="js/course-data.js"></script>
+  <script src="js/tts.js"></script>
+  <script src="js/recorder.js"></script>
+  <script src="js/comments.js"></script>
+  <script>
+    // Load xAPI config (endpoint/auth/agent are optional -> mock LRS when absent)
+    fetch('xapi-config.json', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : {}; })
+      .catch(function () { return {}; })
+      .then(function (cfg) {
+        window.RL_TRACKING_CONFIG = cfg;
+        var s = document.createElement('script');
+        s.src = 'js/tracking-adapter.js';
+        s.onload = function () {
+          var t = window.RLTracking;
+          document.getElementById('xapi-mode').textContent =
+            'Mode: ' + t.mode + ' · endpoint: ' + ((cfg.endpoint) || 'MOCK LRS (localStorage)') + ' · agent: ' + (cfg.agent && cfg.agent.name || 'preview-user');
+          window.RLPlayerUser = { id: 'xapi-local', email: 'learner@local', name: (cfg.agent && cfg.agent.name) || 'xAPI Learner', role: 'student' };
+          var sc = document.createElement('script'); sc.src = 'js/player.js';
+          sc.onload = function () {
+            window.RLCourseData.init('.').then(function () {
+              window.RLPlayer.mount('player-root');
+              t.launch();
+            });
+            document.getElementById('btn-refresh-log').onclick = dump;
+            document.getElementById('btn-export-log').onclick = function () {
+              var blob = new Blob([JSON.stringify(t.lrs.log ? t.lrs.log() : [], null, 2)], { type: 'application/json' });
+              var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'statements.json'; a.click();
+            };
+            function dump() { document.getElementById('log-dump').textContent = JSON.stringify(t.lrs.log ? t.lrs.log().slice(-20) : [], null, 2); }
+            dump();
+          };
+          document.body.appendChild(sc);
+        };
+        document.body.appendChild(s);
+      });
+  </script>
+</body>
+</html>

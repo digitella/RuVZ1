@@ -1,0 +1,43 @@
+{
+  "lessonId": "l2",
+  "id": "d2",
+  "title": "At a coffee counter",
+  "lines": [
+    {
+      "speaker": "Barista",
+      "ru": "Добрый день! Что будете?",
+      "en": "Good afternoon! What would you like?",
+      "hint": "Standard service phrase."
+    },
+    {
+      "speaker": "Mark",
+      "ru": "Кофе, пожалуйста. И бутерброд с сыром.",
+      "en": "Coffee, please. And a sandwich with cheese.",
+      "hint": "pozhaluysta = please / you're welcome."
+    },
+    {
+      "speaker": "Barista",
+      "ru": "Конечно. С молоком и сахаром?",
+      "en": "Of course. With milk and sugar?",
+      "hint": "s + instrumental: s molokom."
+    },
+    {
+      "speaker": "Mark",
+      "ru": "Только с молоком. Спасибо!",
+      "en": "Only with milk. Thanks!",
+      "hint": "tolko = only."
+    },
+    {
+      "speaker": "Barista",
+      "ru": "Сто двадцать рублей.",
+      "en": "That's 120 rubles.",
+      "hint": "Numbers: sto = 100, dvesti = 200."
+    },
+    {
+      "speaker": "Mark",
+      "ru": "Спасибо. Где туалет?",
+      "en": "Thanks. Where is the restroom?",
+      "hint": "Gde + nominative = Where is ...?"
+    }
+  ]
+}

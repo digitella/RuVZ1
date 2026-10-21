@@ -1,0 +1,75 @@
+{
+  "lessonId": "l1",
+  "items": [
+    {
+      "id": "v101",
+      "ru": "привет",
+      "en": "hi",
+      "pos": "interjection",
+      "hint": "Informal only. Not with officials or elders."
+    },
+    {
+      "id": "v102",
+      "ru": "здравствуйте",
+      "en": "hello (formal)",
+      "pos": "interjection",
+      "hint": "Stress on the second 'a': zdravstvUYte."
+    },
+    {
+      "id": "v103",
+      "ru": "пока",
+      "en": "bye",
+      "pos": "interjection",
+      "hint": "Informal goodbye."
+    },
+    {
+      "id": "v104",
+      "ru": "до свидания",
+      "en": "goodbye (formal)",
+      "pos": "phrase",
+      "hint": "Literally 'until a meeting'."
+    },
+    {
+      "id": "v105",
+      "ru": "меня зовут",
+      "en": "my name is",
+      "pos": "phrase",
+      "hint": "Literally 'they call me'."
+    },
+    {
+      "id": "v106",
+      "ru": "приятно познакомиться",
+      "en": "nice to meet you",
+      "pos": "phrase",
+      "hint": "Common set phrase."
+    },
+    {
+      "id": "v107",
+      "ru": "русский",
+      "en": "Russian (language/person)",
+      "pos": "adjective/noun",
+      "hint": "Russian language: russkiy yazyk."
+    },
+    {
+      "id": "v108",
+      "ru": "новичок",
+      "en": "beginner, newcomer",
+      "pos": "noun",
+      "hint": "Stress on the last syllable."
+    },
+    {
+      "id": "v109",
+      "ru": "немного",
+      "en": "a little",
+      "pos": "adverb",
+      "hint": "Colloquial alternative: chut-chut."
+    },
+    {
+      "id": "v110",
+      "ru": "из",
+      "en": "from (place)",
+      "pos": "preposition",
+      "hint": "Governed genitive: iz Kanady, iz Kitaya."
+    }
+  ]
+}

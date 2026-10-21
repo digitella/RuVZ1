@@ -1,0 +1,536 @@
+[
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/launched",
+      "display": {
+        "en-US": "launched"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/course/a1a2",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001"
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/answered",
+      "display": {
+        "en-US": "answered"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/xapi/activity/q101",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001"
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z",
+    "result": {
+      "response": "choice:Здравствуйте",
+      "success": true,
+      "score": {
+        "scaled": 1.0,
+        "raw": 1,
+        "min": 0,
+        "max": 1
+      }
+    }
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/recorded",
+      "display": {
+        "en-US": "recorded"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/xapi/activity/p101",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001",
+      "extensions": {
+        "https://russianlaunchpad.example/xapi/ext/attempt": 1
+      }
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/compared",
+      "display": {
+        "en-US": "compared"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/xapi/activity/p101",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001"
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/practiced",
+      "display": {
+        "en-US": "practiced"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/xapi/activity/s101",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001"
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z",
+    "result": {
+      "response": "зовут",
+      "success": true
+    }
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/commented",
+      "display": {
+        "en-US": "commented"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/xapi/activity/l1",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001",
+      "extensions": {
+        "https://russianlaunchpad.example/xapi/ext/comment-visibility": "private_instructor"
+      }
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/completed",
+      "display": {
+        "en-US": "completed"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/course/a1a2",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001"
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z",
+    "result": {
+      "completion": true
+    }
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/passed",
+      "display": {
+        "en-US": "passed"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/course/a1a2",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001"
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z",
+    "result": {
+      "success": true,
+      "score": {
+        "scaled": 0.87
+      }
+    }
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/failed",
+      "display": {
+        "en-US": "failed"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/course/a1a2",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001"
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z",
+    "result": {
+      "success": false,
+      "score": {
+        "scaled": 0.4
+      }
+    }
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/terminated",
+      "display": {
+        "en-US": "terminated"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/course/a1a2",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001"
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z",
+    "result": {
+      "duration": "PT18M32S"
+    }
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/subscription_activated",
+      "display": {
+        "en-US": "subscription activated"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/xapi/activity/subscription/six_months",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001",
+      "extensions": {
+        "https://russianlaunchpad.example/xapi/ext/plan": "six_months"
+      }
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/subscription_activated",
+      "display": {
+        "en-US": "subscription activated"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/xapi/activity/subscription/one_year",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001",
+      "extensions": {
+        "https://russianlaunchpad.example/xapi/ext/plan": "one_year"
+      }
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/subscription_renewed",
+      "display": {
+        "en-US": "subscription renewed"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/xapi/activity/subscription/six_months",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001"
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "actor": {
+      "objectType": "Agent",
+      "account": {
+        "name": "student-demo",
+        "homePage": "https://russianlaunchpad.example"
+      }
+    },
+    "verb": {
+      "id": "https://russianlaunchpad.example/xapi/verb/subscription_canceled",
+      "display": {
+        "en-US": "subscription canceled"
+      }
+    },
+    "object": {
+      "id": "https://russianlaunchpad.example/xapi/activity/subscription/one_year",
+      "definition": {
+        "name": {
+          "en-US": "Russian Launchpad: A1-A2 for Adult English Speakers"
+        },
+        "type": "https://russianlaunchpad.example/activity/course"
+      }
+    },
+    "context": {
+      "contextActivities": {
+        "parent": [
+          {
+            "id": "https://russianlaunchpad.example/course/a1a2"
+          }
+        ]
+      },
+      "registration": "rl-demo-registration-0001"
+    },
+    "timestamp": "2026-10-21T09:00:00.000Z"
+  }
+]

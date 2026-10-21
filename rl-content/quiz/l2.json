@@ -1,0 +1,48 @@
+{
+  "lessonId": "l2",
+  "items": [
+    {
+      "id": "q201",
+      "type": "multiple_choice",
+      "prompt": "'I want...' (a bun, fem. bulka)",
+      "options": [
+        "булка",
+        "булку",
+        "булке"
+      ],
+      "correct": 1,
+      "explanation": "Feminine -a -> -u in accusative."
+    },
+    {
+      "id": "q202",
+      "type": "fill_blank",
+      "prompt": "Please bring coffee: Кофе, ___ .",
+      "answer": "пожалуйста",
+      "explanation": "pozhaluysta follows the request."
+    },
+    {
+      "id": "q203",
+      "type": "multiple_choice",
+      "prompt": "How do you say 55?",
+      "options": [
+        "пятьдесят пять",
+        "пять пятьдесят",
+        "пять на десять"
+      ],
+      "correct": 0,
+      "explanation": "Tens then units: pyat-desyat pyat."
+    },
+    {
+      "id": "q204",
+      "type": "multiple_choice",
+      "prompt": "Where do you ask 'Gde tualet?'",
+      "options": [
+        "At a cafe",
+        "On a plane",
+        "At home"
+      ],
+      "correct": 0,
+      "explanation": "Polite way to find the restroom in public places."
+    }
+  ]
+}

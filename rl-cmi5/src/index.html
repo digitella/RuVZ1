@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Russian Launchpad — cmi5 bundle</title>
+  <link rel="stylesheet" href="css/player.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h2>🚀 Russian Launchpad — cmi5 edition</h2>
+    <p class="muted" id="cmi5-status">Reading cmi5 launch parameters…</p>
+    <div id="player-root"></div>
+    <div class="card no-tint">
+      <h3>cmi5 statement log</h3>
+      <pre id="log-dump" style="max-height:40vh;overflow:auto"></pre>
+    </div>
+  </div>
+
+  <script>window.RL_RUNTIME = { mode: "cmi5", contentBase: ".", courseId: "russian-launchpad-a1a2", activityId: "https://russianlaunchpad.example/course/a1a2" };</script>
+  <script src="js/mock-api.js"></script>
+  <script src="js/tint.js"></script>
+  <script src="js/course-data.js"></script>
+  <script src="js/tts.js"></script>
+  <script src="js/recorder.js"></script>
+  <script src="js/comments.js"></script>
+  <script>
+    // ---- Parse cmi5 launch params (query string from a real LMS) or fall back to mock config ----
+    (function () {
+      'use strict';
+      var q = new URLSearchParams(location.search);
+      fetch('cmi5-launch-config.json', { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+        .then(function (cfg) {
+          window.RL_CMI5 = {
+            launchPath: q.get('launch_path') || cfg.launchPath || 'index.html',
+            registration: q.get('registration_id') || cfg.registration || '00000000-0000-0000-0000-000000000000',
+            activityId: q.get('activity_id') || cfg.activityId || 'https://russianlaunchpad.example/course/a1a2',
+            moveOnUrl: q.get('move_on') || null,   // real LMS provides a signed PUT url
+            lrsEndpoint: q.get('learner_id') ? decodeURIComponent(q.get('lrs_endpoint') || '') : '',
+            auth: q.get('auth_token') || ''
+          };
+          var fromLms = !!q.get('launch_path');
+          window.RL_TRACKING_CONFIG = {
+            endpoint: fromLms && window.RL_CMI5.lrsEndpoint ? window.RL_CMI5.lrsEndpoint : '',
+            auth: fromLms ? { token: window.RL_CMI5.auth } : null,
+            activityId: window.RL_CMI5.activityId,
+            registration: window.RL_CMI5.registration,
+            agent: fromLms ? { name: decodeURIComponent(q.get('learner_id') || 'cmi5-learner'), homePage: 'https://lms.example' } : { name: 'mock-cmi5-learner', homePage: 'https://mock-lms.example' }
+          };
+          document.getElementById('cmi5-status').textContent = fromLms
+            ? '✅ Launched by cmi5 LMS · registration ' + window.RL_CMI5.registration
+            : '⚠ No cmi5 launch params detected → MOCK cmi5 mode (statements logged locally with cmi5 context). Open via rl-cmi5/dist/mock-launcher.html for the simulated LMS flow.';
+          var s = document.createElement('script'); s.src = 'js/tracking-adapter.js';
+          s.onload = function () {
+            var t = window.RLTracking;
+            if (!fromLms) t.mode = 'cmi5'; // force cmi5 semantics in mock
+            window.RLPlayerUser = { id: 'cmi5-local', email: 'cmi5@local', name: 'cmi5 Learner', role: 'student' };
+            var sc = document.createElement('script'); sc.src = 'js/player.js';
+            sc.onload = function () {
+              window.RLCourseData.init('.').then(function () {
+                window.RLPlayer.mount('player-root');
+                t.launch();
+                function dump() { document.getElementById('log-dump').textContent = JSON.stringify(t.lrs.log ? t.lrs.log().slice(-15) : [], null, 2); }
+                setInterval(dump, 3000); dump();
+              });
+            };
+            document.body.appendChild(sc);
+          };
+          document.body.appendChild(s);
+        });
+    })();
+  </script>
+</body>
+</html>

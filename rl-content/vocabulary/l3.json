@@ -1,0 +1,109 @@
+{
+  "lessonId": "l3",
+  "items": [
+    {
+      "id": "v301",
+      "ru": "метро",
+      "en": "metro",
+      "pos": "noun",
+      "hint": "Indeclinable neuter."
+    },
+    {
+      "id": "v302",
+      "ru": "автобус",
+      "en": "bus",
+      "pos": "noun",
+      "hint": "na avtobuse = by bus."
+    },
+    {
+      "id": "v303",
+      "ru": "остановка",
+      "en": "stop (transport)",
+      "pos": "noun",
+      "hint": "Where you wait for a bus."
+    },
+    {
+      "id": "v304",
+      "ru": "прямо",
+      "en": "straight ahead",
+      "pos": "adverb",
+      "hint": "Opposite: nazad."
+    },
+    {
+      "id": "v305",
+      "ru": "направо",
+      "en": "to the right",
+      "pos": "adverb",
+      "hint": "Povorachivayte napravo = turn right."
+    },
+    {
+      "id": "v306",
+      "ru": "рядом",
+      "en": "nearby",
+      "pos": "adverb",
+      "hint": "ryadom s + instrumental = next to."
+    },
+    {
+      "id": "v307",
+      "ru": "далеко",
+      "en": "far",
+      "pos": "adverb",
+      "hint": "A daleko? = Is it far?"
+    },
+    {
+      "id": "v308",
+      "ru": "пешком",
+      "en": "on foot",
+      "pos": "adverb",
+      "hint": "No case change needed."
+    },
+    {
+      "id": "v309",
+      "ru": "миграционная карта",
+      "en": "migration card",
+      "pos": "noun",
+      "immigration": true,
+      "hint": "Filled out at the airport; keep it until departure."
+    },
+    {
+      "id": "v310",
+      "ru": "регистрация",
+      "en": "(migration) registration",
+      "pos": "noun",
+      "immigration": true,
+      "hint": "Registration at your place of stay within 7 working days."
+    },
+    {
+      "id": "v311",
+      "ru": "разрешение на временное проживание",
+      "en": "temporary residence permit (RVP)",
+      "pos": "phrase",
+      "immigration": true,
+      "hint": "RVP - one-time, valid 3 years."
+    },
+    {
+      "id": "v312",
+      "ru": "вид на жительство",
+      "en": "residence permit (VNZh)",
+      "pos": "phrase",
+      "immigration": true,
+      "hint": "VNZh - valid 5 years, renewable."
+    },
+    {
+      "id": "v313",
+      "ru": "патент",
+      "en": "work patent",
+      "pos": "noun",
+      "immigration": true,
+      "hint": "For visa-free country citizens."
+    },
+    {
+      "id": "v314",
+      "ru": "сертификат о владении языком",
+      "en": "language proficiency certificate",
+      "pos": "phrase",
+      "immigration": true,
+      "hint": "Certificate accepted by exam centers for migration purposes."
+    }
+  ]
+}

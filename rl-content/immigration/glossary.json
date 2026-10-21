@@ -1,0 +1,88 @@
+{
+  "module": "Immigration Test Lab",
+  "level": "A2 (TRKI base subtest)",
+  "items": [
+    {
+      "lessonId": "l3",
+      "id": "v309",
+      "ru": "миграционная карта",
+      "en": "migration card",
+      "pos": "noun",
+      "immigration": true,
+      "hint": "Filled out at the airport; keep it until departure."
+    },
+    {
+      "lessonId": "l3",
+      "id": "v310",
+      "ru": "регистрация",
+      "en": "(migration) registration",
+      "pos": "noun",
+      "immigration": true,
+      "hint": "Registration at your place of stay within 7 working days."
+    },
+    {
+      "lessonId": "l3",
+      "id": "v311",
+      "ru": "разрешение на временное проживание",
+      "en": "temporary residence permit (RVP)",
+      "pos": "phrase",
+      "immigration": true,
+      "hint": "RVP - one-time, valid 3 years."
+    },
+    {
+      "lessonId": "l3",
+      "id": "v312",
+      "ru": "вид на жительство",
+      "en": "residence permit (VNZh)",
+      "pos": "phrase",
+      "immigration": true,
+      "hint": "VNZh - valid 5 years, renewable."
+    },
+    {
+      "lessonId": "l3",
+      "id": "v313",
+      "ru": "патент",
+      "en": "work patent",
+      "pos": "noun",
+      "immigration": true,
+      "hint": "For visa-free country citizens."
+    },
+    {
+      "lessonId": "l3",
+      "id": "v314",
+      "ru": "сертификат о владении языком",
+      "en": "language proficiency certificate",
+      "pos": "phrase",
+      "immigration": true,
+      "hint": "Certificate accepted by exam centers for migration purposes."
+    },
+    {
+      "lessonId": "l3",
+      "type": "multiple_choice",
+      "id": "q303",
+      "prompt": "EXAM FORMAT: Which document allows a foreigner to live in Russia for 5 years?",
+      "options": [
+        "миграционная карта",
+        "патент",
+        "вид на жительство"
+      ],
+      "correct": 2,
+      "hint": "Immigration Test Lab question.",
+      "explanation": "VNZh (vid na zhitelstvo) is issued for 5 years."
+    },
+    {
+      "lessonId": "l3",
+      "type": "multiple_choice",
+      "id": "q304",
+      "prompt": "EXAM FORMAT: You must register at your place of stay within...",
+      "options": [
+        "7 working days",
+        "3 months",
+        "1 year"
+      ],
+      "correct": 0,
+      "hint": "Migration registration rule.",
+      "explanation": "Migration registration: within 7 working days of arrival."
+    }
+  ]
+}

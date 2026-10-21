@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Russian Launchpad A1-A2 — SCORM 1.2 SCO</title>
+  <!-- Self-contained: no external backend required. All paths relative. -->
+  <link rel="stylesheet" href="css/player.css" />
+  <script src="scormdriver.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <h2 id="scorm-title">🚀 Russian Launchpad — SCORM 1.2</h2>
+    <p class="muted" id="scorm-status">Connecting to LMS…</p>
+    <div id="player-root"></div>
+    <div class="row" style="margin-top:16px">
+      <button class="btn" id="btn-finish">Finish attempt &amp; exit</button>
+    </div>
+  </div>
+
+  <script src="js/runtime-config.js"></script>
+  <script>if (!window.RL_RUNTIME) window.RL_RUNTIME = { mode: "scorm", contentBase: ".", courseId: "russian-launchpad-a1a2", activityId: "https://russianlaunchpad.example/course/a1a2" };</script>
+  <script src="js/mock-api.js"></script>
+  <script src="js/tint.js"></script>
+  <script src="js/course-data.js"></script>
+  <script src="js/tts.js"></script>
+  <script src="js/recorder.js"></script>
+  <script src="js/comments.js"></script>
+  <script src="js/tracking-adapter.js"></script>
+  <script src="js/player.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      // SCORM policy: comments disabled by default; microphone optional (typing/file fallbacks stay).
+      window.RLPlayerDisableComments = true;
+      // anonymous offline learner for mock storage inside the SCO
+      window.RLPlayerUser = { id: 'scorm-local', email: 'scorm@local', name: 'SCO Learner', role: 'student' };
+
+      document.getElementById('scorm-title').textContent = navigator.userAgent.indexOf('Moodle') >= 0 ? 'SCORM' : '🚀 Russian Launchpad — SCORM 1.2';
+
+      window.RLCourseData.init('.').then(function () {
+        window.RLPlayer.mount('player-root');
+        var t = window.RLTracking;
+        document.getElementById('scorm-status').textContent =
+          t.mode === 'scorm' && t.scorm && t.scorm.lmsConnected ? '✅ Connected to LMS (SCORM 1.2)' : '⚠ No LMS API found — running in standalone preview mode';
+        t.launch();
+      });
+
+      document.getElementById('btn-finish').onclick = function () {
+        var t = window.RLTracking;
+        if (t.mode === 'scorm' && t.scorm && t.scorm.lmsConnected) {
+          var _db = window.RLMockAPI.db(); var pg = (_db.progress && _db.progress['scorm-local']) || {};
+          var anyCompleted = Object.keys(pg).some(function (k) { return pg[k].completed; });
+          // lesson_status / score / total_time written through the adapter mapping
+          if (anyCompleted) t.passed(85); else t.completed();
+          t.terminate();
+          try { t.scorm.api.LMSCommit(''); t.scorm.api.LMSFinish(''); } catch (e) {}
+        }
+        alert('Attempt committed. Close this window/tab to return to the LMS.');
+      };
+    })();
+  </script>
+</body>
+</html>

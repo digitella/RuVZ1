@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mock cmi5 Launcher — Russian Launchpad</title>
+  <link rel="stylesheet" href="css/player.css" />
+  <style>body{background:#0f172a;color:#e2e8f0;font-family:system-ui}</style>
+</head>
+<body>
+<div class="wrap">
+  <h2>🎓 Mock cmi5 LMS Launcher</h2>
+  <p class="muted">Simulates the cmi5 launch contract: builds a signed-style launch URL with
+    <code>launch_path, activity_id, registration_id, learner_id, lrs_endpoint, auth_token</code>, opens the Assignable Content
+    in an iframe, and watches Move On status from the locally captured statements.</p>
+  <div class="card no-tint">
+    <label>Learner</label><input id="learner" value="cmi5-learner@example.com" />
+    <button class="btn" id="btn-launch">Launch course (simulated)</button>
+  </div>
+  <iframe id="player-frame" style="width:100%;height:60vh;border:1px solid #334155;border-radius:12px;background:#fff"></iframe>
+  <div class="card no-tint">
+    <h3>Move On monitor</h3>
+    <p>Strategy: <b>PassedReported</b></p>
+    <p id="moveon-state" class="pill warn">Not launched</p>
+    <pre id="captured" style="max-height:30vh;overflow:auto"></pre>
+  </div>
+</div>
+<script>
+(function () {
+  'use strict';
+  var reg = crypto.randomUUID ? crypto.randomUUID() : 'mock-' + Date.now();
+  var frame = document.getElementById('player-frame');
+  var stateEl = document.getElementById('moveon-state');
+
+  document.getElementById('btn-launch').onclick = function () {
+    // 1. Build the cmi5 launch URL (relative base! works on subpaths)
+    var params = new URLSearchParams({
+      launch_path: 'index.html',
+      activity_id: 'https://russianlaunchpad.example/course/a1a2',
+      registration_id: reg,
+      learner_id: encodeURIComponent(document.getElementById('learner').value),
+      lrs_endpoint: encodeURIComponent(''),   // empty => content uses MockLRS but keeps cmi5 context
+      auth_token: 'mock-auth-token'
+    });
+    frame.src = 'index.html?' + params.toString();
+
+    // 2. Poll the mock LRS log inside the iframe for cmi5-scenario statements
+    var seen = [];
+    var iv = setInterval(function () {
+      try {
+        var log = JSON.parse(frame.contentWindow.localStorage.getItem('rl_track_xapi_statements') || '[]')
+          .filter(function (s) { return s.context && s.context.registration === reg; });
+        document.getElementById('captured').textContent = JSON.stringify(log.slice(-6), null, 2);
+        var verbs = log.map(function (s) { return s.verb.id.split('/').pop(); });
+        if (verbs.indexOf('mastered') >= 0 || (verbs.indexOf('completed') >= 0 && verbs.indexOf('passed') >= 0)) {
+          stateEl.textContent = 'Move On achieved: Passed'; stateEl.className = 'pill ok';
+        } else if (verbs.indexOf('launched') >= 0) {
+          stateEl.textContent = 'Launched · in progress'; stateEl.className = 'pill warn';
+        }
+        if (verbs.length !== seen.length) { seen = verbs; }
+      } catch (e) { /* cross-origin safe: ignore */ }
+    }, 1500);
+  };
+})();
+</script>
+</body>
+</html>

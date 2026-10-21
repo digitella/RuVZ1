@@ -1,0 +1,37 @@
+{
+  "lessonId": "l3",
+  "items": [
+    {
+      "id": "p301",
+      "ru": "Извините, как пройти к метро?",
+      "en": "Excuse me, how do I get to the metro?",
+      "ipa": "[iz-vi-NI-te kak pra-TII k mi-TRO]",
+      "hint": "projti - stress on the last syllable: pra-TII.",
+      "audio": "media/audio/p301.ogg"
+    },
+    {
+      "id": "p302",
+      "ru": "Прямо и направо",
+      "en": "Straight and then right",
+      "ipa": "[PRYA-ma i na-PRA-və]",
+      "hint": "Final 'o' reduces to 'ə'.",
+      "audio": "media/audio/p302.ogg"
+    },
+    {
+      "id": "p303",
+      "ru": "Минут пять пешком",
+      "en": "About five minutes on foot",
+      "ipa": "[mi-NUT pyat' pish-KOM]",
+      "hint": "pyat ends with a soft sign - no audible 'b', just palatalization.",
+      "audio": "media/audio/p303.ogg"
+    },
+    {
+      "id": "p304",
+      "ru": "Разрешение на временное проживание",
+      "en": "Temporary residence permit",
+      "ipa": "[ra-zre-SHI-ni-je na vre-MYEN-na-je pra-zhy-VA-ni-je]",
+      "hint": "Long official phrase - drill in three chunks: razresheniye / na vremyennoye / prozhivaniye.",
+      "audio": "media/audio/p304.ogg"
+    }
+  ]
+}
