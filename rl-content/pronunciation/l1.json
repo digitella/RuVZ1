@@ -1,0 +1,37 @@
+{
+  "lessonId": "l1",
+  "items": [
+    {
+      "id": "p101",
+      "ru": "Здравствуйте",
+      "en": "Hello (formal)",
+      "ipa": "[ZDRA-stvuy-tye]",
+      "hint": "The 'v' almost disappears: 'ZDRAS-tvuy-tye'. Stress on 'stvuy'.",
+      "audio": "media/audio/p101.ogg"
+    },
+    {
+      "id": "p102",
+      "ru": "Меня зовут Марк",
+      "en": "My name is Mark",
+      "ipa": "[mi-NYA za-VUT mark]",
+      "hint": "Stress the second syllable of menya: mi-NYA.",
+      "audio": "media/audio/p102.ogg"
+    },
+    {
+      "id": "p103",
+      "ru": "Приятно познакомиться",
+      "en": "Nice to meet you",
+      "ipa": "[pri-YAT-na pa-zna-KOM-it-sya]",
+      "hint": "Long word - drill it in three chunks.",
+      "audio": "media/audio/p103.ogg"
+    },
+    {
+      "id": "p104",
+      "ru": "До свидания",
+      "en": "Goodbye (formal)",
+      "ipa": "[da svi-DA-ni-ya]",
+      "hint": "The 'o' in 'do' reduces to 'da'.",
+      "audio": "media/audio/p104.ogg"
+    }
+  ]
+}

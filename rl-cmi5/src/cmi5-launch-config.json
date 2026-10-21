@@ -1,0 +1,19 @@
+{
+  "profileVersion": "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/cmi5_spec.md",
+  "activityId": "https://russianlaunchpad.example/course/a1a2",
+  "launchPath": "index.html",
+  "registration": "1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+  "moveOn": {
+    "strategy": "PassedReported",
+    "threshold": 1
+  },
+  "allowedVerbs": [
+    "http://adlnet.gov/expapi/verbs/launched",
+    "http://adlnet.gov/expapi/verbs/answered",
+    "http://adlnet.gov/expapi/verbs/completed",
+    "http://adlnet.gov/expapi/verbs/mastered",
+    "http://adlnet.gov/expapi/verbs/failed",
+    "http://adlnet.gov/expapi/verbs/terminated"
+  ],
+  "_note": "A real cmi5 LMS overrides these with query params: launch_path, activity_id, registration_id, learner_id, lrs_endpoint, auth_token. See mock-launcher.html which simulates that contract."
+}

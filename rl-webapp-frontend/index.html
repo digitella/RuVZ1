@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Russian Launchpad — A1-A2 Russian for English Speakers</title>
+  <!-- all asset paths are RELATIVE: works on GitHub Pages subpaths -->
+  <link rel="stylesheet" href="css/player.css" />
+</head>
+<body>
+  <nav class="topbar">
+    <span class="brand">🚀 Russian Launchpad</span>
+    <a class="tab" href="#landing" data-view="landing">Home</a>
+    <a class="tab" href="#pricing" data-view="pricing">Pricing</a>
+    <a class="tab" href="#dashboard" data-view="dashboard">Dashboard</a>
+    <a class="tab" href="#player" data-view="player">Course Player</a>
+    <a class="tab" href="#pronlab" data-view="pronlab">Pronunciation Lab</a>
+    <a class="tab" href="#speech" data-view="speech">Speech Fill-in-the-Blank</a>
+    <a class="tab hidden-if-student" href="#inbox" data-view="inbox">Inbox</a>
+    <a class="tab hidden-if-student" href="#crm" data-view="crm">CRM</a>
+    <span id="whoami" class="muted"></span>
+    <button id="btn-statements" class="btn small secondary">xAPI log</button>
+    <span id="nav-auth"><a href="#login" data-view="login" class="btn small">Login</a></span>
+    <button id="btn-logout" class="btn small danger hidden">Logout</button>
+  </nav>
+
+  <div class="wrap">
+    <!-- LANDING -->
+    <section id="view-landing">
+      <div class="hero card">
+        <h1>Speak real Russian in 90 days</h1>
+        <p class="muted">An original A1–A2 course for adult English speakers: everyday dialogues, a hands-on Pronunciation Lab,
+          Speech Fill-in-the-Blank practice, and an <b>Immigration Test Lab</b> for the A2 exam required for residence permits.</p>
+        <a href="#pricing" data-view="pricing" class="btn">See plans</a>
+        <a href="#login" data-view="login" class="btn secondary">Try the demo</a>
+      </div>
+      <div class="grid3">
+        <div class="card"><h3>Dialogue-first method</h3><p class="muted">Grammar appears inside real conversations — never as dry tables first.</p></div>
+        <div class="card"><h3>Pronunciation you can hear</h3><p class="muted">Record yourself, see the waveform, compare with reference TTS at 1x / 0.75x / 0.5x.</p></div>
+        <div class="card"><h3>Exam-ready</h3><p class="muted">миграционная карта, РВП, ВНЖ, патент — vocabulary and exam-format questions built in.</p></div>
+      </div>
+      <div class="card">
+        <h3>Demo accounts (no backend needed)</h3>
+        <table>
+          <tr><th>Role</th><th>Email</th><th>Password</th></tr>
+          <tr><td>Student</td><td>student@demo.test</td><td>demo123</td></tr>
+          <tr><td>Editor</td><td>editor@demo.test</td><td>demo123</td></tr>
+          <tr><td>Admin</td><td>admin@demo.test</td><td>admin123</td></tr>
+        </table>
+        <p class="muted">Preview mode stores everything in localStorage via mock-api.js. Tip: start with the student account, then log in as editor to answer comments in the Inbox.</p>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="view-pricing" class="hidden">
+      <h2>Pricing</h2>
+      <div class="grid3">
+        <div class="card price-card">
+          <h3>Six months</h3><div class="amount">$149</div>
+          <p class="muted">Full course + Immigration Test Lab + labs. Auto-renew available.</p>
+          <button class="btn" onclick="if(window.rlSubscribe){location.hash='#subscribe';window.rlSubscribe('six_months')}else{location.hash='#login'}">Choose</button>
+        </div>
+        <div class="card price-card">
+          <h3>One year</h3><div class="amount">$239</div>
+          <p class="muted">Everything in Six months + new lesson drops + priority instructor replies.</p>
+          <button class="btn" onclick="if(window.rlSubscribe){location.hash='#subscribe';window.rlSubscribe('one_year')}else{location.hash='#login'}">Choose</button>
+        </div>
+      </div>
+      <p class="muted">Payments run through pluggable providers: Stripe, YooKassa, or the built-in mock gateway used in this preview.</p>
+    </section>
+
+    <!-- LOGIN -->
+    <section id="view-login" class="hidden">
+      <div class="row">
+        <div class="card col">
+          <h3>Log in</h3>
+          <label>Email</label><input id="login-email" value="student@demo.test" />
+          <label>Password</label><input id="login-pass" type="password" value="demo123" />
+          <p id="login-err" class="fb-incorrect"></p>
+          <button id="btn-login" class="btn">Log in</button>
+        </div>
+        <div class="card col">
+          <h3>Create account</h3>
+          <label>Name</label><input id="reg-name" placeholder="Your name" />
+          <label>Email</label><input id="reg-email" placeholder="you@example.com" />
+          <label>Password</label><input id="reg-pass" type="password" placeholder="min 6 chars" />
+          <p id="reg-err" class="fb-incorrect"></p>
+          <button id="btn-register" class="btn">Register</button>
+          <p class="muted">New students get no subscription yet → the subscription gate will show. Use a demo account for instant access.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section id="view-dashboard" class="hidden">
+      <h2>Dashboard</h2>
+      <p id="daily-mission" class="pill ok"></p>
+      <p id="dash-progress" class="muted"></p>
+      <div id="dash-cards" class="row"></div>
+    </section>
+
+    <!-- PLAYER (also hosts Pronunciation Lab & Speech F-B tabs) -->
+    <section id="view-player" class="hidden"><div id="player-root"></div></section>
+    <section id="view-pronlab" class="hidden"><div id="player-root-pron" class="hidden"></div>
+      <p class="muted">Opening the Pronunciation Lab… (it lives inside the Course Player tabs)</p>
+    </section>
+    <section id="view-speech" class="hidden"><p class="muted">Opening Speech Fill-in-the-Blank… (inside the Course Player tabs)</p></section>
+
+    <!-- SUBSCRIPTION GATE -->
+    <section id="view-subscribe" class="hidden">
+      <div class="card">
+        <h3>Subscription</h3>
+        <p id="sub-state" class="muted"></p>
+        <p id="sub-msg"></p>
+        <div class="row">
+          <button class="btn" onclick="window.rlSubscribe && window.rlSubscribe('six_months')">Buy 6 months (mock)</button>
+          <button class="btn" onclick="window.rlSubscribe && window.rlSubscribe('one_year')">Buy 1 year (mock)</button>
+          <button id="btn-renew" class="btn secondary">Renew now</button>
+          <button id="btn-cancel" class="btn danger">Cancel auto-renew</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- INBOX -->
+    <section id="view-inbox" class="hidden"><div id="inbox-root"></div></section>
+    <!-- CRM -->
+    <section id="view-crm" class="hidden"><div id="crm-root"></div></section>
+  </div>
+
+  <dialog id="stmt-modal">
+    <h3>Mock LRS statements</h3>
+    <p id="stmt-count" class="muted"></p>
+    <pre id="stmt-dump" style="max-height:50vh;overflow:auto"></pre>
+    <form method="dialog"><button class="btn small">Close</button></form>
+  </dialog>
+
+  <div class="card no-tint" style="margin-top:8px">
+      <label style="display:inline"><input type="checkbox" id="tint-toggle" checked style="width:auto"> Language tint (teal = Russian, violet = English)</label>
+      <span class="muted" id="audio-status"></span>
+    </div>
+    <script>
+      document.getElementById('tint-toggle').addEventListener('change', function () {
+        window.RL_Tint.setEnabled(this.checked);
+        location.reload(); // re-render text nodes cleanly
+      });
+      fetch('media/audio-manifest.json').then(function (r) { return r.json(); }).then(function (m) {
+        var ph = m.items.filter(function (i) { return i.placeholder; }).length;
+        document.getElementById('audio-status').textContent = ' · Audio: ' + m.items.length + ' files ready (' + ph + ' silent placeholders — no 404s)';
+      }).catch(function () {});
+    </script>
+    <footer>Russian Launchpad · preview mode runs fully offline (mock-api + localStorage) · SCORM/xAPI/cmi5 bundles in rl-scorm/, rl-xapi/, rl-cmi5/</footer>
+
+  <script src="js/runtime-config.js"></script>
+  <script src="js/mock-api.js"></script>
+  <script src="js/tint.js"></script>
+  <script src="js/course-data.js"></script>
+  <script src="js/tts.js"></script>
+  <script src="js/recorder.js"></script>
+  <script src="js/comments.js"></script>
+  <script src="js/tracking-adapter.js"></script>
+  <script src="js/player.js"></script>
+  <script>
+    // pronlab/speech shortcuts jump into player tabs
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('[data-view]'); if (!a) return;
+      var v = a.getAttribute('data-view');
+      if (v === 'pronlab' || v === 'speech') {
+        setTimeout(function () {
+          var btns = document.querySelectorAll('#player-root .tabs button');
+          Array.prototype.forEach.call(btns, function (b) {
+            if ((v === 'pronlab' && b.textContent === 'Pronunciation Lab') || (v === 'speech' && b.textContent.indexOf('Fill-in-the-Blank') >= 0)) b.click();
+          });
+        }, 50);
+      }
+    });
+  </script>
+  <script src="js/app.js"></script>
+</body>
+</html>

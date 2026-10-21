@@ -1,0 +1,99 @@
+{
+  "lessonId": "l1",
+  "items": [
+    {
+      "id": "g1a",
+      "title": "To be is invisible: present tense of 'byt'",
+      "summary": "Russian has no present-tense copula. 'Ya student' literally means 'I student'. Past and future use byl / budu.",
+      "examples": [
+        {
+          "ru": "Я из Канады.",
+          "en": "I am from Canada."
+        },
+        {
+          "ru": "Она врач.",
+          "en": "She is a doctor."
+        },
+        {
+          "ru": "Вчера я был в Москве.",
+          "en": "Yesterday I was in Moscow."
+        }
+      ],
+      "conjugation": {
+        "infinitive": "быть",
+        "tense": "past",
+        "forms": [
+          {
+            "person": "ya",
+            "ru": "был"
+          },
+          {
+            "person": "ty",
+            "ru": "был"
+          },
+          {
+            "person": "on/ona",
+            "ru": "был / была"
+          },
+          {
+            "person": "my",
+            "ru": "были"
+          },
+          {
+            "person": "vy",
+            "ru": "были"
+          },
+          {
+            "person": "oni",
+            "ru": "были"
+          }
+        ]
+      }
+    },
+    {
+      "id": "g1b",
+      "title": "Personal pronouns and ty vs vy",
+      "summary": "Use vy with adults you don't know, officials, and groups. Use ty with friends, children, casual peers.",
+      "examples": [
+        {
+          "ru": "Как вас зовут?",
+          "en": "What is your name? (formal)"
+        },
+        {
+          "ru": "А тебя?",
+          "en": "And yours? (informal)"
+        }
+      ],
+      "conjugation": {
+        "infinitive": null,
+        "tense": null,
+        "forms": [
+          {
+            "person": "1sg",
+            "ru": "я"
+          },
+          {
+            "person": "2sg",
+            "ru": "ты"
+          },
+          {
+            "person": "3sg",
+            "ru": "он / она / оно"
+          },
+          {
+            "person": "1pl",
+            "ru": "мы"
+          },
+          {
+            "person": "2pl",
+            "ru": "вы"
+          },
+          {
+            "person": "3pl",
+            "ru": "они"
+          }
+        ]
+      }
+    }
+  ]
+}

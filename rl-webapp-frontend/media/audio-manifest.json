@@ -1,0 +1,174 @@
+{
+  "generatedBy": "scripts/build_all.py",
+  "format": "ogg (Vorbis)",
+  "items": [
+    {
+      "id": "p101",
+      "path": "media/audio/p101.ogg",
+      "text": "Здравствуйте",
+      "exists": true,
+      "placeholder": true,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "p102",
+      "path": "media/audio/p102.ogg",
+      "text": "Меня зовут Марк",
+      "exists": true,
+      "placeholder": true,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "p103",
+      "path": "media/audio/p103.ogg",
+      "text": "Приятно познакомиться",
+      "exists": true,
+      "placeholder": true,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "p104",
+      "path": "media/audio/p104.ogg",
+      "text": "До свидания",
+      "exists": true,
+      "placeholder": true,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "s101",
+      "path": "media/audio/s101.ogg",
+      "text": "Меня зовут Марк.",
+      "exists": true,
+      "placeholder": true,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "s102",
+      "path": "media/audio/s102.ogg",
+      "text": "Я родом из Канады.",
+      "exists": true,
+      "placeholder": false,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "s103",
+      "path": "media/audio/s103.ogg",
+      "text": "Привет! Как дела?",
+      "exists": true,
+      "placeholder": false,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "p201",
+      "path": "media/audio/p201.ogg",
+      "text": "Кофе, пожалуйста",
+      "exists": true,
+      "placeholder": false,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "p202",
+      "path": "media/audio/p202.ogg",
+      "text": "Спасибо",
+      "exists": true,
+      "placeholder": false,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "p203",
+      "path": "media/audio/p203.ogg",
+      "text": "Бутерброд с сыром",
+      "exists": true,
+      "placeholder": true,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "p204",
+      "path": "media/audio/p204.ogg",
+      "text": "Сколько стоит?",
+      "exists": true,
+      "placeholder": false,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "s201",
+      "path": "media/audio/s201.ogg",
+      "text": "Кофе, пожалуйста.",
+      "exists": true,
+      "placeholder": true,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "s202",
+      "path": "media/audio/s202.ogg",
+      "text": "Сколько стоит этот кофе?",
+      "exists": true,
+      "placeholder": false,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "s203",
+      "path": "media/audio/s203.ogg",
+      "text": "Я хочу бутерброд с сыром.",
+      "exists": true,
+      "placeholder": true,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "p301",
+      "path": "media/audio/p301.ogg",
+      "text": "Извините, как пройти к метро?",
+      "exists": true,
+      "placeholder": false,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "p302",
+      "path": "media/audio/p302.ogg",
+      "text": "Прямо и направо",
+      "exists": true,
+      "placeholder": true,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "p303",
+      "path": "media/audio/p303.ogg",
+      "text": "Минут пять пешком",
+      "exists": true,
+      "placeholder": false,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "p304",
+      "path": "media/audio/p304.ogg",
+      "text": "Разрешение на временное проживание",
+      "exists": true,
+      "placeholder": true,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "s301",
+      "path": "media/audio/s301.ogg",
+      "text": "Как пройти к метро?",
+      "exists": true,
+      "placeholder": false,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "s302",
+      "path": "media/audio/s302.ogg",
+      "text": "Потом направо.",
+      "exists": true,
+      "placeholder": true,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    },
+    {
+      "id": "s303",
+      "path": "media/audio/s303.ogg",
+      "text": "Я живу в России два года.",
+      "exists": true,
+      "placeholder": false,
+      "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
+    }
+  ]
+}

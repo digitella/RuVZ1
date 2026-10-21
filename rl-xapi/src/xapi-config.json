@@ -1,0 +1,8 @@
+{
+  "endpoint": "",
+  "auth": { "key": "", "secret": "" },
+  "activityId": "https://russianlaunchpad.example/course/a1a2",
+  "registration": "rl-preview-registration",
+  "agent": { "name": "preview-user", "homePage": "https://russianlaunchpad.example" },
+  "_comment": "Leave endpoint empty for the built-in Mock LRS (localStorage). For a real LRS set endpoint (e.g. https://lrs.example/xapi), auth.key/secret (basic auth) and a per-launch registration UUID. The tracking adapter falls back to mock automatically if the LRS is unreachable."
+}

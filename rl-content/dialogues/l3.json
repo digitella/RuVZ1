@@ -1,0 +1,37 @@
+{
+  "lessonId": "l3",
+  "id": "d3",
+  "title": "Asking a passer-by",
+  "lines": [
+    {
+      "speaker": "Mark",
+      "ru": "Извините, как пройти к метро?",
+      "en": "Excuse me, how do I get to the metro?",
+      "hint": "kak projti k + dative."
+    },
+    {
+      "speaker": "Local",
+      "ru": "Прямо и потом направо. Это рядом.",
+      "en": "Straight and then right. It's nearby.",
+      "hint": "pryamo = straight; napravo = to the right."
+    },
+    {
+      "speaker": "Mark",
+      "ru": "Спасибо! А далеко отсюда?",
+      "en": "Thanks! Is it far from here?",
+      "hint": "daleko ot + genitive."
+    },
+    {
+      "speaker": "Local",
+      "ru": "Нет, минут пять пешком.",
+      "en": "No, about five minutes on foot.",
+      "hint": "peshkom = on foot."
+    },
+    {
+      "speaker": "Mark",
+      "ru": "Отлично. Всего доброго!",
+      "en": "Great. Have a good day!",
+      "hint": "Formal farewell."
+    }
+  ]
+}

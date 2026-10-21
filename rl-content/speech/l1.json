@@ -1,0 +1,32 @@
+{
+  "lessonId": "l1",
+  "items": [
+    {
+      "id": "s101",
+      "sentence_ru": "Меня ___ Марк.",
+      "answer": "зовут",
+      "transcript": "Меня зовут Марк.",
+      "en": "My name is Mark.",
+      "hint": "Verb meaning 'they call'. Stress on the last syllable.",
+      "audio": "media/audio/s101.ogg"
+    },
+    {
+      "id": "s102",
+      "sentence_ru": "Я ___ из Канады.",
+      "answer": "родом",
+      "transcript": "Я родом из Канады.",
+      "en": "I come from Canada.",
+      "hint": "Word used with countries: 'Ya ~ iz ...'",
+      "audio": "media/audio/s102.ogg"
+    },
+    {
+      "id": "s103",
+      "sentence_ru": "___! Как дела?",
+      "answer": "привет",
+      "transcript": "Привет! Как дела?",
+      "en": "Hi! How are you?",
+      "hint": "Informal greeting starting with P.",
+      "audio": "media/audio/s103.ogg"
+    }
+  ]
+}

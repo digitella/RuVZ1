@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="RussianLaunchpadA1A2" version="2.0.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata><schema>ADL SCORM</schema><schemaversion>1.2</schemaversion></metadata>
+  <organizations default="RL_ORG">
+    <organization identifier="RL_ORG" structure="hierarchical">
+      <title>Russian Launchpad A1-A2</title>
+      <item identifier="l1" identifierref="res_l1"><title>Lesson 1 - Privet!</title></item>
+      <item identifier="l2" identifierref="res_l2"><title>Lesson 2 - Cafe</title></item>
+      <item identifier="l3" identifierref="res_l3"><title>Lesson 3 - Directions (Immigration Lab)</title></item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="res_l1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/><file href="scormdriver.js"/>
+    </resource>
+    <resource identifier="res_l2" type="webcontent" adlcp:scormtype="sco" href="index.html"/>
+    <resource identifier="res_l3" type="webcontent" adlcp:scormtype="sco" href="index.html"/>
+  </resources>
+</manifest>

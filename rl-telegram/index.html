@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Russian Launchpad — Telegram Mini App</title>
+  <link rel="stylesheet" href="css/player.css" />
+  <!-- Official Telegram WebApp SDK (loaded defensively; app works without it in demo mode) -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body { background: var(--bg); }
+    .tg-shell { max-width: 480px; margin: 0 auto; padding-bottom: 72px; }
+    .tg-tabs { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px;
+      display: flex; background: var(--panel); border-top: 1px solid #334155; z-index: 20; }
+    .tg-tabs button { flex: 1; padding: 12px 4px; background: none; border: 0; color: var(--muted); font-size: 12px; cursor: pointer; }
+    .tg-tabs button.active { color: var(--accent); }
+    .tg-head { padding: 12px 16px; background: var(--panel); border-bottom: 1px solid #334155; }
+    #player-root .wrap { padding: 12px; }
+  </style>
+</head>
+<body>
+<div class="tg-shell">
+  <div class="tg-head row">
+    <b>🚀 Russian Launchpad</b>
+    <span class="pill" id="tg-mode">detecting…</span>
+    <span style="flex:1"></span>
+    <button class="btn small secondary" id="tg-login">Demo login</button>
+  </div>
+
+  <section id="tg-home">
+    <div class="card">
+      <h3 id="tg-greet">Привет! 👋</h3>
+      <p class="pill ok" id="tg-mission">Daily mission loading…</p>
+      <p class="muted" id="tg-sub-state"></p>
+    </div>
+    <div class="card">
+      <h3>Lessons</h3>
+      <div id="tg-lessons"></div>
+    </div>
+    <div class="card">
+      <h3>Immigration Test Lab</h3>
+      <p class="muted">миграционная карта · регистрация · РВП · ВНЖ · патент — exam-format drills inside Lesson 3.</p>
+      <button class="btn small" data-openlesson="l3">Open Lesson 3</button>
+    </div>
+  </section>
+
+  <section id="tg-player" class="hidden"><div id="player-root"></div></section>
+  <section id="tg-lab" class="hidden"><div id="lab-root"></div><p class="muted" style="padding:12px">Pronunciation Lab & Speech Fill-in-the-Blank use the same engine as the web app — mic optional, typing fallback always on.</p></section>
+  <section id="tg-sub" class="hidden">
+    <div class="card" style="margin:12px">
+      <h3>Subscription</h3>
+      <p class="muted" id="tg-sub-info"></p>
+      <button class="btn" id="tg-buy-6">6 months — $149</button>
+      <button class="btn" id="tg-buy-12" style="margin-top:8px">1 year — $239</button>
+      <p class="muted" id="tg-pay-msg"></p>
+    </div>
+  </section>
+
+  <nav class="tg-tabs">
+    <button data-tab="home" class="active">🏠 Home</button>
+    <button data-tab="player">📖 Course</button>
+    <button data-tab="lab">🎙 Labs</button>
+    <button data-tab="sub">💳 Plan</button>
+  </nav>
+</div>
+
+<script>window.RL_RUNTIME = { mode: "preview", contentBase: ".", courseId: "russian-launchpad-a1a2", activityId: "https://russianlaunchpad.example/course/a1a2" };</script>
+<script src="js/mock-api.js"></script>
+<script src="js/tint.js"></script>
+<script src="js/course-data.js"></script>
+<script src="js/tts.js"></script>
+<script src="js/recorder.js"></script>
+<script src="js/comments.js"></script>
+<script src="js/tracking-adapter.js"></script>
+<script src="js/player.js"></script>
+<script>
+(function () {
+  'use strict';
+  var tg = window.Telegram && window.Telegram.WebApp;
+  var inTelegram = !!(tg && tg.initDataUnsafe && tg.initDataUnsafe.user);
+  document.getElementById('tg-mode').textContent = inTelegram ? 'Telegram: ' + tg.initDataUnsafe.user.first_name : 'DEMO / MOCK mode (outside Telegram)';
+  if (inTelegram) { try { tg.ready(); tg.expand(); } catch (e) {} }
+
+  function setToken(t) { localStorage.setItem('rl_token', JSON.stringify(t)); }
+  function getToken() { return (localStorage.getItem('rl_token') || '').replace(/"/g, ''); }
+
+  // Auth: real initData -> POST /telegram/auth (mock verifies nothing, API would HMAC-check)
+  function telegramAuth() {
+    if (!inTelegram) return Promise.resolve(null);
+    return window.RLMockAPI.request('POST', '/telegram/auth', {
+      initData: tg.initData, tgId: tg.initDataUnsafe.user.id, firstName: tg.initDataUnsafe.user.first_name
+    }).then(function (r) { return r.json(); }).then(function (j) { setToken(j.access_token); window.RLPlayerUser = j.user; return j.user; });
+  }
+  function demoLogin() {
+    return window.RLMockAPI.request('POST', '/auth/login', { email: 'student@demo.test', password: 'demo123' })
+      .then(function (r) { return r.json(); }).then(function (j) { setToken(j.access_token); window.RLPlayerUser = j.user; return j.user; });
+  }
+  document.getElementById('tg-login').onclick = function () { demoLogin().then(refreshAll); };
+
+  function tab(name) {
+    ['home', 'player', 'lab', 'sub'].forEach(function (v) {
+      document.getElementById('tg-' + v).classList.toggle('hidden', v !== name);
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.tg-tabs button'), function (b) {
+      b.classList.toggle('active', b.getAttribute('data-tab') === name);
+    });
+    if (name === 'lab') mountLab();
+    if (name === 'player') mountCourse();
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.tg-tabs button'), function (b) {
+    b.onclick = function () { tab(b.getAttribute('data-tab')); };
+  });
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-openlesson]');
+    if (t) { window.RLPlayer.state.lessonId = t.getAttribute('data-openlesson'); mountCourse(true); tab('player'); }
+  });
+
+  var courseMounted = false;
+  function mountCourse(reopen) {
+    if (!window.RL_COURSE) return;
+    if (!courseMounted || reopen) {
+      window.RLPlayer.mount('player-root'); courseMounted = true;
+      if (reopen) { /* re-render with new lesson */ }
+    }
+  }
+  function mountLab() {
+    var host = document.getElementById('lab-root');
+    if (host.childElementCount) return;
+    var wrapDiv = document.createElement('div'); wrapDiv.id = 'player-root';
+    host.appendChild(wrapDiv);
+    window.RLPlayer.mount('player-root');
+    setTimeout(function () {
+      var btns = document.querySelectorAll('#lab-root .tabs button');
+      Array.prototype.forEach.call(btns, function (b) { if (b.textContent === 'Pronunciation Lab') b.click(); });
+    }, 30);
+  }
+
+  function refreshAll() {
+    var u = window.RLPlayerUser;
+    if (u) document.getElementById('tg-greet').textContent = 'Привет, ' + u.name.split(' ')[0] + '! 👋';
+    window.RLMockAPI.request('GET', '/access').then(function (r) { return r.json(); }).then(function (a) {
+      var st = document.getElementById('tg-sub-state'); var info = document.getElementById('tg-sub-info');
+      var txt = a.hasAccess ? '✅ Access active (' + (a.subscription ? a.subscription.plan : 'staff') + ')' : '🔒 No active subscription — open the Plan tab.';
+      st.textContent = txt; info.textContent = txt;
+    });
+    var lessons = document.getElementById('tg-lessons'); lessons.innerHTML = '';
+    (window.RL_COURSE ? window.RL_COURSE.lessons : []).forEach(function (l) {
+      var b = document.createElement('button'); b.className = 'btn small secondary'; b.style.margin = '4px';
+      b.textContent = l.title.replace('Lesson', 'Урок'.slice(0, 0) + 'Lesson'); b.setAttribute('data-openlesson', l.id);
+      lessons.appendChild(b);
+    });
+    var missions = ['Record 2 phrases and compare with reference TTS.', 'Complete Lesson 2 quiz ≥ 70%.', 'Say 3 fill-in-the-blank words aloud.'];
+    document.getElementById('tg-mission').textContent = '🎯 Daily mission: ' + missions[new Date().getUTCDay() % 3];
+  }
+
+  function buy(plan) {
+    if (!window.RLPlayerUser) { demoLogin().then(function () { buy(plan); }); return; }
+    window.RLMockAPI.request('POST', '/payments/checkout', { plan: plan, provider: inTelegram ? 'yookassa_stub' : 'mock', autoRenew: true })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        // In production: OpenFeature/Invoice paid via Telegram Stars or YooKassa deep link.
+        return window.RLMockAPI.request('POST', '/payments/confirm', { paymentId: j.paymentId });
+      }).then(function (r) { return r.json(); }).then(function () {
+        window.RLTracking.subscription('activated', plan);
+        document.getElementById('tg-pay-msg').textContent = '✅ Activated ' + plan + ' (demo gateway).';
+        refreshAll();
+      });
+  }
+  document.getElementById('tg-buy-6').onclick = function () { buy('six_months'); };
+  document.getElementById('tg-buy-12').onclick = function () { buy('one_year'); };
+
+  window.RLCourseData.init('.').then(function () {
+    return inTelegram ? telegramAuth() : (getToken() ? window.RLMockAPI.request('GET', '/auth/me').then(function (r) { return r.ok ? r.json() : null; }) : Promise.resolve(null));
+  }).then(function (u) { if (u) window.RLPlayerUser = u; refreshAll(); })
+    .catch(function () { refreshAll(); });
+})();
+</script>
+</body>
+</html>

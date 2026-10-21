@@ -1,0 +1,48 @@
+{
+  "lessonId": "l1",
+  "items": [
+    {
+      "id": "q101",
+      "type": "multiple_choice",
+      "prompt": "Which greeting is formal?",
+      "options": [
+        "Привет",
+        "Здравствуйте",
+        "Пока"
+      ],
+      "correct": 1,
+      "explanation": "Zdravstvuyte is used with strangers, officials, elders."
+    },
+    {
+      "id": "q102",
+      "type": "multiple_choice",
+      "prompt": "Complete: Я ___ Германии.",
+      "options": [
+        "из",
+        "от",
+        "в"
+      ],
+      "correct": 0,
+      "explanation": "Origin uses iz + genitive: iz Germanii."
+    },
+    {
+      "id": "q103",
+      "type": "fill_blank",
+      "prompt": "Fill the gap: Меня ___ Анна. (they call)",
+      "answer": "зовут",
+      "explanation": "Menya zovut... = My name is..."
+    },
+    {
+      "id": "q104",
+      "type": "multiple_choice",
+      "prompt": "You say 'poka' when you...",
+      "options": [
+        "arrive",
+        "leave informally",
+        "order coffee"
+      ],
+      "correct": 1,
+      "explanation": "Poka is an informal goodbye."
+    }
+  ]
+}

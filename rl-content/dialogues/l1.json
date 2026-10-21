@@ -1,0 +1,37 @@
+{
+  "lessonId": "l1",
+  "id": "d1",
+  "title": "At a language exchange cafe",
+  "lines": [
+    {
+      "speaker": "Anna",
+      "ru": "Привет! Меня зовут Анна. А тебя?",
+      "en": "Hi! My name is Anna. And yours?",
+      "hint": "Informal greeting between peers."
+    },
+    {
+      "speaker": "Mark",
+      "ru": "Привет, Анна. Меня зовут Марк. Я из Канады.",
+      "en": "Hi, Anna. My name is Mark. I am from Canada.",
+      "hint": "из + genitive = country of origin."
+    },
+    {
+      "speaker": "Anna",
+      "ru": "Очень приятно! Ты учишь русский?",
+      "en": "Nice to meet you! Are you studying Russian?",
+      "hint": "Very + nominative adjective = 'very pleasant'."
+    },
+    {
+      "speaker": "Mark",
+      "ru": "Да, немного. Я новичок.",
+      "en": "Yes, a little. I am a beginner.",
+      "hint": "немного = a little; новичок = newcomer."
+    },
+    {
+      "speaker": "Anna",
+      "ru": "Отлично. Ну, пока!",
+      "en": "Great. Well, bye!",
+      "hint": "пока = bye (informal)."
+    }
+  ]
+}

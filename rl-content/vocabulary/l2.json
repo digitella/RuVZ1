@@ -1,0 +1,75 @@
+{
+  "lessonId": "l2",
+  "items": [
+    {
+      "id": "v201",
+      "ru": "кофе",
+      "en": "coffee",
+      "pos": "noun",
+      "hint": "Indeclinable in everyday speech; masculine."
+    },
+    {
+      "id": "v202",
+      "ru": "бутерброд",
+      "en": "sandwich (with bread)",
+      "pos": "noun",
+      "hint": "Classic Russian snack: bread + cheese/sausage."
+    },
+    {
+      "id": "v203",
+      "ru": "пожалуйста",
+      "en": "please / you're welcome",
+      "pos": "phrase",
+      "hint": "One word does both jobs."
+    },
+    {
+      "id": "v204",
+      "ru": "спасибо",
+      "en": "thank you",
+      "pos": "interjection",
+      "hint": "Stress on the second 'i': spa-SI-ba."
+    },
+    {
+      "id": "v205",
+      "ru": "счёт",
+      "en": "the bill",
+      "pos": "noun",
+      "hint": "Also: chek (receipt)."
+    },
+    {
+      "id": "v206",
+      "ru": "рубль",
+      "en": "ruble",
+      "pos": "noun",
+      "hint": "Plural: rublya (2-4), rubley (5+)."
+    },
+    {
+      "id": "v207",
+      "ru": "молоко",
+      "en": "milk",
+      "pos": "noun",
+      "hint": "Neuter; stress on the last syllable."
+    },
+    {
+      "id": "v208",
+      "ru": "сахар",
+      "en": "sugar",
+      "pos": "noun",
+      "hint": "Written 'a', pronounced reduced."
+    },
+    {
+      "id": "v209",
+      "ru": "вода",
+      "en": "water",
+      "pos": "noun",
+      "hint": "butilirovannaya voda = bottled water."
+    },
+    {
+      "id": "v210",
+      "ru": "меню",
+      "en": "menu",
+      "pos": "noun",
+      "hint": "Indeclinable neuter."
+    }
+  ]
+}

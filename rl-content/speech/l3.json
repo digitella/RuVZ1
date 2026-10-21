@@ -1,0 +1,32 @@
+{
+  "lessonId": "l3",
+  "items": [
+    {
+      "id": "s301",
+      "sentence_ru": "Как ___ к метро?",
+      "answer": "пройти",
+      "transcript": "Как пройти к метро?",
+      "en": "How do I get to the metro?",
+      "hint": "Infinitive of motion: to pass through.",
+      "audio": "media/audio/s301.ogg"
+    },
+    {
+      "id": "s302",
+      "sentence_ru": "Потом ___.",
+      "answer": "направо",
+      "transcript": "Потом направо.",
+      "en": "Then to the right.",
+      "hint": "Direction adverb starting with na-.",
+      "audio": "media/audio/s302.ogg"
+    },
+    {
+      "id": "s303",
+      "sentence_ru": "Я живу в России два ___ .",
+      "answer": "года",
+      "transcript": "Я живу в России два года.",
+      "en": "I have lived in Russia for two years.",
+      "hint": "Genitive singular after 'dva'.",
+      "audio": "media/audio/s303.ogg"
+    }
+  ]
+}
