@@ -32,25 +32,31 @@
   }
 
   // ------------------------------------------------------------- tabs ------
-  function renderTabs(host, lesson) {
+  var TAB_DEFS = [
+    ['dialogue', 'Dialogue'], ['vocab', 'Vocabulary'], ['grammar', 'Grammar'],
+    ['pron', 'Pronunciation Lab'], ['speech', 'Speech Fill-in-the-Blank'],
+    ['quiz', 'Quiz']
+  ];
+  function renderTabs(host, lesson, containerId) {
     host.innerHTML = '';
-    var defs = [
-      ['dialogue', 'Dialogue'], ['vocab', 'Vocabulary'], ['grammar', 'Grammar'],
-      ['pron', 'Pronunciation Lab'], ['speech', 'Speech Fill-in-the-Blank'],
-      ['quiz', 'Quiz']
-    ];
+    var defs = TAB_DEFS.slice();
     if (lesson.id === 'l3') defs.push(['immigration', 'Immigration Test Lab']);
     var bar = el('div', 'tabs');
     defs.forEach(function (d) {
       var b = el('button', state.tab === d[0] ? 'active' : '', d[1]);
-      b.onclick = function () { state.tab = d[0]; renderTabs(host, lesson); renderBody(lesson); };
+      b.setAttribute('data-tab', d[0]);
+      b.onclick = function () {
+        state.tab = d[0];
+        try { localStorage.setItem('rl_tab_' + containerId, d[0]); } catch (e) {}
+        renderTabs(host, lesson, containerId); renderBody(lesson, containerId);
+      };
       bar.appendChild(b);
     });
     host.appendChild(bar);
   }
 
-  function renderBody(lesson) {
-    var body = document.getElementById('lesson-body');
+  function renderBody(lesson, containerId) {
+    var body = document.getElementById('lesson-body-' + containerId) || document.getElementById('lesson-body');
     body.innerHTML = '';
     ({
       dialogue: viewDialogue, vocab: viewVocab, grammar: viewGrammar,
@@ -427,8 +433,8 @@
   }
 
   // --------------------------------------------------------- dashboard -----
-  function updateProgress() {
-    var bar = document.getElementById('course-progress');
+  function updateProgress(containerId) {
+    var bar = document.getElementById('course-progress-' + containerId) || document.getElementById('course-progress');
     if (!bar || !user()) return;
     api().request('GET', '/progress').then(function (r) { return r.json(); }).then(function (pg) {
       var total = window.RL_COURSE.lessons.length;
@@ -441,23 +447,26 @@
   function mount(containerId) {
     var root = document.getElementById(containerId);
     root.innerHTML = '';
+    // per-instance tab memory: lab views (#pronlab / #speech) remember their tab
+    try { state.tab = localStorage.getItem('rl_tab_' + containerId) || state.tab; } catch (e) {}
     var nav = el('div', 'row');
     var sel = el('select'); sel.style.width = 'auto';
     window.RL_COURSE.lessons.forEach(function (l) { var o = el('option', null, l.title); o.value = l.id; sel.appendChild(o); });
     sel.onchange = function () { state.lessonId = sel.value; open(); };
     nav.appendChild(el('b', null, 'Lessons:')); nav.appendChild(sel);
-    var progWrap = el('div', 'progressbar col'); var progBar = el('div'); progBar.id = 'course-progress'; progBar.style.width = '0%';
+    var progWrap = el('div', 'progressbar col');
+    var progBar = el('div'); progBar.id = 'course-progress-' + containerId; progBar.style.width = '0%';
     progWrap.appendChild(progBar); nav.appendChild(progWrap);
     root.appendChild(nav);
     var tabsHost = el('div'); root.appendChild(tabsHost);
-    var body = el('div'); body.id = 'lesson-body'; root.appendChild(body);
+    var body = el('div'); body.id = 'lesson-body-' + containerId; root.appendChild(body);
 
     function open() {
       var lesson = window.RLCourseData.lesson(state.lessonId);
-      renderTabs(tabsHost, lesson); renderBody(lesson); updateProgress();
+      renderTabs(tabsHost, lesson, containerId); renderBody(lesson, containerId); updateProgress(containerId);
       window.RLTracking.launch();
     }
-    state.lessonId = window.RL_COURSE.lessons[0].id;
+    if (!state.lessonId || !window.RLCourseData.lesson(state.lessonId)) state.lessonId = window.RL_COURSE.lessons[0].id;
     open();
   }
 
