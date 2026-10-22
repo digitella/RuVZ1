@@ -25,7 +25,14 @@
     if (view === 'inbox') loadInbox();
     if (view === 'crm') loadCRM();
     if (view === 'subscribe') loadSubscribe();
-    if (view === 'pronlab' || view === 'speech') ensurePlayer();
+    if (view === 'pronlab' || view === 'speech') {
+      ensurePlayer(view);
+      var hostId = PLAYER_HOSTS[view];
+      // lab views must land on their own tab, not whatever the main player left open
+      var want = LAB_TAB[view];
+      try { localStorage.setItem('rl_tab_' + hostId, want); } catch (e) {}
+      openLabTab(hostId, want);
+    }
     history.replaceState(null, '', '#' + view);
   }
 
@@ -109,13 +116,34 @@
     daily.textContent = '🎯 Daily mission: ' + missions[new Date().getDay() % missions.length];
   }
 
-  var playerMounted = false;
-  function ensurePlayer() {
-    if (!playerMounted) {
-      window.RLPlayerUser = me;
-      window.RLPlayer.mount('player-root');
-      playerMounted = true;
+  // --------------------------------------------------------- player hosts --
+  // Each view (player / pronlab / speech) gets its OWN RLPlayer instance so a
+  // direct visit to #pronlab (e.g. via GitHub Pages deep link) renders the real
+  // Pronunciation Lab instead of an empty redirect stub.
+  var PLAYER_HOSTS = { player: 'player-root', pronlab: 'player-root-pron', speech: 'player-root-speech' };
+  function ensurePlayer(view) {
+    var id = PLAYER_HOSTS[view || 'player'];
+    if (!id) return;
+    var host = document.getElementById(id);
+    if (!host || host.dataset.mounted === '1') return;
+    window.RLPlayerUser = me;
+    try {
+      window.RLPlayer.mount(id);
+      host.dataset.mounted = '1';
+      if (window.RLPlayer.instances) window.RLPlayer.instances[id] = null; // reset per-instance tab memory
+    } catch (e) {
+      host.innerHTML = '<div class="card"><p class="fb-incorrect">Player failed to load: ' + e + '</p></div>';
     }
+  }
+  // After mount, jump a lab instance straight to its tab.
+  var LAB_TAB = { pronlab: 'pron', speech: 'speech' };
+  function openLabTab(containerId, tab) {
+    var host = document.getElementById(containerId);
+    if (!host) return;
+    var btns = host.querySelectorAll('.tabs button');
+    Array.prototype.forEach.call(btns, function (b) {
+      if (b.getAttribute('data-tab') === tab) b.click();
+    });
   }
   function gatePlayer(lessonId) {
     if (!gate(function () {})) return;
@@ -216,11 +244,13 @@
   };
 
   // ---------------------------------------------------------------- boot ---
+  var pendingRoute = null;   // hash chosen before the app finished booting
   Array.prototype.forEach.call(document.querySelectorAll('[data-view]'), function (a) {
     a.addEventListener('click', function (e) {
       e.preventDefault();
       var v = a.getAttribute('data-view');
-      if (['dashboard', 'player', 'pronlab', 'speech', 'subscribe'].indexOf(v) >= 0) { if (!gate(function () { show(v); })) return; if (v !== 'dashboard' && v !== 'subscribe') ensurePlayer(); }
+      if (!window.RL_COURSE) { pendingRoute = v; }     // still booting — remember and let boot() route
+      if (['dashboard', 'player', 'pronlab', 'speech', 'subscribe'].indexOf(v) >= 0) { if (!gate(function () { show(v); })) return; if (v === 'player') ensurePlayer('player'); }
       else if (v === 'inbox' || v === 'crm') { if (!me) { show('login'); return; } show(v); }
       else show(v);
     });
@@ -235,12 +265,25 @@
       });
       return initAuthNav();
     }).then(function () {
-      var h = (location.hash || '#landing').slice(1);
-      if (me) show(h === 'landing' ? 'dashboard' : h); else if (['landing','pricing','login'].indexOf(h) >= 0) show(h); else show('landing');
-      if (!me) show('landing');
+      var h = pendingRoute || (location.hash || '#landing').slice(1);
+      pendingRoute = null;
+      route(h);
+      // deep links / back-forward navigation on GitHub Pages must re-route live
+      window.addEventListener('hashchange', function () { route((location.hash || '#landing').slice(1)); });
     }).catch(function (e) {
       document.body.insertAdjacentHTML('beforeend', '<p style="color:#f87171;padding:16px">Failed to load course data: ' + e + '. Serve via python3 -m http.server.</p>');
     });
+  }
+  function route(h) {
+    if (!h || h === '#' || h === '') h = 'landing';
+    if (['landing', 'pricing', 'login'].indexOf(h) >= 0) { show(h); return; }
+    if (['dashboard', 'player', 'pronlab', 'speech', 'subscribe', 'inbox', 'crm'].indexOf(h) >= 0) {
+      if (!me) { show('login'); return; }              // stay on #login view; user logs in → dashboard
+      if (h === 'inbox' || h === 'crm') { show(h); return; }
+      gate(function () { show(h); });                   // show() mounts lab instances itself
+      return;
+    }
+    show('landing');                                    // unknown hash → landing
   }
   boot();
 })();
