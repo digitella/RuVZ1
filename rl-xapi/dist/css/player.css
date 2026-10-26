@@ -57,3 +57,14 @@ footer { text-align: center; color: var(--muted); padding: 24px; font-size: 13px
 .progressbar { height: 8px; background: var(--panel2); border-radius: 4px; overflow: hidden; }
 .progressbar > div { height: 100%; background: var(--accent); }
 .fb-correct { color: var(--ok); font-weight: 700; } .fb-near { color: var(--warn); font-weight: 700; } .fb-incorrect { color: var(--bad); font-weight: 700; }
+
+/* ---- top-nav lesson dropdown (Fitts: large targets; Hick: grouped sections) ---- */
+nav.topbar .dropdown { position: relative; display: inline-flex; }
+nav.topbar button.dropdown-btn { background: none; border: none; color: var(--text); font: inherit; padding: 6px 10px; border-radius: 8px; cursor: pointer; }
+nav.topbar button.dropdown-btn:hover, nav.topbar button.dropdown-btn[aria-expanded="true"] { background: var(--panel2); outline: 2px solid var(--accent); }
+.dropdown-panel { position: absolute; top: calc(100% + 6px); left: 0; z-index: 50; width: min(480px, 92vw); max-height: 70vh; overflow-y: auto; background: var(--panel); border: 1px solid #334155; border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,.45); padding: 10px; }
+.dropdown-panel .dd-group-title { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 10px 6px 4px; }
+.dropdown-panel .dd-item { display: flex; gap: 8px; align-items: baseline; width: 100%; text-align: left; background: none; border: none; color: var(--text); padding: 9px 10px; border-radius: 8px; cursor: pointer; font: inherit; min-height: 44px; }
+.dropdown-panel .dd-item:hover { background: var(--panel2); }
+.dropdown-panel .dd-item .dd-num { color: var(--accent); font-weight: 700; min-width: 26px; }
+.dropdown-panel .dd-item .dd-sit { color: var(--muted); font-size: 12.5px; }

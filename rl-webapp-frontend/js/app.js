@@ -152,6 +152,54 @@
     show(me && me.role === 'student' && !(access && access.hasAccess) ? 'subscribe' : 'player');
   }
 
+  // --------------------------------------------------- lessons dropdown ----
+  var LESSON_SECTIONS = [
+    ['Basics & Getting Around', ['l1', 'l2', 'l3', 'l4', 'l5', 'l6']],
+    ['Everyday Errands', ['l7', 'l8', 'l9', 'l10', 'l11', 'l12']],
+    ['Health, Money & Services', ['l13', 'l14', 'l15', 'l16']],
+    ['Work, Study & Family', ['l17', 'l18', 'l19', 'l20']],
+    ['Immigration Test Lab', ['l21', 'l22', 'l23', 'l24', 'l25', 'l26', 'l27']]
+  ];
+  function buildLessonsDropdown() {
+    var panel = document.getElementById('lesson-dropdown');
+    var btn = document.getElementById('btn-nav-lessons');
+    if (!panel || !btn || !window.RL_COURSE) return;
+    panel.innerHTML = '';
+    var byId = {};
+    window.RL_COURSE.lessons.forEach(function (l) { byId[l.id] = l; });
+    var placed = {};
+    LESSON_SECTIONS.forEach(function (sec) {
+      var items = sec[1].filter(function (id) { return byId[id]; });
+      if (!items.length) return;
+      items.forEach(function (id) { placed[id] = true; });
+      panel.appendChild(Object.assign(document.createElement('div'), { className: 'dd-group-title', textContent: sec[0] }));
+      items.forEach(function (id) {
+        var l = byId[id];
+        var b = document.createElement('button'); b.className = 'dd-item'; b.type = 'button'; b.setAttribute('role', 'menuitem');
+        b.innerHTML = '<span class="dd-num">' + l.order + '</span><span>' + l.title +
+          '</span><span class="dd-sit">' + (l.situation || '') + '</span>';
+        b.onclick = function () { closeDropdown(); gatePlayer(l.id); };
+        panel.appendChild(b);
+      });
+    });
+    // any lesson not covered by the section map (future additions) goes to "More"
+    var rest = window.RL_COURSE.lessons.filter(function (l) { return !placed[l.id]; });
+    if (rest.length) {
+      panel.appendChild(Object.assign(document.createElement('div'), { className: 'dd-group-title', textContent: 'More' }));
+      rest.forEach(function (l) {
+        var b = document.createElement('button'); b.className = 'dd-item'; b.type = 'button';
+        b.innerHTML = '<span class="dd-num">' + l.order + '</span><span>' + l.title + '</span>';
+        b.onclick = function () { closeDropdown(); gatePlayer(l.id); };
+        panel.appendChild(b);
+      });
+    }
+    function openDropdown() { panel.classList.remove('hidden'); btn.setAttribute('aria-expanded', 'true'); }
+    function closeDropdown() { panel.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false'); }
+    btn.onclick = function (e) { e.stopPropagation(); panel.classList.contains('hidden') ? openDropdown() : closeDropdown(); };
+    document.addEventListener('click', function (e) { if (!panel.contains(e.target) && e.target !== btn) closeDropdown(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDropdown(); });
+  }
+
   // ------------------------------------------------------- subscription ----
   function loadSubscribe() {
     var host = $('#sub-state');
@@ -265,6 +313,7 @@
       });
       return initAuthNav();
     }).then(function () {
+      buildLessonsDropdown();
       var h = pendingRoute || (location.hash || '#landing').slice(1);
       pendingRoute = null;
       route(h);
