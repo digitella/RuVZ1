@@ -1,12 +1,2 @@
-dist/
-build/
-node_modules/
-.env
-.env.local
-*.env.*
-.vscode/
-.idea/
-*.swp
-*.swo
-.DS_Store
-Thumbs.db
+__pycache__/
+*.pyc
