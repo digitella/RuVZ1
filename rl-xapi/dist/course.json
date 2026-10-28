@@ -1622,7 +1622,7 @@
           "options": [
             "бронь",
             "бро́нь",
-            "бронь́"
+            "бронь"
           ],
           "correct": 0,
           "explain": "BRON' — one syllable word basically; stress on о."
@@ -1811,7 +1811,7 @@
         },
         {
           "id": "p704",
-          "ru": "Тухие́ часу́",
+          "ru": "Ти́хие часу́",
           "en": "Quiet hours",
           "ipa": "",
           "hint": "TI-hi-ya cha-SY. Plural stress moves.",
@@ -2610,7 +2610,7 @@
         },
         {
           "id": "p1003",
-          "ru": "Комуссия́",
+          "ru": "Коми́ссия",
           "en": "Fee",
           "ipa": "",
           "hint": "ka-MI-si-ya. Double с sounded once.",
@@ -2637,7 +2637,7 @@
         },
         {
           "id": "s1002",
-          "sentence_ru": "Ныжен ___ .",
+          "sentence_ru": "Ну́жен ___ .",
           "answer": "па́спорт",
           "transcript": "Ну́жен па́спорт.",
           "en": "A passport is required.",
@@ -3943,7 +3943,7 @@
       "pronunciation": [
         {
           "id": "p1501",
-          "ru": "Поликлуника́",
+          "ru": "Поликлини́ка",
           "en": "Clinic",
           "ipa": "",
           "hint": "po-li-KLI-ni-ka. Loan stress stays on i.",
@@ -3995,9 +3995,9 @@
         },
         {
           "id": "s1503",
-          "sentence_ru": "Ныжен ___ лист.",
+          "sentence_ru": "Ну́жен ___ лист.",
           "answer": "больни́чный",
-          "transcript": "Ныже́н больни́чный ли́ст.",
+          "transcript": "Ну́жен больни́чный ли́ст.",
           "en": "I need a sick-note.",
           "hint": "For work absence.",
           "audio": "media/audio/s1503.ogg"
@@ -4502,7 +4502,7 @@
       "pronunciation": [
         {
           "id": "p1701",
-          "ru": "Многофункцуональны́й",
+          "ru": "Многофункцио́нальный",
           "en": "Multifunctional",
           "ipa": "",
           "hint": "mna-fa-un-ktSI-a-n'ny. Long! Chunk it.",
@@ -4763,7 +4763,7 @@
           "summary": "Experience length.",
           "examples": [
             {
-              "ru": "Опы́т четы́ре лет́.",
+              "ru": "Опы́т четы́ре ле́т.",
               "en": ""
             }
           ],
@@ -5355,9 +5355,9 @@
       "speechBlanks": [
         {
           "id": "s2001",
-          "sentence_ru": "Ныжна ___ и медка́рта.",
+          "sentence_ru": "Ну́жна ___ и медка́рта.",
           "answer": "путё́вка",
-          "transcript": "Ныжна́ путё́вка и медка́рта.",
+          "transcript": "Ну́жна путё́вка и медка́рта.",
           "en": "A voucher and medical card are needed.",
           "hint": "Kindergarten placement paper.",
           "audio": "media/audio/s2001.ogg"
@@ -5602,7 +5602,7 @@
         },
         {
           "id": "p2103",
-          "ru": "Пригласу́ть",
+          "ru": "Пригласи́ть",
           "en": "To invite",
           "ipa": "",
           "hint": "pri-gla-SIT'. Perfective.",
@@ -5841,7 +5841,7 @@
           "summary": "In-progress news.",
           "examples": [
             {
-              "ru": "Идё́т эваку́ация. / Идё́т дождь́.",
+              "ru": "Идё́т эваку́ация. / Идё́т дождь.",
               "en": ""
             }
           ],
@@ -6122,7 +6122,7 @@
       "pronunciation": [
         {
           "id": "p2301",
-          "ru": "Продлу́ть",
+          "ru": "Продли́ть",
           "en": "To extend",
           "ipa": "",
           "hint": "prod-LIT'. Cluster дл hard — slow drill.",
@@ -6165,9 +6165,9 @@
         },
         {
           "id": "s2302",
-          "sentence_ru": "Ныжен че́к за ___ .",
+          "sentence_ru": "Ну́жен че́к за ___ .",
           "answer": "госпошлину́",
-          "transcript": "Ныже́н че́к за́ госпошлину́.",
+          "transcript": "Ну́жен че́к за́ госпошлину́.",
           "en": "Receipt for the state fee is needed.",
           "hint": "Official payment.",
           "audio": "media/audio/s2302.ogg"
@@ -6689,7 +6689,7 @@
       "pronunciation": [
         {
           "id": "p2501",
-          "ru": "Предствуться́",
+          "ru": "Представьте́сь",
           "en": "Introduce yourself",
           "ipa": "",
           "hint": "pit-STVIT'-sa. Consonant cluster!",
@@ -6725,7 +6725,7 @@
           "id": "s2501",
           "sentence_ru": "___ , пожа́луйста.",
           "answer": "Представьтесь",
-          "transcript": "Предствуться́, пожа́луйста.",
+          "transcript": "Представьте́сь, пожа́луйста.",
           "en": "Please introduce yourself.",
           "hint": "Exam opener.",
           "audio": "media/audio/s2501.ogg"
@@ -6752,7 +6752,7 @@
       "quiz": [
         {
           "id": "q2501",
-          "question": "'Предствуться' means…",
+          "question": "'Представьтесь' means…",
           "options": [
             "introduce yourself",
             "take a break",

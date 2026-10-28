@@ -303,24 +303,28 @@
   }
 
   function speechItem(host, lesson, sb) {
-    var box = el('div'); box.style.cssText = 'border-top:1px solid #334155;padding:12px 0;margin-top:8px';
+    var box = el('div'); box.style.cssText = 'border-top:1px solid var(--surface-line);padding:12px 0;margin-top:8px';
     var shown = sb.sentence_ru.replace('___', '______');
     box.appendChild(el('div', null, shown)).style.fontSize = '19px';
     box.appendChild(el('div', 'muted', sb.en));
     box.appendChild(el('div', 'muted', '💡 Hint: ' + sb.hint));
 
+    // Buttons live in a .row so CSS gives them a clear gap (Listen | Say the word)
+    var actions = el('div', 'row'); actions.style.marginTop = '8px';
     var listenBtn = el('button', 'btn small secondary', '🔊 Listen');
     listenBtn.onclick = function () { window.RLTTS.playReference(sb, { rate: state.rate, audioEl: hiddenAudio() }); };
-    box.appendChild(listenBtn);
+    actions.appendChild(listenBtn);
 
     var sayBtn = el('button', 'btn', '● Say the word');
     var status = el('span', 'muted', ' ');
+    actions.appendChild(sayBtn); actions.appendChild(status);
+    box.appendChild(actions);
     var typeIn = el('input'); typeIn.placeholder = '…or type the missing word (typing fallback)';
     var checkType = el('button', 'btn small', 'Check typed answer');
     var fb = el('div'); fb.className = window.RLRecorder.srAvailable() && window.RLRecorder.micAvailable() ? 'hidden' : '';
     if (fb.className !== 'hidden') fb.appendChild(el('p', 'muted', 'Speech recognition unavailable → typing fallback enabled automatically.'));
     fb.appendChild(typeIn); fb.appendChild(checkType);
-    box.appendChild(sayBtn); box.appendChild(status); box.appendChild(fb);
+    box.appendChild(fb);
 
     var resultLine = el('div'); box.appendChild(resultLine);
     var attemptsUl = el('ul', 'attempts'); box.appendChild(attemptsUl);

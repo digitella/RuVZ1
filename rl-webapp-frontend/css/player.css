@@ -1,28 +1,33 @@
 /* Russian Launchpad — shared player styles (also used by SCORM/xAPI/cmi5 bundles)
- * UX notes (NN/g / Laws of UX):
- * - Color is never the only cue: RU/EN tints pair hue with weight + underline offset
- *   (color-blind safe, WCAG AA verified: tint text >= 5.3:1 on its chip).
- * - Fitts's law: buttons have min-height 44px, generous hit areas.
+ * UX notes (NN/g / Laws of UX / iOS Human Interface Guidelines):
+ * - Palette follows the iOS system-color families: teal & indigo/violet as ACCENTS
+ *   on quiet neutral backgrounds — never full-saturation fills behind text.
+ * - Color is never the only cue: RU/EN tints pair hue with weight + underline
+ *   (color-blind safe). Every tint fg/bg pair is WCAG AA verified (>= 4.5:1).
+ * - Fitts's law: buttons have min-height 44px, generous hit areas and gaps.
  * - Miller/Hick: content chunks are separated by clear surfaces, not noise.
  */
 :root {
   --fs: 1;            /* user font scale: 0.9 .. 1.3 (A-/A+ controls) */
-  --bg: #0f172a; --panel: #1e293b; --panel2: #273648; --text: #e2e8f0; --muted: #94a3b8;
-  --accent: #22d3ee; --ok: #34d399; --warn: #fbbf24; --bad: #f87171;
-  /* Language tint — calm, desaturated chips on dark surfaces (no neon):
-     #7fd1c8 on #1e293b ≈ 7.4:1, #c3b3e6 on #1e293b ≈ 7.9:1 (WCAG AA/AAA). */
-  --tint-ru-bg: rgba(45, 148, 138, .16); --tint-ru-border: rgba(102, 180, 172, .45); --tint-ru-fg: #8ed6cd;
-  --tint-en-bg: rgba(124, 108, 190, .16); --tint-en-border: rgba(163, 148, 214, .45); --tint-en-fg: #c3b3e6;
-  --surface-line: #334155; --surface-line2: #475569; --input-bg: #0b1220; --hover-bg: #31435a; --stress-fg: #fde68a; --btn-on-fg: #06222b;
+  /* Dark theme — iOS "system background (dark)" neutrals */
+  --bg: #1c1c1e; --panel: #2c2c2e; --panel2: #3a3a3c; --text: #f2f2f7; --muted: #aeaeb2;
+  --accent: #0a84ff; --btn-bg: #0060df; --ok: #30d158; --warn: #ffd60a; --bad: #ff453a;
+  /* Language tint (iOS systemTeal #64D2FF family, softened for reading):
+     #5ac8fa on #2c2c2e ≈ 8.9:1, #bf5af2 on #2c2c2e ≈ 4.8:1 (AA). Chips use a
+     subtle wash instead of saturated fills — no neon, no psychedelic contrast. */
+  --tint-ru-bg: rgba(100, 210, 255, .14); --tint-ru-border: rgba(100, 210, 255, .55); --tint-ru-fg: #7ad4ff;
+  --tint-en-bg: rgba(191, 90, 242, .16); --tint-en-border: rgba(191, 90, 242, .55); --tint-en-fg: #d3a9f7;
+  --surface-line: #3a3a3c; --surface-line2: #48484a; --input-bg: #1c1c1e; --hover-bg: #48484a; --stress-fg: #ffd60a; --btn-on-fg: #ffffff;
 }
-/* Light theme (html.theme-light) — same tokens, light surfaces. Contrast kept >= AA:
-   teal #0f766e on white ≈ 4.9:1, violet #6d28d9 on white ≈ 8.1:1. */
+/* Light theme — iOS "system background (light)" neutrals (#F2F2F7 / #FFFFFF) */
 html.theme-light {
-  --bg: #f4f6fb; --panel: #ffffff; --panel2: #e8edf5; --text: #111a28; --muted: #51617a;
-  --accent: #0e7490; --ok: #047857; --warn: #92400e; --bad: #b91c1c;
-  --tint-ru-bg: rgba(13, 148, 136, .14); --tint-ru-border: rgba(15, 118, 110, .55); --tint-ru-fg: #0f766e;
-  --tint-en-bg: rgba(124, 58, 237, .12); --tint-en-border: rgba(109, 40, 217, .50); --tint-en-fg: #6d28d9;
-  --surface-line: #cbd5e1; --surface-line2: #94a3b8; --input-bg: #ffffff; --hover-bg: #d7deea; --stress-fg: #b45309; --btn-on-fg: #ecfeff;
+  --bg: #f2f2f7; --panel: #ffffff; --panel2: #e5e5ea; --text: #1c1c1e; --muted: #6e6e73;
+  --accent: #0071e3; --btn-bg: #0060c0; --ok: #34c759; --warn: #b25000; --bad: #d70015;
+  /* iOS systemTeal #30b0c7 on white ≈ 3.0:1 — too low for body text, so we use
+     the accessible dark variant #0a6f7d (≈ 5.6:1) and systemIndigo #3634a3 (≈ 8.6:1). */
+  --tint-ru-bg: rgba(48, 176, 199, .16); --tint-ru-border: rgba(10, 111, 125, .60); --tint-ru-fg: #0a6f7d;
+  --tint-en-bg: rgba(88, 86, 214, .14); --tint-en-border: rgba(54, 52, 163, .55); --tint-en-fg: #3634a3;
+  --surface-line: #d1d1d6; --surface-line2: #aeaeb2; --input-bg: #ffffff; --hover-bg: #e5e5ea; --stress-fg: #7a4a00; --btn-on-fg: #ffffff;
 }
 html.tint-off .tint-ru, html.tint-off .tint-en { background: none; color: inherit; padding: 0; border-radius: 0; border-bottom: 0; font-weight: inherit; }
 * { box-sizing: border-box; }
@@ -32,10 +37,12 @@ h1,h2,h3 { font-weight: 700; }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 16px; }
 .card { background: var(--panel); border-radius: 12px; padding: 16px; margin-bottom: 16px; border: 1px solid var(--surface-line); }
 /* Buttons — Fitts's law (min 44px targets), clear affordance, hover/active feedback */
-.btn { background: var(--accent); color: var(--btn-on-fg); border: 0; border-radius: 10px; padding: 10px 18px; min-height: 44px; font-size: calc(15px * var(--fs)); font-weight: 700; cursor: pointer; box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, 0 2px 6px rgba(0,0,0,.35); transition: filter .15s ease, transform .05s ease; }
+.btn { background: var(--btn-bg); color: var(--btn-on-fg); border: 0; border-radius: 10px; padding: 10px 18px; min-height: 44px; font-size: calc(15px * var(--fs)); font-weight: 700; cursor: pointer; box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, 0 2px 6px rgba(0,0,0,.35); transition: filter .15s ease, transform .05s ease; }
 .btn:hover { filter: brightness(1.12); }
 .btn:active { transform: translateY(1px); }
-.btn:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+/* Spacing between adjacent buttons (Hick/Miller: quiet grouping, no cramped taps) */
+.row > .btn + .btn, .row > .btn + span, .row > span + .btn { margin-left: 10px; }
 .btn.secondary { background: var(--panel2); color: var(--text); border: 1px solid var(--surface-line2); }
 .btn.secondary:hover { background: var(--hover-bg); }
 .btn.danger { background: var(--bad); color: #2b0606; }
@@ -46,7 +53,7 @@ label { display: block; margin: 8px 0 4px; color: var(--muted); font-size: calc(
 .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 .col { flex: 1; min-width: 260px; }
 .muted { color: var(--muted); font-size: calc(14px * var(--fs)); }
-.pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: calc(12px * var(--fs)); background: var(--panel2); border: 1px solid var(--surface-line)2; }
+.pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: calc(12px * var(--fs)); background: var(--panel2); border: 1px solid var(--surface-line2); }
 .pill.ok { color: var(--ok); border-color: var(--ok); }
 .pill.warn { color: var(--warn); border-color: var(--warn); }
 .pill.bad { color: var(--bad); border-color: var(--bad); }
@@ -55,31 +62,33 @@ label { display: block; margin: 8px 0 4px; color: var(--muted); font-size: calc(
 .tint-ru { display: inline-block; background: var(--tint-ru-bg); color: var(--tint-ru-fg); border-bottom: 2px solid var(--tint-ru-border); padding: 1px 6px 0; border-radius: 5px; font-weight: 650; line-height: 1.45; }
 /* Stressed vowel: rendered as bold letter (accent mark removed by tint.js).
    Weight 800 + slight warm highlight makes the stress pop without a combining glyph. */
-.stress { font-weight: 800; color: inherit; text-decoration: none; }
-.stress::after { content: '\0301'; width: 0; font-size: 0; line-height: 0; display: inline-block; overflow: hidden; }  /* mark kept for a11y/TTS copy, not painted */
-html.tint-off .stress { font-weight: inherit; }
+/* Stress indicator = BOLD vowel letter only (user requirement).
+   tint.js converts 'vowel + U+0301' into <b class="stress"> — the combining
+   mark is never painted, so no accent glyph can leak into the UI. */
+.stress { font-weight: 800; color: var(--stress-fg); }
+html.tint-off .stress { font-weight: 800; color: var(--stress-fg); }
 .tint-en { display: inline-block; background: var(--tint-en-bg); color: var(--tint-en-fg); border-bottom: 2px solid var(--tint-en-border); padding: 1px 6px 0; border-radius: 5px; font-style: italic; line-height: 1.45; }
 /* Tint legend — explicit key, so meaning never depends on color alone */
-.tint-legend { display: flex; gap: 14px; align-items: center; margin: 0 0 12px; padding: 8px 12px; background: var(--panel2); border: 1px solid var(--surface-line)2; border-radius: 10px; font-size: calc(13px * var(--fs)); color: var(--muted); width: fit-content; }
+.tint-legend { display: flex; gap: 14px; align-items: center; margin: 0 0 12px; padding: 8px 12px; background: var(--panel2); border: 1px solid var(--surface-line2); border-radius: 10px; font-size: calc(13px * var(--fs)); color: var(--muted); width: fit-content; }
 .tint-legend .lg-ru { color: var(--tint-ru-fg); font-weight: 700; }
 .tint-legend .lg-en { color: var(--tint-en-fg); font-weight: 700; font-style: italic; }
 nav.topbar { display: flex; gap: 14px; align-items: center; padding: 10px 16px; background: var(--panel); border-bottom: 1px solid var(--surface-line); position: sticky; top: 0; z-index: 10; flex-wrap: wrap; }
 nav.topbar .brand { font-weight: 800; color: var(--accent); }
 nav.topbar a.tab { color: var(--text); padding: 10px 14px; min-height: 44px; display: inline-flex; align-items: center; border-radius: 10px; font-weight: 600; }
-nav.topbar a.tab.active { background: rgba(34, 211, 238, .16); color: var(--accent); outline: 2px solid rgba(34, 211, 238, .55); }
+nav.topbar a.tab.active { background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); outline: 2px solid var(--accent); }
 nav.topbar a.tab:hover { background: var(--panel2); }
 /* Tabs — larger hit targets (Fitts), unambiguous active state via color + weight + border */
 .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
 .tabs button { background: var(--panel2); color: var(--text); border: 1px solid var(--surface-line2); border-radius: 10px; padding: 10px 16px; min-height: 44px; cursor: pointer; font-weight: 600; font-size: calc(14.5px * var(--fs)); }
 .tabs button:hover { background: var(--hover-bg); }
-.tabs button.active { background: rgba(34, 211, 238, .16); color: var(--accent); border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: -2px; }
+.tabs button.active { background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: -2px; }
 table { width: 100%; border-collapse: collapse; }
 th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--surface-line); font-size: calc(14px * var(--fs)); }
-dialog, .modal { background: var(--panel); color: var(--text); border: 1px solid var(--surface-line)2; border-radius: 12px; padding: 16px; }
+dialog, .modal { background: var(--panel); color: var(--text); border: 1px solid var(--surface-line2); border-radius: 12px; padding: 16px; }
 canvas.wave { width: 100%; height: 64px; background: var(--input-bg); border-radius: 8px; border: 1px solid var(--surface-line); }
 .rec-timer { font-variant-numeric: tabular-nums; font-size: calc(20px * var(--fs)); }
 .attempts li { display: flex; gap: 8px; align-items: center; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--surface-line); list-style: none; }
-.quiz-opt { display: block; margin: 6px 0; padding: 8px 12px; background: var(--panel2); border: 1px solid var(--surface-line)2; border-radius: 8px; cursor: pointer; }
+.quiz-opt { display: block; margin: 6px 0; padding: 8px 12px; background: var(--panel2); border: 1px solid var(--surface-line2); border-radius: 8px; cursor: pointer; }
 .quiz-opt.sel { outline: 2px solid var(--accent); }
 .quiz-opt.correct { border-color: var(--ok); background: rgba(52,211,153,.12); }
 .quiz-opt.wrong { border-color: var(--bad); background: rgba(248,113,113,.12); }
@@ -119,8 +128,8 @@ nav.topbar button.dropdown-btn:hover, nav.topbar button.dropdown-btn[aria-expand
 .switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
 .switch .track { width: 58px; height: 32px; border-radius: 999px; background: var(--panel2); border: 2px solid var(--surface-line2); transition: background .2s ease, border-color .2s ease; display: inline-block; position: relative; flex: none; }
 .switch .thumb { position: absolute; top: 2px; left: 2px; width: 24px; height: 24px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.4); transition: transform .2s cubic-bezier(.4,0,.2,1); }
-.switch input:checked + .track { background: #0f766e; border-color: #0f766e; }
-html.theme-light .switch input:checked + .track { background: #0d9488; border-color: #0d9488; }
+.switch input:checked + .track { background: #34c759; border-color: #34c759; } /* iOS green */
+html.theme-light .switch input:checked + .track { background: #34c759; border-color: #34c759; }
 .switch input:checked + .track .thumb { transform: translateX(26px); }
 .switch input:focus-visible + .track { outline: 3px solid var(--accent); outline-offset: 2px; }
 /* Tint switch uses violet when ON to echo the EN tint family? No — keep one accent for "on"
