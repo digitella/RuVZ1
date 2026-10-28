@@ -5,7 +5,7 @@
     {
       "id": "p101",
       "path": "media/audio/p101.ogg",
-      "text": "Здравствуйте́",
+      "text": "Здра́вствуйте",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -37,7 +37,7 @@
     {
       "id": "s101",
       "path": "media/audio/s101.ogg",
-      "text": "Меня́́ зову́т Ма́рк.",
+      "text": "Меня́ зову́т Ма́рк.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -53,7 +53,7 @@
     {
       "id": "s103",
       "path": "media/audio/s103.ogg",
-      "text": "Приве́т! Ка́к дела́́?",
+      "text": "Приве́т! Ка́к дела́?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -69,7 +69,7 @@
     {
       "id": "p202",
       "path": "media/audio/p202.ogg",
-      "text": "Кофе́́, пожа́луйста",
+      "text": "Кофе́, пожа́луйста",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -85,7 +85,7 @@
     {
       "id": "p204",
       "path": "media/audio/p204.ogg",
-      "text": "Приятного́ аппетита́!",
+      "text": "Прия́тного аппети́та!",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -93,7 +93,7 @@
     {
       "id": "s201",
       "path": "media/audio/s201.ogg",
-      "text": "Кофе́́, пожа́луйста.",
+      "text": "Кофе́, пожа́луйста.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -117,7 +117,7 @@
     {
       "id": "p301",
       "path": "media/audio/p301.ogg",
-      "text": "Извини́те, где́ метро́́?",
+      "text": "Извини́те, где́ метро́?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -149,7 +149,7 @@
     {
       "id": "s301",
       "path": "media/audio/s301.ogg",
-      "text": "Где́ метро́́?",
+      "text": "Где́ метро́?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -157,7 +157,7 @@
     {
       "id": "s302",
       "path": "media/audio/s302.ogg",
-      "text": "Иди́те прямо́́ и поверни́те напра́во.",
+      "text": "Иди́те прямо́ и поверни́те напра́во.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -181,7 +181,7 @@
     {
       "id": "p402",
       "path": "media/audio/p402.ogg",
-      "text": "Мéсто у óкна́",
+      "text": "Место́ у окна́",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -189,7 +189,7 @@
     {
       "id": "p403",
       "path": "media/audio/p403.ogg",
-      "text": "Поса́дка чере́з ча́с",
+      "text": "Поса́дка че́рез ча́с",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -221,7 +221,7 @@
     {
       "id": "s403",
       "path": "media/audio/s403.ogg",
-      "text": "Где́ багажное́ отделе́ние?",
+      "text": "Где́ бага́жное отделе́ние?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -269,7 +269,7 @@
     {
       "id": "s502",
       "path": "media/audio/s502.ogg",
-      "text": "Е́сть про́бки? Мы́ опáздываем.",
+      "text": "Е́сть про́бки? Мы́ опазды́ваем.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -277,7 +277,7 @@
     {
       "id": "s503",
       "path": "media/audio/s503.ogg",
-      "text": "Остано́вьте у вхо́да, пожа́луйста.",
+      "text": "Остано́вьте у входа́, пожа́луйста.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -285,7 +285,7 @@
     {
       "id": "p601",
       "path": "media/audio/p601.ogg",
-      "text": "У ва́с е́сть брóнь?",
+      "text": "У ва́с е́сть бро́нь?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -293,7 +293,7 @@
     {
       "id": "p602",
       "path": "media/audio/p602.ogg",
-      "text": "Завтра́к включё́н",
+      "text": "За́втрак вклю́чён",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -301,7 +301,7 @@
     {
       "id": "p603",
       "path": "media/audio/p603.ogg",
-      "text": "До́ двена́дцати часо́в",
+      "text": "До́ двенадца́ти часо́в",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -309,7 +309,7 @@
     {
       "id": "p604",
       "path": "media/audio/p604.ogg",
-      "text": "Не́ рабо́тает кондиционе́р",
+      "text": "Не́ работа́ет кондиционе́р",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -317,7 +317,7 @@
     {
       "id": "s601",
       "path": "media/audio/s601.ogg",
-      "text": "У ва́с е́сть брóнь на́ и́мя Сми́та?",
+      "text": "У ва́с е́сть бро́нь на́ имя́ Сми́та?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -349,7 +349,7 @@
     {
       "id": "p702",
       "path": "media/audio/p702.ogg",
-      "text": "Стирáльная машина́́",
+      "text": "Стиральна́я машина́",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -357,7 +357,7 @@
     {
       "id": "p703",
       "path": "media/audio/p703.ogg",
-      "text": "Коммунáльные плате́жи",
+      "text": "Коммуна́льные плате́жи",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -365,7 +365,7 @@
     {
       "id": "p704",
       "path": "media/audio/p704.ogg",
-      "text": "Тúхие ча́сú",
+      "text": "Тухие́ часу́",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -381,7 +381,7 @@
     {
       "id": "s702",
       "path": "media/audio/s702.ogg",
-      "text": "Сегóдня шуми́т стирáльная машина́́.",
+      "text": "Сего́дня шуми́т стиральна́я машина́.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -389,7 +389,7 @@
     {
       "id": "s703",
       "path": "media/audio/s703.ogg",
-      "text": "Кто́ пла́тит за́ коммунáлку?",
+      "text": "Кто́ плати́т за́ коммуна́лку?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -397,7 +397,7 @@
     {
       "id": "p801",
       "path": "media/audio/p801.ogg",
-      "text": "Два́́ килогрáмма",
+      "text": "Два́ килогра́мма",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -405,7 +405,7 @@
     {
       "id": "p802",
       "path": "media/audio/p802.ogg",
-      "text": "Полкилогрáмма",
+      "text": "Полкилогра́мма",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -413,7 +413,7 @@
     {
       "id": "p803",
       "path": "media/audio/p803.ogg",
-      "text": "На́ кáссе",
+      "text": "На́ ка́ссе",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -429,7 +429,7 @@
     {
       "id": "s801",
       "path": "media/audio/s801.ogg",
-      "text": "В конце́вом отделе́́, напра́во.",
+      "text": "В конце́вом отделе́, напра́во.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -461,7 +461,7 @@
     {
       "id": "p902",
       "path": "media/audio/p902.ogg",
-      "text": "Торгóваться",
+      "text": "Торгова́ться",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -469,7 +469,7 @@
     {
       "id": "p903",
       "path": "media/audio/p903.ogg",
-      "text": "Килогрáмм помидóров",
+      "text": "Килогра́мм помидо́ров",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -485,7 +485,7 @@
     {
       "id": "s901",
       "path": "media/audio/s901.ogg",
-      "text": "Ско́лько пучóк?",
+      "text": "Ско́лько пучо́к?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -501,7 +501,7 @@
     {
       "id": "s903",
       "path": "media/audio/s903.ogg",
-      "text": "Помидóры спéлые, пожа́луйста.",
+      "text": "Помидо́ры спелы́е, пожа́луйста.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -517,7 +517,7 @@
     {
       "id": "p1002",
       "path": "media/audio/p1002.ogg",
-      "text": "Шестьдеся́т два́́",
+      "text": "Шестьдеся́т два́",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -525,7 +525,7 @@
     {
       "id": "p1003",
       "path": "media/audio/p1003.ogg",
-      "text": "Комúссия",
+      "text": "Комуссия́",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -565,7 +565,7 @@
     {
       "id": "p1101",
       "path": "media/audio/p1101.ogg",
-      "text": "Сúм-ка́рта",
+      "text": "Сум-ка́рта",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -573,7 +573,7 @@
     {
       "id": "p1102",
       "path": "media/audio/p1102.ogg",
-      "text": "Тарúф",
+      "text": "Тару́ф",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -589,7 +589,7 @@
     {
       "id": "p1104",
       "path": "media/audio/p1104.ogg",
-      "text": "Попóлнить счё́т",
+      "text": "Пополни́ть счё́т",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -605,7 +605,7 @@
     {
       "id": "s1102",
       "path": "media/audio/s1102.ogg",
-      "text": "Како́й тари́ф вы́ предлага́ете?",
+      "text": "Како́й та́риф вы́ предлага́ете?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -621,7 +621,7 @@
     {
       "id": "p1201",
       "path": "media/audio/p1201.ogg",
-      "text": "Пересáдка",
+      "text": "Переса́дка",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -629,7 +629,7 @@
     {
       "id": "p1202",
       "path": "media/audio/p1202.ogg",
-      "text": "Следующая́ остановка́",
+      "text": "Сле́дующая остано́вка",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -637,7 +637,7 @@
     {
       "id": "p1203",
       "path": "media/audio/p1203.ogg",
-      "text": "Турникéт",
+      "text": "Турнике́т",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -645,7 +645,7 @@
     {
       "id": "p1204",
       "path": "media/audio/p1204.ogg",
-      "text": "Поднимáться",
+      "text": "Поднима́ться",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -653,7 +653,7 @@
     {
       "id": "s1201",
       "path": "media/audio/s1201.ogg",
-      "text": "Одно́́ на́ «Па́рк Ку́льтуры».",
+      "text": "Одно́ на́ «Па́рк Ку́льтуры».",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -669,7 +669,7 @@
     {
       "id": "s1203",
       "path": "media/audio/s1203.ogg",
-      "text": "Следующая́ остано́вка — Павелецкая́?",
+      "text": "Сле́дующая остано́вка — Павеле́цкая?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -677,7 +677,7 @@
     {
       "id": "p1301",
       "path": "media/audio/p1301.ogg",
-      "text": "Отпрáвить",
+      "text": "Отправи́ть",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -685,7 +685,7 @@
     {
       "id": "p1302",
       "path": "media/audio/p1302.ogg",
-      "text": "Трек-нóмер",
+      "text": "Трек-но́мер",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -693,7 +693,7 @@
     {
       "id": "p1303",
       "path": "media/audio/p1303.ogg",
-      "text": "Налóженный платё́ж",
+      "text": "Наложе́нный платё́ж",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -701,7 +701,7 @@
     {
       "id": "p1304",
       "path": "media/audio/p1304.ogg",
-      "text": "Индéкс получáтеля",
+      "text": "И́ндекс получа́теля",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -717,7 +717,7 @@
     {
       "id": "s1302",
       "path": "media/audio/s1302.ogg",
-      "text": "И́ндекс получáтеля то́чный?",
+      "text": "И́ндекс получа́теля то́чный?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -725,7 +725,7 @@
     {
       "id": "s1303",
       "path": "media/audio/s1303.ogg",
-      "text": "Сколько́ идё́т посы́лка?",
+      "text": "Ско́лько идё́т посы́лка?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -733,7 +733,7 @@
     {
       "id": "p1401",
       "path": "media/audio/p1401.ogg",
-      "text": "Áптека́",
+      "text": "Апте́ка",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -741,7 +741,7 @@
     {
       "id": "p1402",
       "path": "media/audio/p1402.ogg",
-      "text": "Таблéтка",
+      "text": "Таблетка́",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -749,7 +749,7 @@
     {
       "id": "p1403",
       "path": "media/audio/p1403.ogg",
-      "text": "Реце́пт́",
+      "text": "Реце́пт",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -757,7 +757,7 @@
     {
       "id": "p1404",
       "path": "media/audio/p1404.ogg",
-      "text": "Двáжды в де́нь",
+      "text": "Дважды́ в де́нь",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -765,7 +765,7 @@
     {
       "id": "s1401",
       "path": "media/audio/s1401.ogg",
-      "text": "Что-нибудь о́т головнóй бо́ли?",
+      "text": "Что́-ни́будь о́т голо́вной бо́ли?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -781,7 +781,7 @@
     {
       "id": "s1403",
       "path": "media/audio/s1403.ogg",
-      "text": "Принимáть по́слé éды́.",
+      "text": "Прини́мать после́ еды́.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -789,7 +789,7 @@
     {
       "id": "p1501",
       "path": "media/audio/p1501.ogg",
-      "text": "Поликлúника",
+      "text": "Поликлуника́",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -805,7 +805,7 @@
     {
       "id": "p1503",
       "path": "media/audio/p1503.ogg",
-      "text": "Жáловатьcя",
+      "text": "Жалова́ться",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -821,7 +821,7 @@
     {
       "id": "s1501",
       "path": "media/audio/s1501.ogg",
-      "text": "На́ что́ жáлуетесь?",
+      "text": "На́ что́ жалуе́тесь?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -829,7 +829,7 @@
     {
       "id": "s1502",
       "path": "media/audio/s1502.ogg",
-      "text": "Го́рлó боли́т.",
+      "text": "Горло́ боли́т.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -837,7 +837,7 @@
     {
       "id": "s1503",
       "path": "media/audio/s1503.ogg",
-      "text": "Нýжен больни́чный ли́ст.",
+      "text": "Ныже́н больни́чный ли́ст.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -845,7 +845,7 @@
     {
       "id": "p1601",
       "path": "media/audio/p1601.ogg",
-      "text": "Заявлéние",
+      "text": "Заявле́ние",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -861,7 +861,7 @@
     {
       "id": "p1603",
       "path": "media/audio/p1603.ogg",
-      "text": "Талóн-уведомлéние",
+      "text": "Тало́н-уведомлени́е",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -869,7 +869,7 @@
     {
       "id": "p1604",
       "path": "media/audio/p1604.ogg",
-      "text": "Посóльство",
+      "text": "Посольство́",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -893,7 +893,7 @@
     {
       "id": "s1603",
       "path": "media/audio/s1603.ogg",
-      "text": "Мы́ выдади́м талóн-уведомлéние.",
+      "text": "Мы́ выдади́м тало́н-уведомлени́е.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -901,7 +901,7 @@
     {
       "id": "p1701",
       "path": "media/audio/p1701.ogg",
-      "text": "Многофункцúональный",
+      "text": "Многофункцуональны́й",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -909,7 +909,7 @@
     {
       "id": "p1702",
       "path": "media/audio/p1702.ogg",
-      "text": "Регистрáция",
+      "text": "Регистра́ция",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -917,7 +917,7 @@
     {
       "id": "p1703",
       "path": "media/audio/p1703.ogg",
-      "text": "Уведомлéние",
+      "text": "Уведомлени́е",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -933,7 +933,7 @@
     {
       "id": "s1701",
       "path": "media/audio/s1701.ogg",
-      "text": "Что́ тáкое МФЦ?",
+      "text": "Что́ тако́е МФЦ?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -941,7 +941,7 @@
     {
       "id": "s1702",
       "path": "media/audio/s1702.ogg",
-      "text": "Мне́ ну́жна регистрáция по́ méсту́ пребывáния.",
+      "text": "Мне́ ну́жна регистра́ция по́ месту́ пребывани́я.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -949,7 +949,7 @@
     {
       "id": "s1703",
       "path": "media/audio/s1703.ogg",
-      "text": "СНИ́ЛС — номéр пенсионного́ страхóвания.",
+      "text": "СНИ́ЛС — но́мер пенсионно́го страховани́я.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -957,7 +957,7 @@
     {
       "id": "p1801",
       "path": "media/audio/p1801.ogg",
-      "text": "Собесéдование",
+      "text": "Собесе́дование",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -965,7 +965,7 @@
     {
       "id": "p1802",
       "path": "media/audio/p1802.ogg",
-      "text": "Трудовóй догóвор",
+      "text": "Трудово́й дого́вор",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -973,7 +973,7 @@
     {
       "id": "p1803",
       "path": "media/audio/p1803.ogg",
-      "text": "Оклáд",
+      "text": "Окла́д",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -981,7 +981,7 @@
     {
       "id": "p1804",
       "path": "media/audio/p1804.ogg",
-      "text": "Оформлéние",
+      "text": "Оформлени́е",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -989,7 +989,7 @@
     {
       "id": "s1801",
       "path": "media/audio/s1801.ogg",
-      "text": "Расскажите́ о се́бé.",
+      "text": "Расскажи́те о себе́.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -997,7 +997,7 @@
     {
       "id": "s1802",
       "path": "media/audio/s1802.ogg",
-      "text": "Мо́й о́пыт — четы́ре го́да.",
+      "text": "Мо́й опы́т — четы́ре года́.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1005,7 +1005,7 @@
     {
       "id": "s1803",
       "path": "media/audio/s1803.ogg",
-      "text": "Когда́ оформлéние и трудовóй догóвор?",
+      "text": "Когда́ оформлени́е и трудово́й дого́вор?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1013,7 +1013,7 @@
     {
       "id": "p1901",
       "path": "media/audio/p1901.ogg",
-      "text": "Записáться",
+      "text": "Записа́ться",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1021,7 +1021,7 @@
     {
       "id": "p1902",
       "path": "media/audio/p1902.ogg",
-      "text": "Преподавáтель",
+      "text": "Преподава́тель",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1029,7 +1029,7 @@
     {
       "id": "p1903",
       "path": "media/audio/p1903.ogg",
-      "text": "Домáшнее задáние",
+      "text": "Дома́шнее задани́е",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1045,7 +1045,7 @@
     {
       "id": "s1901",
       "path": "media/audio/s1901.ogg",
-      "text": "Хочу́ записа́ться на́ курcы́.",
+      "text": "Хочу́ записа́ться на́ ку́рсы.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1053,7 +1053,7 @@
     {
       "id": "s1902",
       "path": "media/audio/s1902.ogg",
-      "text": "Прóбое заняти́é — беcплáтно?",
+      "text": "Пробое́ зяня́тие — бесплатно́?",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1061,7 +1061,7 @@
     {
       "id": "s1903",
       "path": "media/audio/s1903.ogg",
-      "text": "Дóмашнее задáние сдавáть к пя́тнице.",
+      "text": "Дома́шнее задани́е сдава́ть к пя́тнице.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1069,7 +1069,7 @@
     {
       "id": "p2001",
       "path": "media/audio/p2001.ogg",
-      "text": "Воспитате́ль",
+      "text": "Воспита́тель",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1077,7 +1077,7 @@
     {
       "id": "p2002",
       "path": "media/audio/p2002.ogg",
-      "text": "Путёвка́",
+      "text": "Путё́вка",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1085,7 +1085,7 @@
     {
       "id": "p2003",
       "path": "media/audio/p2003.ogg",
-      "text": "Óчере́дь",
+      "text": "Оче́редь",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1093,7 +1093,7 @@
     {
       "id": "p2004",
       "path": "media/audio/p2004.ogg",
-      "text": "Утрéнник",
+      "text": "Утре́нник",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1101,7 +1101,7 @@
     {
       "id": "s2001",
       "path": "media/audio/s2001.ogg",
-      "text": "Нýжна путёвка́ и медка́рта.",
+      "text": "Ныжна́ путё́вка и медка́рта.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1109,7 +1109,7 @@
     {
       "id": "s2002",
       "path": "media/audio/s2002.ogg",
-      "text": "Ребёно́к заболéл — сообщúте воспúтателю.",
+      "text": "Ребё́нок заболе́л — сообщи́те воспита́телю.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1117,7 +1117,7 @@
     {
       "id": "s2003",
       "path": "media/audio/s2003.ogg",
-      "text": "Утрéнник начина́ется в де́сять.",
+      "text": "Утре́нник начина́ется в де́сять.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1125,7 +1125,7 @@
     {
       "id": "p2101",
       "path": "media/audio/p2101.ogg",
-      "text": "Де́нь рождéния",
+      "text": "Де́нь рожде́ния",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1141,7 +1141,7 @@
     {
       "id": "p2103",
       "path": "media/audio/p2103.ogg",
-      "text": "Пригласúть",
+      "text": "Пригласу́ть",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1157,7 +1157,7 @@
     {
       "id": "s2101",
       "path": "media/audio/s2101.ogg",
-      "text": "В суббóту дре́нь рожде́ния!",
+      "text": "В субботу́ дре́нь рожде́ния!",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1165,7 +1165,7 @@
     {
       "id": "s2102",
       "path": "media/audio/s2102.ogg",
-      "text": "Тóсты по-ру́сски — це́лое иску́сство.",
+      "text": "То́сты по-ру́сски — це́лое искусство́.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1173,7 +1173,7 @@
     {
       "id": "s2103",
       "path": "media/audio/s2103.ogg",
-      "text": "Хочу́ тебя́́ поздиви́ть.",
+      "text": "Хочу́ тебя́ поздиви́ть.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1181,7 +1181,7 @@
     {
       "id": "p2201",
       "path": "media/audio/p2201.ogg",
-      "text": "Помогúте!",
+      "text": "Помоги́те!",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1189,7 +1189,7 @@
     {
       "id": "p2202",
       "path": "media/audio/p2202.ogg",
-      "text": "Скорáя помóщь",
+      "text": "Ско́рая по́мощь",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1197,7 +1197,7 @@
     {
       "id": "p2203",
       "path": "media/audio/p2203.ogg",
-      "text": "Пострáдавший",
+      "text": "Пострада́вший",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1205,7 +1205,7 @@
     {
       "id": "p2204",
       "path": "media/audio/p2204.ogg",
-      "text": "Бе́з сознанúя",
+      "text": "Бе́з созна́ния",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1213,7 +1213,7 @@
     {
       "id": "s2201",
       "path": "media/audio/s2201.ogg",
-      "text": "Помогúте! Пожáр в соседне́й кварти́рé!",
+      "text": "Помоги́те! Пожа́р в соседне́й кварти́ре!",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1229,7 +1229,7 @@
     {
       "id": "s2203",
       "path": "media/audio/s2203.ogg",
-      "text": "Не́ пользýйтесь лúфтом!",
+      "text": "Не́ по́льзуйтесь лифто́м!",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1237,7 +1237,7 @@
     {
       "id": "p2301",
       "path": "media/audio/p2301.ogg",
-      "text": "Продлúть",
+      "text": "Продлу́ть",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1245,7 +1245,7 @@
     {
       "id": "p2302",
       "path": "media/audio/p2302.ogg",
-      "text": "Госпошлúна",
+      "text": "Госпошлину́",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1253,7 +1253,7 @@
     {
       "id": "p2303",
       "path": "media/audio/p2303.ogg",
-      "text": "Пребывáние",
+      "text": "Пребыва́ние",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1261,7 +1261,7 @@
     {
       "id": "p2304",
       "path": "media/audio/p2304.ogg",
-      "text": "Постанóвка на́ учё́",
+      "text": "Постано́вка на́ учё́",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1269,7 +1269,7 @@
     {
       "id": "s2301",
       "path": "media/audio/s2301.ogg",
-      "text": "Хочу́ продли́ть срók пребывáния.",
+      "text": "Хочу́ продли́ть сро́к пребывани́я.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1277,7 +1277,7 @@
     {
       "id": "s2302",
       "path": "media/audio/s2302.ogg",
-      "text": "Нýжен че́к за́ госпóшлину.",
+      "text": "Ныже́н че́к за́ госпошлину́.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1285,7 +1285,7 @@
     {
       "id": "s2303",
       "path": "media/audio/s2303.ogg",
-      "text": "Штра́фы за́ нарушéние сро́ков — серьёзные́.",
+      "text": "Штра́фы за́ наруше́ние сро́ков — серьё́зные.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1293,7 +1293,7 @@
     {
       "id": "p2401",
       "path": "media/audio/p2401.ogg",
-      "text": "Отчéство",
+      "text": "Отче́ство",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1301,7 +1301,7 @@
     {
       "id": "p2402",
       "path": "media/audio/p2402.ogg",
-      "text": "Фáмилия",
+      "text": "Фами́лия",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1309,7 +1309,7 @@
     {
       "id": "p2403",
       "path": "media/audio/p2403.ogg",
-      "text": "Пóдпись",
+      "text": "По́дпись",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1317,7 +1317,7 @@
     {
       "id": "p2404",
       "path": "media/audio/p2404.ogg",
-      "text": "Прóчерк",
+      "text": "Проче́рк",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1325,7 +1325,7 @@
     {
       "id": "s2401",
       "path": "media/audio/s2401.ogg",
-      "text": "Грáфа «ФИО́»: фámилия, á, óтчество́.",
+      "text": "Графа́ «ФИО́»: фами́лия, имя́, отче́ство.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1333,7 +1333,7 @@
     {
       "id": "s2402",
       "path": "media/audio/s2402.ogg",
-      "text": "Дáта рождéния пи́шется цифрáми.",
+      "text": "Дата́ рожде́ния пи́шется цифрами́.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1341,7 +1341,7 @@
     {
       "id": "s2403",
       "path": "media/audio/s2403.ogg",
-      "text": "Ста́вьте пóдпись и дáту внúзу.",
+      "text": "Ста́вьте по́дпись и дату́ внизу́.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1349,7 +1349,7 @@
     {
       "id": "p2501",
       "path": "media/audio/p2501.ogg",
-      "text": "Предствúться",
+      "text": "Предствуться́",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1357,7 +1357,7 @@
     {
       "id": "p2502",
       "path": "media/audio/p2502.ogg",
-      "text": "Экзаменáтор",
+      "text": "Экзамена́тор",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1365,7 +1365,7 @@
     {
       "id": "p2503",
       "path": "media/audio/p2503.ogg",
-      "text": "Похóже, что́…",
+      "text": "Похо́же, что́…",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1373,7 +1373,7 @@
     {
       "id": "p2504",
       "path": "media/audio/p2504.ogg",
-      "text": "Завершéно",
+      "text": "Заверше́но",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1381,7 +1381,7 @@
     {
       "id": "s2501",
       "path": "media/audio/s2501.ogg",
-      "text": "Предствúться, пожа́луйста.",
+      "text": "Предствуться́, пожа́луйста.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1389,7 +1389,7 @@
     {
       "id": "s2502",
       "path": "media/audio/s2502.ogg",
-      "text": "На́ фото́ семья́ у́жинает.",
+      "text": "На́ фо́то семья́ у́жинает.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1397,7 +1397,7 @@
     {
       "id": "s2503",
       "path": "media/audio/s2503.ogg",
-      "text": "Результáты в лúчном кабúнете.",
+      "text": "Результа́ты в ли́чном кабине́те.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1405,7 +1405,7 @@
     {
       "id": "p2601",
       "path": "media/audio/p2601.ogg",
-      "text": "Конституция́",
+      "text": "Конституци́я",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1413,7 +1413,7 @@
     {
       "id": "p2602",
       "path": "media/audio/p2602.ogg",
-      "text": "Российская́ Федерáция",
+      "text": "Российская́ Федераци́я",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1421,7 +1421,7 @@
     {
       "id": "p2603",
       "path": "media/audio/p2603.ogg",
-      "text": "Граждáнин",
+      "text": "Гражда́нин",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1429,7 +1429,7 @@
     {
       "id": "p2604",
       "path": "media/audio/p2604.ogg",
-      "text": "Выбóры",
+      "text": "Выбо́ры",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1437,7 +1437,7 @@
     {
       "id": "s2601",
       "path": "media/audio/s2601.ogg",
-      "text": "Столи́цá Росси́и — Мо́сквá.",
+      "text": "Столица́ Росси́и — Москва́.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1445,7 +1445,7 @@
     {
       "id": "s2602",
       "path": "media/audio/s2602.ogg",
-      "text": "Все́ жители́ соблýдают закóн.",
+      "text": "Все́ жите́ли соблюда́ют зако́н.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1453,7 +1453,7 @@
     {
       "id": "s2603",
       "path": "media/audio/s2603.ogg",
-      "text": "Президéнта избúрают на́ выбóрах.",
+      "text": "Президента́ избира́ют на́ выбора́х.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1461,7 +1461,7 @@
     {
       "id": "p2701",
       "path": "media/audio/p2701.ogg",
-      "text": "Переспросúте, пожа́луйста",
+      "text": "Переспроси́те, пожа́луйста",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1469,7 +1469,7 @@
     {
       "id": "p2702",
       "path": "media/audio/p2702.ogg",
-      "text": "Ка́к мéстный",
+      "text": "Ка́к местны́й",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1485,7 +1485,7 @@
     {
       "id": "p2704",
       "path": "media/audio/p2704.ogg",
-      "text": "Главны́й секрéт",
+      "text": "Гла́вный секре́т",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1493,7 +1493,7 @@
     {
       "id": "s2701",
       "path": "media/audio/s2701.ogg",
-      "text": "Не́ бóйся переспáшивать, е́сли непоня́тно.",
+      "text": "Не́ бо́йся переспраши́вать, е́сли непоня́тно.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1501,7 +1501,7 @@
     {
       "id": "s2702",
       "path": "media/audio/s2702.ogg",
-      "text": "«Повтори́те, пожа́луйста» меня́́ спа́слó.",
+      "text": "«Повтори́те, пожа́луйста» меня́ спасло́.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"

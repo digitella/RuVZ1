@@ -63,6 +63,17 @@
       pron: viewPron, speech: viewSpeech, quiz: viewQuiz, immigration: viewImmigration
     })[state.tab](body, lesson);
     if (window.RL_Tint) window.RL_Tint.apply(body);
+    // Language legend (redundant cue beyond color — NN/g: don't rely on color alone).
+    // Inserted AFTER tinting and marked no-tint so its own words are not painted.
+    try {
+      var tintOn = !window.RL_Tint || window.RL_Tint.isEnabled();
+      if (tintOn && body.querySelector('.tint-ru,.tint-en')) {
+        var lg = el('div', 'tint-legend no-tint');
+        lg.appendChild(el('span', 'lg-ru', '● русский'));
+        lg.appendChild(el('span', 'lg-en', '● English'));
+        body.insertBefore(lg, body.firstChild);
+      }
+    } catch (e) {}
   }
 
   // --------------------------------------------------------- dialogue ------

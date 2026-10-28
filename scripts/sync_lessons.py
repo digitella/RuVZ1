@@ -26,7 +26,8 @@ def stressed_word(w):
     return "\u0301" in w
 
 def auto_stress(word):
-    """Fallback: mark last vowel if a phrase needs a stress but has none."""
+    """Fallback: mark last vowel if a phrase needs a stress but has none.
+    U+0301 itself is not a vowel, so already-marked letters are skipped."""
     idx = max((i for i, ch in enumerate(word) if ch.lower() in VOWELS), default=-1)
     if idx < 0:
         return word
@@ -35,11 +36,16 @@ def auto_stress(word):
 def ensure_stress(text):
     """Make sure every multi-letter Russian word in text has a stress mark.
     Words already marked upstream are left untouched; unmarked ones get the
-    fallback so TTS never guesses on content phrases."""
+    fallback so TTS never guesses on content phrases.
+
+    NOTE: U+0301 is a combining mark (category Mn), NOT in the Cyrillic block
+    \\u0400-\\u04FF, so it must be kept in `core` when checking for an existing
+    stress — otherwise stripped letters like 'а' look unmarked and get a
+    second accent (пока́ -> пока́́)."""
     out_words = []
     for tok in text.split(" "):
-        core = re.sub(r"[^\u0400-\u04FF]", "", tok)
-        if len(core) > 1 and not stressed_word(core):
+        core = re.sub(r"[^\u0400-\u04FF\u0301]", "", tok)
+        if len(re.sub(r"\u0301", "", core)) > 1 and not stressed_word(core):
             fixed_core = auto_stress(core)
             tok = tok.replace(core, fixed_core, 1)
         out_words.append(tok)

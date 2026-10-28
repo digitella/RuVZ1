@@ -1,5 +1,7 @@
 /* Russian Launchpad — tint.js
- * Language tint: soft teal highlight for Russian words, violet for English.
+ * Language tint: high-contrast teal chips for Russian words, violet chips for English.
+ * Redundant coding (NN/g "don't rely on color alone"): hue + weight/italic + underline
+ * are defined in CSS (.tint-ru/.tint-en); a legend is rendered by the player.
  * - Skips input/textarea/select/audio/canvas/script/style (and code/pre optional).
  * - Can be disabled via course config (config.languageTint.enabled=false)
  *   or at runtime: RL_Tint.disable().
@@ -16,7 +18,7 @@
     var el = node.parentElement;
     while (el) {
       if (SKIP_TAGS.indexOf(el.tagName) >= 0) return true;
-      if (el.classList && el.classList.contains('no-tint')) return true;
+      if (el.classList && (el.classList.contains('no-tint') || el.classList.contains('tint-legend'))) return true;
       el = el.parentElement;
     }
     return false;

@@ -154,7 +154,7 @@ def ensure_placeholders(target_content_dir, course):
     return manifest
 
 # ---------------------------------------------------------------- copies ---
-SHARED_JS = ["js/mock-api.js", "js/tracking-adapter.js", "js/tts.js",
+SHARED_JS = ["js/player.js", "js/mock-api.js", "js/tracking-adapter.js", "js/tts.js",
              "js/recorder.js", "js/tint.js", "js/comments.js", "js/course-data.js"]
 
 def stage_common(dst, course, mode):
