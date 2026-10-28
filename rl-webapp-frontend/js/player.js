@@ -459,9 +459,11 @@
   }
 
   // ------------------------------------------------------------- mount -----
+  var mountedHosts = [];   // containerIds currently mounted — used for live re-render (tint toggle)
   function mount(containerId) {
     var root = document.getElementById(containerId);
     root.innerHTML = '';
+    if (mountedHosts.indexOf(containerId) < 0) mountedHosts.push(containerId);
     // per-instance tab memory: lab views (#pronlab / #speech) remember their tab
     try { state.tab = localStorage.getItem('rl_tab_' + containerId) || state.tab; } catch (e) {}
     var nav = el('div', 'row');
@@ -483,7 +485,16 @@
     }
     if (!state.lessonId || !window.RLCourseData.lesson(state.lessonId)) state.lessonId = window.RL_COURSE.lessons[0].id;
     open();
+    // keep a re-render hook per mounted host (used by the tint toggle — no page reload)
+    root.__rlRerender = open;
   }
 
-  window.RLPlayer = { mount: mount, updateProgress: updateProgress, state: state };
+  function rerenderMounted() {
+    mountedHosts.slice().forEach(function (id) {
+      var host = document.getElementById(id);
+      if (host && typeof host.__rlRerender === 'function') host.__rlRerender();
+    });
+  }
+
+  window.RLPlayer = { mount: mount, updateProgress: updateProgress, state: state, rerenderMounted: rerenderMounted };
 })();

@@ -12,6 +12,16 @@
     <p class="muted" id="xapi-mode">Tracking: detecting…</p>
     <div id="player-root"></div>
     <div class="card no-tint">
+      <div class="switch-row">
+        <span class="switch-label">Language tint <span class="muted">(teal = RU, violet = EN)</span></span>
+        <label class="switch"><input type="checkbox" id="tint-toggle" role="switch" aria-label="Language tint"><span class="track"><span class="thumb"></span></span></label>
+      </div>
+      <div class="switch-row">
+        <span class="switch-label">Theme <span class="pill" id="theme-toggle-label">Dark</span></span>
+        <label class="switch"><input type="checkbox" id="theme-toggle" role="switch" aria-label="Light theme"><span class="track"><span class="thumb"></span></span></label>
+      </div>
+    </div>
+    <div class="card no-tint">
       <h3>Statement log (mock LRS / configured LRS)</h3>
       <button class="btn small secondary" id="btn-refresh-log">Refresh</button>
       <button class="btn small" id="btn-export-log">Export JSON</button>

@@ -12,7 +12,93 @@
   var CYR = /[а-яёА-ЯЁ]/;
   var LATIN = /[a-zA-Z]/;
   var SKIP_TAGS = ['INPUT', 'TEXTAREA', 'SELECT', 'AUDIO', 'CANVAS', 'SCRIPT', 'STYLE', 'NOSCRIPT', 'OPTION'];
+  var LS_TINT = 'rl_tint_enabled';
+  var LS_THEME = 'rl_theme';
+  // Runtime state is restored from localStorage so toggles survive reloads.
   var enabled = true;
+  try { enabled = localStorage.getItem(LS_TINT) !== 'off'; } catch (e) {}
+
+  function applyTintClass(v) {
+    document.documentElement.classList.toggle('tint-off', !v);
+  }
+
+  /* ---------- Theme (light / dark) ---------- */
+  function getTheme() {
+    try {
+      var t = localStorage.getItem(LS_THEME);
+      if (t === 'light' || t === 'dark') return t;
+    } catch (e) {}
+    try {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) return 'light';
+    } catch (e) {}
+    return 'dark';
+  }
+  function setTheme(t) {
+    t = (t === 'light') ? 'light' : 'dark';
+    document.documentElement.classList.toggle('theme-light', t === 'light');
+    document.documentElement.classList.toggle('theme-dark', t === 'dark');
+    try { localStorage.setItem(LS_THEME, t); } catch (e) {}
+    syncControls();
+    return t;
+  }
+  function toggleTheme() {
+    return setTheme(getTheme() === 'light' ? 'dark' : 'light');
+  }
+
+  /* ---------- Shared control wiring (checkbox-style switches) ----------
+   * One implementation used by the webapp and the SCORM/xAPI/cmi5 bundles.
+   * Toggles are <input type="checkbox" role="switch"> styled as switches in CSS.
+   * IMPORTANT: we do NOT location.reload() — we re-render the DOM in place so
+   * the current view/lesson is preserved (NN/g: visibility of system status,
+   * no disorienting full-page refresh). */
+  function syncControls() {
+    var tintOn = enabled, theme = getTheme();
+    var tc = document.getElementById('tint-toggle');
+    if (tc) {
+      tc.checked = tintOn;
+      tc.setAttribute('aria-checked', tintOn ? 'true' : 'false');
+    }
+    var th = document.getElementById('theme-toggle');
+    if (th) {
+      var isLight = theme === 'light';
+      th.checked = isLight;
+      th.setAttribute('aria-checked', isLight ? 'true' : 'false');
+      var lbl = document.getElementById('theme-toggle-label');
+      if (lbl) lbl.textContent = isLight ? 'Light' : 'Dark';
+    }
+  }
+
+  function rerenderAll() {
+    // Re-render mounted player instances in place (no reload, no state loss).
+    try { if (window.RLPlayer && typeof window.RLPlayer.rerenderMounted === 'function') { window.RLPlayer.rerenderMounted(); return; } } catch (e) {}
+    try { if (window.rlApp && typeof window.rlApp.rerender === 'function') { window.rlApp.rerender(); return; } } catch (e) {}
+  }
+
+  function initControls() {
+    var tc = document.getElementById('tint-toggle');
+    if (tc && !tc.dataset.rlWired) {
+      tc.dataset.rlWired = '1';
+      tc.addEventListener('change', function () {
+        window.RL_Tint.setEnabled(tc.checked);
+        rerenderAll();
+      });
+    }
+    var th = document.getElementById('theme-toggle');
+    if (th && !th.dataset.rlWired) {
+      th.dataset.rlWired = '1';
+      th.addEventListener('change', function () { setTheme(th.checked ? 'light' : 'dark'); });
+    }
+    syncControls();
+  }
+
+  // Apply persisted settings ASAP (this script is loaded early in <body>).
+  applyTintClass(enabled);
+  setTheme(getTheme());
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initControls);
+  } else {
+    initControls();
+  }
 
   function shouldSkip(node) {
     var el = node.parentElement;
@@ -106,7 +192,17 @@
 
   window.RL_Tint = {
     apply: function (root) { walk(root || document.body); },
-    setEnabled: function (v) { enabled = !!v; if (!v) document.documentElement.classList.add('tint-off'); else document.documentElement.classList.remove('tint-off'); },
-    isEnabled: function () { return enabled; }
+    setEnabled: function (v) {
+      enabled = !!v;
+      applyTintClass(enabled);
+      try { localStorage.setItem(LS_TINT, enabled ? 'on' : 'off'); } catch (e) {}
+      syncControls();
+    },
+    isEnabled: function () { return enabled; },
+    // Theme API — usable from console or other modules.
+    getTheme: getTheme,
+    setTheme: setTheme,
+    toggleTheme: toggleTheme,
+    syncControls: syncControls
   };
 })();
