@@ -162,7 +162,7 @@
       "speechBlanks": [
         { "id": "s201", "sentence_ru": "Кофе, ___.", "answer": "пожалуйста", "transcript": "Кофе, пожалуйста.", "en": "Coffee, please.", "hint": "Magic word: please AND you're welcome.", "audio": "media/audio/s201.ogg" },
         { "id": "s202", "sentence_ru": "Сколько ___ этот кофе?", "answer": "стоит", "transcript": "Сколько стоит этот кофе?", "en": "How much is this coffee?", "hint": "Verb 'to cost', 3rd person.", "audio": "media/audio/s202.ogg" },
-        { "id": "s203", "sentence_ru": "Я хочу бутерброд с ___.", "answer": "сыром", "transcript": "Я хочу бутерброд с сыром.", "en": "I want a sandwich with cheese.", "hint": "Instrumental of 'syр'.", "audio": "media/audio/s203.ogg" }
+        { "id": "s203", "sentence_ru": "Я хочу бутерброд с ___.", "answer": "сыром", "transcript": "Я хочу бутерброд с сыром.", "en": "I want a sandwich with cheese.", "hint": "Instrumental of 'сыр'.", "audio": "media/audio/s203.ogg" }
       ],
       "quiz": [
         { "id": "q201", "type": "multiple_choice", "prompt": "'I want...' (a bun, fem. bulka)", "options": ["булка", "булку", "булке"], "correct": 1, "explanation": "Feminine -a -> -u in accusative." },
