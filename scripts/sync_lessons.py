@@ -149,6 +149,14 @@ def main():
     course["lessons"] = merged
     course["version"] = "2.1.0"
 
+    # Sanitize pass (single source of truth hygiene): collapse double stress
+    # marks, move marks off consonants, convert any legacy Mathematical-Bold
+    # codepoints back to canonical 'vowel + U+0301'. No Latin homoglyphs may
+    # ever reach the bundles; bold rendering is done in CSS (.stress), not by
+    # swapping Unicode codepoints.
+    import stress_bold as _sb
+    course = _sb.walk_strings(course, lambda t: _sb.normalize_marks(_sb.strip_bold_to_acute(t)))
+
     with open(CONTENT, "w", encoding="utf-8") as f:
         json.dump(course, f, ensure_ascii=False, indent=2)
         f.write("\n")

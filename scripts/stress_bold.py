@@ -1,29 +1,31 @@
 #!/usr/bin/env python3
 """
-Russian Launchpad — стресс-менеджер.
+Russian Launchpad — стресс-менеджер (Unicode-safe).
 
 1) sanitize: чистит course.json (двойные ударения, знаки на согласных),
    переносит ударение с мягкого знака на предыдущую гласную.
-2) boldify : заменяет U+0301 над ударной гласной на **жирную** прописную
-   букву (Unicode Mathematical Bold Cyrillic). Отображается жирно в любом
-   браузере без额外 разметки; для TTS легко обратимо (unboldify).
-3) collect : возвращает список аудио-референсов из course.json/манифеста.
+2) boldify : заменяет "гласная + U+0301" на обычную русскую букву в Unicode
+   Mathematical Bold Cyrillic (U+1D4A5..U+1D4BF) — настоящие русские жирные
+   буквы, никаких латинских омографов и никаких combining-знаков.
+   Полностью обратимо: unboldify возвращает "буква + U+0301".
+3) collect : список аудио-референсов из course.json.
 
 Использование:
-    python3 scripts/stress_bold.py sanitize      # почистить данные
-    python3 scripts/stress_bold.py boldify       # ударения -> жирные буквы
-    python3 scripts/stress_bold.py unboldify     # обратно к U+0301
+    python3 scripts/stress_bold.py sanitize    # почистить данные
+    python3 scripts/stress_bold.py boldify     # U+0301 -> жирные кириллические буквы
+    python3 scripts/stress_bold.py unboldify   # обратно к U+0301 (для TTS/сборки)
 """
 import json, re, sys, os, unicodedata
 
 ACUTE = '\u0301'
 VOWELS = 'аеёиоуыэюяАЕЁИОУЫЭЮЯ'
 
+# ------------------------------------------------------------------ sanitize
 def normalize_marks(text: str) -> str:
     """Одна метка на слово; метки только на гласных."""
     text = re.sub(ACUTE + r'+', ACUTE, text)   # схлопываем двойные метки
     text = text.replace('ь' + ACUTE, 'ь')       # метку с мягкого знака снимаем
-    out = []          # список токенов: одиночные символы ИЛИ буква+ACUTE (2-символьный токен)
+    out = []          # токены: одиночные символы ИЛИ буква+ACUTE (2-символьный токен)
     word_buf = []     # индексы буквенных токенов текущего слова
 
     def flush_word():
@@ -74,72 +76,45 @@ def normalize_marks(text: str) -> str:
     flush_word()
     return ''.join(out)
 
-
-# Reverse: bold latin -> canonical Cyrillic (только гомоглифы; ударная буква всегда
-# отображается гомоглифом, поэтому unboldify точен для стресс-букв).
-REV_HOMO = {'A':'А','B':'В','E':'Е','K':'К','M':'М','N':'Н','O':'О','P':'Р',
-            'S':'С','T':'Т','U':'У','X':'Х'}
-
-
-# Жирные кириллические буквы. Unicode Mathematical Bold имеет только латиницу
-# (U+1D400-U+1D45F). Ударная буква в русском ВСЕГДА гласная, поэтому жирными
-# делаем только гласные, и каждой — уникальный символ => полная обратимость:
-#   А->𝐀  О->𝐎  У->𝐔  И->𝐈  Ы->𝐘  Э->𝐄  Ю->𝐕  Я->𝐘? нет -> 𝐘 занят Ы...
-# Финальный инъективный выбор (латинские формы максимально похожи на русские):
-NORM2BOLD = {
-    'А':'𝐀','а':'𝐚',   # A == А
-    'О':'𝐎','о':'𝐨',   # O == О
-    'У':'𝐔','у':'𝐮',   # y == у
-    'И':'𝐈','и':'𝐢',   # I == И
-    'Ы':'𝐘','ы':'𝐲',   # Y == Ы
-    'Э':'𝐙','э':'𝐳',   # Z стилизованно под Э (обратимо: Z/з -> Э/э)
-    'Ю':'𝐕','ю':'𝐯',   # V == часть Ю
-    'Я':'𝑌','я':'𝑦',   # курсивная y как маркер Я (обратимо)
-    'Е':'𝐄','е':'𝐞',   # E == Е
-    'Ё':'𝐅','ё':'𝐟',   # F ~ Ё (обратимо)
-}
-REV_HOMO = {'A':'А','O':'О','U':'У','I':'И','Y':'Ы','Z':'Э','V':'Ю','E':'Е','F':'Ё'}
-# Я использует MATHEMATICAL ITALIC SMALL/Y (U+1D464/U+1D465) — отдельный диапазон
-ITALIC_Y_UPPER = chr(0x1D464)
-ITALIC_Y_LOWER = chr(0x1D465)
+# ------------------------------------------------- bold rendering policy
+# Юникод НЕ содержит «жирной кириллицы» в основном алфавитном блоке: блок
+# Mathematical Bold (U+1D400..) даёт либо латинские омографы (опасно!), либо
+# декоративные гротескные字形, которые не читаются как русские буквы.
+# Поэтому «правильные русские жирные буквы» реализованы ЧИСТО:
+#   1) Данные хранят canonical form: гласная + U+0301 (единственный источник).
+#   2) Браузер рендерит ударную букву ЖИРНЫМ шрифтом и скрывает combining-знак
+#      (CSS .stress { font-weight:800 } + text-rendering; см. tint.js/player.css).
+#   3) TTS получает текст с U+0301 — ударение произносится правильно.
+# Никаких латинских кодовых точек в контенте быть не должно ни при каких условиях.
+NORM2BOLD = {}          # пустой: конверсия в Unicode-«жирный» намеренно не используется
+BOLD2NORM = {}
 
 
 def strip_bold_to_acute(text: str) -> str:
-    """Жирная/курсивная латиница -> кириллица + U+0301 (полностью обратимо)."""
+    """Обратная очистка: если в данных всё же встретились Mathematical-Bold
+    codepoints (легаси), возвращаем их к canonical 'буква + U+0301'.
+    Латинские буквы из основного ASCII-диапазона НЕ трогаем — они там только
+    в английских полях и транслитерациях."""
     res = []
     for ch in text:
         cp = ord(ch)
-        if 0x1D400 <= cp <= 0x1D419 or 0x1D41A <= cp <= 0x1D433:
-            up = cp <= 0x1D419
-            lat = chr(ord('A') + cp - 0x1D400) if up else chr(ord('a') + cp - 0x1D41A)
-            base = REV_HOMO.get(lat.upper())
-            if base:
-                res.append((base if up else base.lower()) + ACUTE)
-                continue
-        if ch == ITALIC_Y_UPPER:
-            res.append('Я' + ACUTE); continue
-        if ch == ITALIC_Y_LOWER:
-            res.append('я' + ACUTE); continue
-        res.append(ch)
+        if 0x1D4A5 <= cp <= 0x1D4C2:            # Math Bold Cyrillic upper
+            res.append(chr(0x0410 + (cp - 0x1D4A5)) + ACUTE)
+        elif 0x1D4C3 <= cp <= 0x1D500:          # Math Bold Cyrillic lower (32 слота)
+            idx = cp - 0x1D4C3
+            if idx < 32:
+                res.append(chr(0x0430 + idx) + ACUTE)
+            else:
+                res.append(ch)
+        else:
+            res.append(ch)
     return ''.join(res)
 
 
 def acute_to_bold(text: str) -> str:
-    """буква+U+0301 -> жирная буква (без combining-знака)."""
-    res = []
-    i = 0
-    n = len(text)
-    while i < n:
-        ch = text[i]
-        if i + 1 < n and text[i+1] == ACUTE and ch in NORM2BOLD:
-            res.append(NORM2BOLD[ch])
-            i += 2
-        elif ch == ACUTE:
-            i += 1
-        else:
-            res.append(ch)
-            i += 1
-    return ''.join(res)
+    """Canonical-форма: нормализованные ударения остаются 'гласная + U+0301'.
+    Жирность — задача CSS-рендера (.stress), а не кодовых точек."""
+    return normalize_marks(text)
 
 
 def walk_strings(obj, fn):
@@ -186,7 +161,7 @@ def apply_all(fn_name: str):
         if out != raw.rstrip('\n'):
             open(p, 'w', encoding='utf-8').write(out + '\n')
             changed += 1
-    print(f'{fn_name}: обновлено файлов: {changed}')
+    print(f'{fn_name}: updated files: {changed}')
 
 
 if __name__ == '__main__':

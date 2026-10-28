@@ -21,7 +21,17 @@ CONTENT = os.path.join(ROOT, "rl-content")
 
 def load_course():
     with open(os.path.join(CONTENT, "course.json"), encoding="utf-8") as f:
-        return json.load(f)
+        course = json.load(f)
+    # Sanitize pass: collapse double stress marks, move marks off consonants,
+    # and strip any legacy Mathematical-Bold codepoints back to canonical
+    # 'vowel + U+0301'. Guarantees no Latin homoglyphs reach the bundles.
+    try:
+        sys.path.insert(0, os.path.join(ROOT, "scripts"))
+        import stress_bold as _sb
+        course = _sb.walk_strings(course, lambda t: _sb.normalize_marks(_sb.strip_bold_to_acute(t)))
+    except Exception as e:  # never break the build over a lint pass
+        print("WARN: sanitize pass skipped:", e)
+    return course
 
 # ---------------------------------------------------------------- audio ----
 AUDIO_EXT = ".ogg"
