@@ -41,6 +41,10 @@ label { display: block; margin: 8px 0 4px; color: var(--muted); font-size: 14px;
 /* Language tint chips: hue + weight + underline = redundant coding (color-blind safe).
    Backgrounds are clearly lighter than the surface (NN/g figure-ground guidance). */
 .tint-ru { display: inline-block; background: var(--tint-ru-bg); color: var(--tint-ru-fg); border-bottom: 2px solid var(--tint-ru-border); padding: 1px 6px 0; border-radius: 5px; font-weight: 650; line-height: 1.45; }
+/* Stressed vowel: rendered as bold letter (accent mark removed by tint.js).
+   Weight 800 + slight warm highlight makes the stress pop without a combining glyph. */
+.stress { font-weight: 800; color: #fde68a; text-decoration: none; }
+html.tint-off .stress { color: inherit; }
 .tint-en { display: inline-block; background: var(--tint-en-bg); color: var(--tint-en-fg); border-bottom: 2px solid var(--tint-en-border); padding: 1px 6px 0; border-radius: 5px; font-style: italic; line-height: 1.45; }
 /* Tint legend — explicit key, so meaning never depends on color alone */
 .tint-legend { display: flex; gap: 14px; align-items: center; margin: 0 0 12px; padding: 8px 12px; background: var(--panel2); border: 1px solid #475569; border-radius: 10px; font-size: 13px; color: var(--muted); width: fit-content; }

@@ -31,10 +31,41 @@
     return null;
   }
 
+  // Stress rendering: convert "Vowel + U+0301" into a bold <b> span.
+  // This fulfills the course rule: stressed vowels are shown BOLD, not with an accent mark.
+  function buildStressedFragment(tok) {
+    var frag = document.createDocumentFragment();
+    var buf = '';
+    for (var i = 0; i < tok.length; i++) {
+      var ch = tok[i];
+      if (ch === '\u0301') {
+        // attach combining mark to the buffered base letter, render it bold
+        if (buf) {
+          var last = buf[buf.length - 1];
+          buf = buf.slice(0, -1);
+          if (buf) frag.appendChild(document.createTextNode(buf));
+          var b = document.createElement('b');
+          b.className = 'stress';
+          b.textContent = last;
+          frag.appendChild(b);
+          buf = '';
+        }
+        continue;
+      }
+      buf += ch;
+    }
+    if (buf) frag.appendChild(document.createTextNode(buf));
+    return frag;
+  }
+
   function wrapToken(tok, cls) {
     var s = document.createElement('span');
     s.className = 'tint-' + cls;
-    s.textContent = tok;
+    if (tok.indexOf('\u0301') >= 0) {
+      s.appendChild(buildStressedFragment(tok));
+    } else {
+      s.textContent = tok;
+    }
     return s;
   }
 

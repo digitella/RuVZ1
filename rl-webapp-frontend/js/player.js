@@ -71,6 +71,10 @@
         var lg = el('div', 'tint-legend no-tint');
         lg.appendChild(el('span', 'lg-ru', '● русский'));
         lg.appendChild(el('span', 'lg-en', '● English'));
+        var st = document.createElement('span');
+        st.className = 'lg-stress';
+        st.innerHTML = '<b class="stress">о</b> — ударная буква (жирная)';
+        lg.appendChild(st);
         body.insertBefore(lg, body.firstChild);
       }
     } catch (e) {}
