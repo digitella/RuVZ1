@@ -46,7 +46,7 @@ label { display: block; margin: 8px 0 4px; color: var(--muted); font-size: calc(
 .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 .col { flex: 1; min-width: 260px; }
 .muted { color: var(--muted); font-size: calc(14px * var(--fs)); }
-.pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: calc(12px * var(--fs)); background: var(--panel2); border: 1px solid var(--surface-line)2; }
+.pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: calc(12px * var(--fs)); background: var(--panel2); border: 1px solid var(--surface-line2); }
 .pill.ok { color: var(--ok); border-color: var(--ok); }
 .pill.warn { color: var(--warn); border-color: var(--warn); }
 .pill.bad { color: var(--bad); border-color: var(--bad); }
@@ -55,12 +55,14 @@ label { display: block; margin: 8px 0 4px; color: var(--muted); font-size: calc(
 .tint-ru { display: inline-block; background: var(--tint-ru-bg); color: var(--tint-ru-fg); border-bottom: 2px solid var(--tint-ru-border); padding: 1px 6px 0; border-radius: 5px; font-weight: 650; line-height: 1.45; }
 /* Stressed vowel: rendered as bold letter (accent mark removed by tint.js).
    Weight 800 + slight warm highlight makes the stress pop without a combining glyph. */
-.stress { font-weight: 800; color: inherit; text-decoration: none; }
-.stress::after { content: '\0301'; width: 0; font-size: 0; line-height: 0; display: inline-block; overflow: hidden; }  /* mark kept for a11y/TTS copy, not painted */
-html.tint-off .stress { font-weight: inherit; }
+/* Stress indicator = BOLD vowel letter only (user requirement).
+   tint.js converts 'vowel + U+0301' into <b class="stress"> — the combining
+   mark is never painted, so no accent glyph can leak into the UI. */
+.stress { font-weight: 800; color: var(--stress-fg); }
+html.tint-off .stress { font-weight: 800; color: var(--stress-fg); }
 .tint-en { display: inline-block; background: var(--tint-en-bg); color: var(--tint-en-fg); border-bottom: 2px solid var(--tint-en-border); padding: 1px 6px 0; border-radius: 5px; font-style: italic; line-height: 1.45; }
 /* Tint legend — explicit key, so meaning never depends on color alone */
-.tint-legend { display: flex; gap: 14px; align-items: center; margin: 0 0 12px; padding: 8px 12px; background: var(--panel2); border: 1px solid var(--surface-line)2; border-radius: 10px; font-size: calc(13px * var(--fs)); color: var(--muted); width: fit-content; }
+.tint-legend { display: flex; gap: 14px; align-items: center; margin: 0 0 12px; padding: 8px 12px; background: var(--panel2); border: 1px solid var(--surface-line2); border-radius: 10px; font-size: calc(13px * var(--fs)); color: var(--muted); width: fit-content; }
 .tint-legend .lg-ru { color: var(--tint-ru-fg); font-weight: 700; }
 .tint-legend .lg-en { color: var(--tint-en-fg); font-weight: 700; font-style: italic; }
 nav.topbar { display: flex; gap: 14px; align-items: center; padding: 10px 16px; background: var(--panel); border-bottom: 1px solid var(--surface-line); position: sticky; top: 0; z-index: 10; flex-wrap: wrap; }
@@ -75,11 +77,11 @@ nav.topbar a.tab:hover { background: var(--panel2); }
 .tabs button.active { background: rgba(34, 211, 238, .16); color: var(--accent); border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: -2px; }
 table { width: 100%; border-collapse: collapse; }
 th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--surface-line); font-size: calc(14px * var(--fs)); }
-dialog, .modal { background: var(--panel); color: var(--text); border: 1px solid var(--surface-line)2; border-radius: 12px; padding: 16px; }
+dialog, .modal { background: var(--panel); color: var(--text); border: 1px solid var(--surface-line2); border-radius: 12px; padding: 16px; }
 canvas.wave { width: 100%; height: 64px; background: var(--input-bg); border-radius: 8px; border: 1px solid var(--surface-line); }
 .rec-timer { font-variant-numeric: tabular-nums; font-size: calc(20px * var(--fs)); }
 .attempts li { display: flex; gap: 8px; align-items: center; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--surface-line); list-style: none; }
-.quiz-opt { display: block; margin: 6px 0; padding: 8px 12px; background: var(--panel2); border: 1px solid var(--surface-line)2; border-radius: 8px; cursor: pointer; }
+.quiz-opt { display: block; margin: 6px 0; padding: 8px 12px; background: var(--panel2); border: 1px solid var(--surface-line2); border-radius: 8px; cursor: pointer; }
 .quiz-opt.sel { outline: 2px solid var(--accent); }
 .quiz-opt.correct { border-color: var(--ok); background: rgba(52,211,153,.12); }
 .quiz-opt.wrong { border-color: var(--bad); background: rgba(248,113,113,.12); }

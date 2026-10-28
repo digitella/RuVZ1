@@ -141,7 +141,7 @@
     <div class="switch-row">
       <span class="switch-label">
         <span class="lg-ru">Русский</span> / <span class="lg-en">English</span> language tint
-        <span class="muted">(teal = Russian, violet = English)</span>
+        <span class="muted">&mdash; color-code Russian and English words</span>
       </span>
       <label class="switch" title="Toggle language tint">
         <input type="checkbox" id="tint-toggle" role="switch" aria-label="Language tint">
@@ -149,12 +149,20 @@
       </label>
     </div>
     <div class="switch-row">
-      <span class="switch-label">Theme <span class="pill" id="theme-toggle-label">Dark</span></span>
+      <span class="switch-label">Theme <b id="theme-toggle-label">Dark</b> <span class="muted">&mdash; switch between light and dark colors</span></span>
       <label class="switch" title="Toggle light / dark theme">
         <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light theme">
         <span class="track"><span class="thumb"></span></span>
       </label>
     </div>
+      <div class="switch-row">
+        <span class="switch-label">Text size <span class="muted">(A- / A+)</span></span>
+        <span class="fontctl" role="group" aria-label="Text size">
+          <button type="button" id="font-minus" class="fa-minus" aria-label="Decrease text size">A&minus;</button>
+          <span class="fa-value" id="font-value" aria-live="polite">100%</span>
+          <button type="button" id="font-plus" class="fa-plus" aria-label="Increase text size">A+</button>
+        </span>
+      </div>
     <p class="muted" id="audio-status"></p>
   </div>
     <script>

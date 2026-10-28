@@ -66,6 +66,14 @@
       var lbl = document.getElementById('theme-toggle-label');
       if (lbl) lbl.textContent = isLight ? 'Light' : 'Dark';
     }
+    // Font scale readout (works in every bundle that ships the .fontctl markup).
+    var fs = getFontScale();
+    var fv = document.getElementById('font-value');
+    if (fv) fv.textContent = Math.round(fs * 100) + '%';
+    var fminus = document.getElementById('font-minus');
+    var fplus = document.getElementById('font-plus');
+    if (fminus) fminus.disabled = fs <= FS_MIN;
+    if (fplus) fplus.disabled = fs >= FS_MAX;
   }
 
   function rerenderAll() {
@@ -73,6 +81,22 @@
     try { if (window.RLPlayer && typeof window.RLPlayer.rerenderMounted === 'function') { window.RLPlayer.rerenderMounted(); return; } } catch (e) {}
     try { if (window.rlApp && typeof window.rlApp.rerender === 'function') { window.rlApp.rerender(); return; } } catch (e) {}
   }
+
+  // Robust fallback: even if this script ran before the toggle existed, or a
+  // stale cached copy of tint.js missed the wiring, a change event from
+  // #tint-toggle / #theme-toggle is still handled (capture listener).
+  document.addEventListener('change', function (ev) {
+    var t = ev.target;
+    if (!t || t.dataset.rlWired === '1') return;
+    if (t.id === 'tint-toggle') {
+      t.dataset.rlWired = '1';
+      window.RL_Tint.setEnabled(t.checked);
+      rerenderAll();
+    } else if (t.id === 'theme-toggle') {
+      t.dataset.rlWired = '1';
+      setTheme(t.checked ? 'light' : 'dark');
+    }
+  }, true);
 
   function initControls() {
     var tc = document.getElementById('tint-toggle');
@@ -88,12 +112,23 @@
       th.dataset.rlWired = '1';
       th.addEventListener('change', function () { setTheme(th.checked ? 'light' : 'dark'); });
     }
+    var fminus = document.getElementById('font-minus');
+    if (fminus && !fminus.dataset.rlWired) {
+      fminus.dataset.rlWired = '1';
+      fminus.addEventListener('click', function () { bumpFontScale(-1); });
+    }
+    var fplus = document.getElementById('font-plus');
+    if (fplus && !fplus.dataset.rlWired) {
+      fplus.dataset.rlWired = '1';
+      fplus.addEventListener('click', function () { bumpFontScale(1); });
+    }
     syncControls();
   }
 
   // Apply persisted settings ASAP (this script is loaded early in <body>).
   applyTintClass(enabled);
   setTheme(getTheme());
+  document.documentElement.style.setProperty('--fs', String(getFontScale()));
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initControls);
   } else {
@@ -190,6 +225,25 @@
     });
   }
 
+  /* ---------- Font size scale (A- / A+ controls, NN/g inclusivity) ---------- */
+  var LS_FS = 'rl_font_scale';
+  var FS_MIN = 0.9, FS_MAX = 1.3, FS_STEP = 0.1;
+  function getFontScale() {
+    try {
+      var v = parseFloat(localStorage.getItem(LS_FS));
+      if (v >= FS_MIN && v <= FS_MAX) return v;
+    } catch (e) {}
+    return 1;
+  }
+  function setFontScale(v) {
+    v = Math.min(FS_MAX, Math.max(FS_MIN, Math.round(v * 100) / 100));
+    document.documentElement.style.setProperty('--fs', String(v));
+    try { localStorage.setItem(LS_FS, String(v)); } catch (e) {}
+    syncControls();
+    return v;
+  }
+  function bumpFontScale(dir) { return setFontScale(getFontScale() + dir * FS_STEP); }
+
   window.RL_Tint = {
     apply: function (root) { walk(root || document.body); },
     setEnabled: function (v) {
@@ -201,6 +255,9 @@
     isEnabled: function () { return enabled; },
     // Theme API — usable from console or other modules.
     getTheme: getTheme,
+    getFontScale: getFontScale,
+    setFontScale: setFontScale,
+    bumpFontScale: bumpFontScale,
     setTheme: setTheme,
     toggleTheme: toggleTheme,
     syncControls: syncControls
