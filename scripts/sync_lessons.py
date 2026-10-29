@@ -15,6 +15,10 @@ import json, os, re, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import lessons_data as LD  # noqa: E402
+try:
+    import lessons_extra as LX  # noqa: E402
+except Exception:
+    LX = None
 
 CONTENT = os.path.join(ROOT, "rl-content", "course.json")
 
@@ -57,7 +61,9 @@ def num_id(prefix, lesson_order, n):
 # ------------------------------------------------------------- conversion --
 def convert_lesson(l, order):
     lid = l["id"]
-    base = int(re.sub(r"\D", "", lid) or order)
+    # unique numeric base per lesson ORDER (not digits in id): 'l1b' and 'l1'
+    # must not collide on audio ids p101 vs p101.
+    base = order
 
     dialogue = {
         "id": f"d{base}",
@@ -83,7 +89,8 @@ def convert_lesson(l, order):
     ]
 
     pronunciation = []
-    for i, (ru, en, hint) in enumerate(l["pron"]):
+    for i, p3 in enumerate([tuple(p) + ("",) * (3 - len(p)) for p in l["pron"]]):
+        ru, en, hint = p3[:3]
         pid = num_id("p", base, i + 1)
         pronunciation.append({
             "id": pid, "ru": ensure_stress(ru), "en": en, "ipa": "",
@@ -132,19 +139,29 @@ def main():
         cl = convert_lesson(l, i)
         converted[cl["id"]] = cl
 
+    all_src = list(LD.LESSONS) + (list(LX.LESSONS_EXTRA) if LX else [])
+    converted_all = dict(converted)
+    order = len(LD.LESSONS)
+    for l in (LX.LESSONS_EXTRA if LX else []):
+        order += 1
+        converted_all[l["id"]] = convert_lesson(l, order)
+
     merged = []
     replaced = 0
-    for i, l in enumerate(LD.LESSONS, start=1):
-        merged.append(converted[l["id"]])
+    for i, l in enumerate(all_src, start=1):
+        merged.append(converted_all[l["id"]])
+    seen_ids = {l["id"] for l in merged}
     existing_by_id = {l["id"]: l for l in course["lessons"]}
-    # keep any legacy lesson ids that lessons_data doesn't cover (append after)
+    # keep any legacy lesson ids that lessons_data/lessons_extra don't cover
+    # (append after). Skip ids already present to avoid duplicate lessons.
     extra_order = len(merged)
     for lid, l in existing_by_id.items():
-        if lid not in converted:
+        if lid not in converted and lid not in seen_ids:
             extra_order += 1
             l["order"] = extra_order
             merged.append(l)
             replaced += 1
+            seen_ids.add(lid)
 
     course["lessons"] = merged
     course["version"] = "2.1.0"

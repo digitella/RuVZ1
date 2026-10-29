@@ -69,7 +69,7 @@
     },
     "timestamp": "2026-10-21T09:00:00.000Z",
     "result": {
-      "response": "choice:Здра́вствуйте",
+      "response": "choice:Здравствуйте",
       "success": true,
       "score": {
         "scaled": 1.0,
@@ -187,7 +187,7 @@
     },
     "timestamp": "2026-10-21T09:00:00.000Z",
     "result": {
-      "response": "зову́т",
+      "response": "зовут",
       "success": true
     }
   },
