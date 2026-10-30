@@ -12,6 +12,24 @@
     <p class="muted" id="xapi-mode">Tracking: detecting…</p>
     <div id="player-root"></div>
     <div class="card no-tint">
+      <div class="switch-row">
+        <span class="switch-label">Language tint <span class="muted">&mdash; color-code RU/EN words</span></span>
+        <label class="switch"><input type="checkbox" id="tint-toggle" role="switch" aria-label="Language tint"><span class="track"><span class="thumb"></span></span></label>
+      </div>
+      <div class="switch-row">
+        <span class="switch-label">Theme <b id="theme-toggle-label">Dark</b> <span class="muted">&mdash; light / dark</span></span>
+        <label class="switch"><input type="checkbox" id="theme-toggle" role="switch" aria-label="Light theme"><span class="track"><span class="thumb"></span></span></label>
+      </div>
+      <div class="switch-row">
+        <span class="switch-label">Text size <span class="muted">(A- / A+)</span></span>
+        <span class="fontctl" role="group" aria-label="Text size">
+          <button type="button" id="font-minus" class="fa-minus" aria-label="Decrease text size">A&minus;</button>
+          <span class="fa-value" id="font-value" aria-live="polite">100%</span>
+          <button type="button" id="font-plus" class="fa-plus" aria-label="Increase text size">A+</button>
+        </span>
+      </div>
+    </div>
+    <div class="card no-tint">
       <h3>Statement log (mock LRS / configured LRS)</h3>
       <button class="btn small secondary" id="btn-refresh-log">Refresh</button>
       <button class="btn small" id="btn-export-log">Export JSON</button>

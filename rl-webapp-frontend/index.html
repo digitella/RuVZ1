@@ -13,6 +13,10 @@
     <a class="tab" href="#landing" data-view="landing">Home</a>
     <a class="tab" href="#pricing" data-view="pricing">Pricing</a>
     <a class="tab" href="#dashboard" data-view="dashboard">Dashboard</a>
+    <div class="dropdown" id="nav-lessons-wrap">
+      <button class="tab dropdown-btn" id="btn-nav-lessons" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lesson-dropdown">Lessons ▾</button>
+      <div class="dropdown-panel hidden" id="lesson-dropdown" role="menu"></div>
+    </div>
     <a class="tab" href="#player" data-view="player">Course Player</a>
     <a class="tab" href="#pronlab" data-view="pronlab">Pronunciation Lab</a>
     <a class="tab" href="#speech" data-view="speech">Speech Fill-in-the-Blank</a>
@@ -101,10 +105,9 @@
 
     <!-- PLAYER (also hosts Pronunciation Lab & Speech F-B tabs) -->
     <section id="view-player" class="hidden"><div id="player-root"></div></section>
-    <section id="view-pronlab" class="hidden"><div id="player-root-pron" class="hidden"></div>
-      <p class="muted">Opening the Pronunciation Lab… (it lives inside the Course Player tabs)</p>
-    </section>
-    <section id="view-speech" class="hidden"><p class="muted">Opening Speech Fill-in-the-Blank… (inside the Course Player tabs)</p></section>
+    <!-- PronLab / Speech: real standalone player instances (no redirect hacks) -->
+    <section id="view-pronlab" class="hidden"><div id="player-root-pron"></div></section>
+    <section id="view-speech" class="hidden"><div id="player-root-speech"></div></section>
 
     <!-- SUBSCRIPTION GATE -->
     <section id="view-subscribe" class="hidden">
@@ -134,23 +137,58 @@
     <form method="dialog"><button class="btn small">Close</button></form>
   </dialog>
 
-  <div class="card no-tint" style="margin-top:8px">
-      <label style="display:inline"><input type="checkbox" id="tint-toggle" checked style="width:auto"> Language tint (teal = Russian, violet = English)</label>
-      <span class="muted" id="audio-status"></span>
+  <div class="card no-tint settings-card" style="margin-top:8px">
+    <div class="switch-row">
+      <span class="switch-label">
+        <span class="lg-ru">Русский</span> / <span class="lg-en">English</span> language tint
+        <span class="muted">&mdash; color-code Russian and English words</span>
+      </span>
+      <label class="switch" title="Toggle language tint">
+        <input type="checkbox" id="tint-toggle" role="switch" aria-label="Language tint">
+        <span class="track"><span class="thumb"></span></span>
+      </label>
     </div>
+    <div class="switch-row">
+      <span class="switch-label">Theme <b id="theme-toggle-label">Dark</b> <span class="muted">&mdash; switch between light and dark colors</span></span>
+      <label class="switch" title="Toggle light / dark theme">
+        <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light theme">
+        <span class="track"><span class="thumb"></span></span>
+      </label>
+    </div>
+      <div class="switch-row">
+        <span class="switch-label">Text size <span class="muted">(A- / A+)</span></span>
+        <span class="fontctl" role="group" aria-label="Text size">
+          <button type="button" id="font-minus" class="fa-minus" aria-label="Decrease text size">A&minus;</button>
+          <span class="fa-value" id="font-value" aria-live="polite">100%</span>
+          <button type="button" id="font-plus" class="fa-plus" aria-label="Increase text size">A+</button>
+        </span>
+      </div>
+    <p class="muted" id="audio-status"></p>
+  </div>
     <script>
-      document.getElementById('tint-toggle').addEventListener('change', function () {
-        window.RL_Tint.setEnabled(this.checked);
-        location.reload(); // re-render text nodes cleanly
-      });
+      // Tint/theme toggles are wired centrally in js/tint.js (shared with SCORM/xAPI/cmi5).
       fetch('media/audio-manifest.json').then(function (r) { return r.json(); }).then(function (m) {
         var ph = m.items.filter(function (i) { return i.placeholder; }).length;
-        document.getElementById('audio-status').textContent = ' · Audio: ' + m.items.length + ' files ready (' + ph + ' silent placeholders — no 404s)';
+        document.getElementById('audio-status').textContent = 'Audio: ' + m.items.length + ' files ready (' + ph + ' silent placeholders — no 404s)';
       }).catch(function () {});
     </script>
     <footer>Russian Launchpad · preview mode runs fully offline (mock-api + localStorage) · SCORM/xAPI/cmi5 bundles in rl-scorm/, rl-xapi/, rl-cmi5/</footer>
 
-  <script src="js/runtime-config.js"></script>
+  <!-- Apply persisted tint/theme classes before any script can throw (robustness). -->
+  <script>
+    (function () {
+      try { if (localStorage.getItem('rl_tint_enabled') === 'off') document.documentElement.classList.add('tint-off'); } catch (e) {}
+      try {
+        var t = localStorage.getItem('rl_theme');
+        if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) t = 'light';
+        document.documentElement.classList.toggle('theme-light', t === 'light');
+      } catch (e) {}
+    })();
+  </script>
+  <!-- runtime-config.js is generated by scripts/build_all.py for the SCORM/xAPI/cmi5
+       bundles; in the webapp preview it is optional, so load it defensively. -->
+  <script>document.write('<script src="js/runtime-config.js" onerror="void 0"><\/script>');</script>
+  <script>window.RL_RUNTIME = window.RL_RUNTIME || { mode: 'preview', contentBase: '.', courseId: 'russian-launchpad-a1a2' };</script>
   <script src="js/mock-api.js"></script>
   <script src="js/tint.js"></script>
   <script src="js/course-data.js"></script>
@@ -159,21 +197,6 @@
   <script src="js/comments.js"></script>
   <script src="js/tracking-adapter.js"></script>
   <script src="js/player.js"></script>
-  <script>
-    // pronlab/speech shortcuts jump into player tabs
-    document.addEventListener('click', function (e) {
-      var a = e.target.closest('[data-view]'); if (!a) return;
-      var v = a.getAttribute('data-view');
-      if (v === 'pronlab' || v === 'speech') {
-        setTimeout(function () {
-          var btns = document.querySelectorAll('#player-root .tabs button');
-          Array.prototype.forEach.call(btns, function (b) {
-            if ((v === 'pronlab' && b.textContent === 'Pronunciation Lab') || (v === 'speech' && b.textContent.indexOf('Fill-in-the-Blank') >= 0)) b.click();
-          });
-        }, 50);
-      }
-    });
-  </script>
   <script src="js/app.js"></script>
 </body>
 </html>

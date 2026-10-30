@@ -32,31 +32,52 @@
   }
 
   // ------------------------------------------------------------- tabs ------
-  function renderTabs(host, lesson) {
+  var TAB_DEFS = [
+    ['dialogue', 'Dialogue'], ['vocab', 'Vocabulary'], ['grammar', 'Grammar'],
+    ['pron', 'Pronunciation Lab'], ['speech', 'Speech Fill-in-the-Blank'],
+    ['quiz', 'Quiz']
+  ];
+  function renderTabs(host, lesson, containerId) {
     host.innerHTML = '';
-    var defs = [
-      ['dialogue', 'Dialogue'], ['vocab', 'Vocabulary'], ['grammar', 'Grammar'],
-      ['pron', 'Pronunciation Lab'], ['speech', 'Speech Fill-in-the-Blank'],
-      ['quiz', 'Quiz']
-    ];
+    var defs = TAB_DEFS.slice();
     if (lesson.id === 'l3') defs.push(['immigration', 'Immigration Test Lab']);
     var bar = el('div', 'tabs');
     defs.forEach(function (d) {
       var b = el('button', state.tab === d[0] ? 'active' : '', d[1]);
-      b.onclick = function () { state.tab = d[0]; renderTabs(host, lesson); renderBody(lesson); };
+      b.setAttribute('data-tab', d[0]);
+      b.onclick = function () {
+        state.tab = d[0];
+        try { localStorage.setItem('rl_tab_' + containerId, d[0]); } catch (e) {}
+        renderTabs(host, lesson, containerId); renderBody(lesson, containerId);
+      };
       bar.appendChild(b);
     });
     host.appendChild(bar);
   }
 
-  function renderBody(lesson) {
-    var body = document.getElementById('lesson-body');
+  function renderBody(lesson, containerId) {
+    var body = document.getElementById('lesson-body-' + containerId) || document.getElementById('lesson-body');
     body.innerHTML = '';
     ({
       dialogue: viewDialogue, vocab: viewVocab, grammar: viewGrammar,
       pron: viewPron, speech: viewSpeech, quiz: viewQuiz, immigration: viewImmigration
     })[state.tab](body, lesson);
     if (window.RL_Tint) window.RL_Tint.apply(body);
+    // Language legend (redundant cue beyond color — NN/g: don't rely on color alone).
+    // Inserted AFTER tinting and marked no-tint so its own words are not painted.
+    try {
+      var tintOn = !window.RL_Tint || window.RL_Tint.isEnabled();
+      if (tintOn && body.querySelector('.tint-ru,.tint-en')) {
+        var lg = el('div', 'tint-legend no-tint');
+        lg.appendChild(el('span', 'lg-ru', '● русский'));
+        lg.appendChild(el('span', 'lg-en', '● English'));
+        var st = document.createElement('span');
+        st.className = 'lg-stress';
+        st.innerHTML = '<b class="stress">о</b> — ударная буква (жирная)';
+        lg.appendChild(st);
+        body.insertBefore(lg, body.firstChild);
+      }
+    } catch (e) {}
   }
 
   // --------------------------------------------------------- dialogue ------
@@ -282,24 +303,28 @@
   }
 
   function speechItem(host, lesson, sb) {
-    var box = el('div'); box.style.cssText = 'border-top:1px solid #334155;padding:12px 0;margin-top:8px';
+    var box = el('div'); box.style.cssText = 'border-top:1px solid var(--surface-line);padding:12px 0;margin-top:8px';
     var shown = sb.sentence_ru.replace('___', '______');
     box.appendChild(el('div', null, shown)).style.fontSize = '19px';
     box.appendChild(el('div', 'muted', sb.en));
     box.appendChild(el('div', 'muted', '💡 Hint: ' + sb.hint));
 
+    // Buttons live in a .row so CSS gives them a clear gap (Listen | Say the word)
+    var actions = el('div', 'row'); actions.style.marginTop = '8px';
     var listenBtn = el('button', 'btn small secondary', '🔊 Listen');
     listenBtn.onclick = function () { window.RLTTS.playReference(sb, { rate: state.rate, audioEl: hiddenAudio() }); };
-    box.appendChild(listenBtn);
+    actions.appendChild(listenBtn);
 
     var sayBtn = el('button', 'btn', '● Say the word');
     var status = el('span', 'muted', ' ');
+    actions.appendChild(sayBtn); actions.appendChild(status);
+    box.appendChild(actions);
     var typeIn = el('input'); typeIn.placeholder = '…or type the missing word (typing fallback)';
     var checkType = el('button', 'btn small', 'Check typed answer');
     var fb = el('div'); fb.className = window.RLRecorder.srAvailable() && window.RLRecorder.micAvailable() ? 'hidden' : '';
     if (fb.className !== 'hidden') fb.appendChild(el('p', 'muted', 'Speech recognition unavailable → typing fallback enabled automatically.'));
     fb.appendChild(typeIn); fb.appendChild(checkType);
-    box.appendChild(sayBtn); box.appendChild(status); box.appendChild(fb);
+    box.appendChild(fb);
 
     var resultLine = el('div'); box.appendChild(resultLine);
     var attemptsUl = el('ul', 'attempts'); box.appendChild(attemptsUl);
@@ -427,8 +452,8 @@
   }
 
   // --------------------------------------------------------- dashboard -----
-  function updateProgress() {
-    var bar = document.getElementById('course-progress');
+  function updateProgress(containerId) {
+    var bar = document.getElementById('course-progress-' + containerId) || document.getElementById('course-progress');
     if (!bar || !user()) return;
     api().request('GET', '/progress').then(function (r) { return r.json(); }).then(function (pg) {
       var total = window.RL_COURSE.lessons.length;
@@ -438,28 +463,42 @@
   }
 
   // ------------------------------------------------------------- mount -----
+  var mountedHosts = [];   // containerIds currently mounted — used for live re-render (tint toggle)
   function mount(containerId) {
     var root = document.getElementById(containerId);
     root.innerHTML = '';
+    if (mountedHosts.indexOf(containerId) < 0) mountedHosts.push(containerId);
+    // per-instance tab memory: lab views (#pronlab / #speech) remember their tab
+    try { state.tab = localStorage.getItem('rl_tab_' + containerId) || state.tab; } catch (e) {}
     var nav = el('div', 'row');
     var sel = el('select'); sel.style.width = 'auto';
     window.RL_COURSE.lessons.forEach(function (l) { var o = el('option', null, l.title); o.value = l.id; sel.appendChild(o); });
     sel.onchange = function () { state.lessonId = sel.value; open(); };
     nav.appendChild(el('b', null, 'Lessons:')); nav.appendChild(sel);
-    var progWrap = el('div', 'progressbar col'); var progBar = el('div'); progBar.id = 'course-progress'; progBar.style.width = '0%';
+    var progWrap = el('div', 'progressbar col');
+    var progBar = el('div'); progBar.id = 'course-progress-' + containerId; progBar.style.width = '0%';
     progWrap.appendChild(progBar); nav.appendChild(progWrap);
     root.appendChild(nav);
     var tabsHost = el('div'); root.appendChild(tabsHost);
-    var body = el('div'); body.id = 'lesson-body'; root.appendChild(body);
+    var body = el('div'); body.id = 'lesson-body-' + containerId; root.appendChild(body);
 
     function open() {
       var lesson = window.RLCourseData.lesson(state.lessonId);
-      renderTabs(tabsHost, lesson); renderBody(lesson); updateProgress();
+      renderTabs(tabsHost, lesson, containerId); renderBody(lesson, containerId); updateProgress(containerId);
       window.RLTracking.launch();
     }
-    state.lessonId = window.RL_COURSE.lessons[0].id;
+    if (!state.lessonId || !window.RLCourseData.lesson(state.lessonId)) state.lessonId = window.RL_COURSE.lessons[0].id;
     open();
+    // keep a re-render hook per mounted host (used by the tint toggle — no page reload)
+    root.__rlRerender = open;
   }
 
-  window.RLPlayer = { mount: mount, updateProgress: updateProgress, state: state };
+  function rerenderMounted() {
+    mountedHosts.slice().forEach(function (id) {
+      var host = document.getElementById(id);
+      if (host && typeof host.__rlRerender === 'function') host.__rlRerender();
+    });
+  }
+
+  window.RLPlayer = { mount: mount, updateProgress: updateProgress, state: state, rerenderMounted: rerenderMounted };
 })();
