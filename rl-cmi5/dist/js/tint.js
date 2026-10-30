@@ -39,6 +39,9 @@
     document.documentElement.classList.toggle('theme-dark', t === 'dark');
     try { localStorage.setItem(LS_THEME, t); } catch (e) {}
     syncControls();
+    // Re-render so the stress pass rewrites any text nodes that still contain
+    // raw U+0301 marks (e.g. rendered while tint was on and now off).
+    rerenderAll();
     return t;
   }
   function toggleTheme() {
@@ -260,8 +263,53 @@
     return frag;
   }
 
+  /* ---------- Stress-only pass (tint OFF) ----------
+   * When the language tint is disabled we still must never show raw U+0301
+   * combining marks. This pass rewrites text nodes: "base + U+0301" becomes a
+   * bold Cyrillic <b class="stress"> with the mark removed. No chips, no colors. */
+  function stripStressOnly(text) {
+    if (text.indexOf('\u0301') < 0) return null;
+    var frag = document.createDocumentFragment();
+    var buf = '';
+    for (var i = 0; i < text.length; i++) {
+      var ch = text[i];
+      if (ch === '\u0301' && buf) {
+        var last = buf[buf.length - 1];
+        buf = buf.slice(0, -1);
+        if (buf) frag.appendChild(document.createTextNode(buf));
+        var b = document.createElement('b');
+        b.className = 'stress';
+        b.textContent = last;
+        frag.appendChild(b);
+        buf = '';
+      } else {
+        buf += ch;
+      }
+    }
+    if (buf) frag.appendChild(document.createTextNode(buf));
+    return frag;
+  }
+
+  function walkStressOnly(root) {
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (n.nodeValue.indexOf('\u0301') < 0) return NodeFilter.FILTER_REJECT;
+        if (n.parentElement && n.parentElement.closest && n.parentElement.closest('.no-tint')) return NodeFilter.FILTER_REJECT;
+        return shouldSkip(n) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function (n) {
+      var p = n.parentNode;
+      if (!p) return;
+      var f = stripStressOnly(normalizeHomoglyphs(n.nodeValue));
+      if (f) p.replaceChild(f, n);
+    });
+  }
+
   function walk(root) {
-    if (!enabled) return;
+    if (!enabled) { walkStressOnly(root || document.body); return; }
     var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
       acceptNode: function (n) {
         if (!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;

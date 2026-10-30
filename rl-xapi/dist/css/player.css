@@ -65,8 +65,11 @@ label { display: block; margin: 8px 0 4px; color: var(--muted); font-size: calc(
 /* Stress indicator = BOLD vowel letter only (user requirement).
    tint.js converts 'vowel + U+0301' into <b class="stress"> — the combining
    mark is never painted, so no accent glyph can leak into the UI. */
-.stress { font-weight: 800; color: var(--stress-fg); }
-html.tint-off .stress { font-weight: 800; color: var(--stress-fg); }
+/* Stressed vowel: bold + a subtle warm highlight (never an accent mark).
+   In tint mode the chip background is light teal, so we use a translucent
+   amber that stays readable on both teal and indigo chips in both themes. */
+.stress { font-weight: 800; color: inherit; background: rgba(255, 214, 10, 0.35); border-radius: 3px; padding: 0 1px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+html.tint-off .stress { font-weight: 800; color: var(--stress-fg); background: none; padding: 0; }
 .tint-en { display: inline-block; background: var(--tint-en-bg); color: var(--tint-en-fg); border-bottom: 2px solid var(--tint-en-border); padding: 1px 6px 0; border-radius: 5px; font-style: italic; line-height: 1.45; }
 /* Tint legend — explicit key, so meaning never depends on color alone */
 .tint-legend { display: flex; gap: 14px; align-items: center; margin: 0 0 12px; padding: 8px 12px; background: var(--panel2); border: 1px solid var(--surface-line2); border-radius: 10px; font-size: calc(13px * var(--fs)); color: var(--muted); width: fit-content; }
