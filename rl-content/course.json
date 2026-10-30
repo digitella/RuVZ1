@@ -187,7 +187,7 @@
           "ru": "Здра́вствуйте",
           "en": "Hello (formal)",
           "ipa": "",
-          "hint": "The 'v' almost disappears: ZDRAStvyute. Stress on -ству-.",
+          "hint": "The v almost disappears: ZDRAStvyute. Stress on -ству-.",
           "audio": "media/audio/p101.ogg"
         },
         {
@@ -269,7 +269,7 @@
         },
         {
           "id": "q103",
-          "question": "What does 'пока́' mean?",
+          "question": "What does пока́ mean?",
           "options": [
             "bye (informal)",
             "hello",
@@ -291,7 +291,7 @@
         },
         {
           "id": "q105",
-          "question": "'О́чень прия́тно' means…",
+          "question": "О́чень прия́тно means…",
           "options": [
             "Nice to meet you",
             "Very expensive",
@@ -512,7 +512,7 @@
       "quiz": [
         {
           "id": "q201",
-          "question": "'Ско́лько сто́ит?' asks about…",
+          "question": "Ско́лько сто́ит? asks about…",
           "options": [
             "price",
             "time",
@@ -534,7 +534,7 @@
         },
         {
           "id": "q203",
-          "question": "'Мо́жно ка́ртой?' means…",
+          "question": "Мо́жно ка́ртой? means…",
           "options": [
             "Can I pay by card?",
             "May I see the menu?",
@@ -556,7 +556,7 @@
         },
         {
           "id": "q205",
-          "question": "'Че́к' is…",
+          "question": "Че́к is…",
           "options": [
             "a receipt",
             "a check(in)",
@@ -779,7 +779,7 @@
       "quiz": [
         {
           "id": "q301",
-          "question": "'Нале́во' means…",
+          "question": "Нале́во means…",
           "options": [
             "left",
             "right",
@@ -790,7 +790,7 @@
         },
         {
           "id": "q302",
-          "question": "'Далеко́?' asks…",
+          "question": "Далеко́? asks…",
           "options": [
             "Is it far?",
             "Is it late?",
@@ -812,7 +812,7 @@
         },
         {
           "id": "q304",
-          "question": "Correct stress of 'пло́щадь':",
+          "question": "Correct stress of пло́щадь:",
           "options": [
             "площадь",
             "площадь",
@@ -823,7 +823,7 @@
         },
         {
           "id": "q305",
-          "question": "'Пешко́м' means…",
+          "question": "Пешко́м means…",
           "options": [
             "on foot",
             "by bus",
@@ -992,7 +992,7 @@
           "ru": "Место́ у окна́",
           "en": "Window seat",
           "ipa": "",
-          "hint": "MYES-ta u OK-na. 'у' attaches to the previous word's rhythm.",
+          "hint": "MYES-ta u OK-na. у attaches to the previous words rhythm.",
           "audio": "media/audio/p402.ogg"
         },
         {
@@ -1000,7 +1000,7 @@
           "ru": "Поса́дка че́рез ча́с",
           "en": "Boarding in an hour",
           "ipa": "",
-          "hint": "pa-SAT-ka CHE-res CHAS. 'че́рез' → CHE-res.",
+          "hint": "pa-SAT-ka CHE-res CHAS. че́рез → CHE-res.",
           "audio": "media/audio/p403.ogg"
         },
         {
@@ -1008,7 +1008,7 @@
           "ru": "Ручна́я кла́дь",
           "en": "Carry-on",
           "ipa": "",
-          "hint": "ruch-NA-ya KLAD'. Final ть is soft.",
+          "hint": "ruch-NA-ya KLAD. Final ть is soft.",
           "audio": "media/audio/p404.ogg"
         }
       ],
@@ -1044,18 +1044,18 @@
       "quiz": [
         {
           "id": "q401",
-          "question": "'Поса́дка' means…",
+          "question": "Поса́дка means…",
           "options": [
             "boarding",
             "landing",
             "departure"
           ],
           "correct": 0,
-          "explain": "Поса́дка = boarding (also 'landing' for planes, context!)."
+          "explain": "Поса́дка = boarding (also landing for planes, context!)."
         },
         {
           "id": "q402",
-          "question": "'Ручна́я кла́дь' is…",
+          "question": "Ручна́я кла́дь is…",
           "options": [
             "carry-on",
             "checked bag",
@@ -1077,7 +1077,7 @@
         },
         {
           "id": "q404",
-          "question": "'Бага́ж' — э́то…",
+          "question": "Бага́ж — э́то…",
           "options": [
             "luggage",
             "snack",
@@ -1276,7 +1276,7 @@
           "ru": "Е́сть про́бки?",
           "en": "Is there traffic?",
           "ipa": "",
-          "hint": "yes' PROBK'i. 'ешь' reduces to 'is'.",
+          "hint": "yes PROBKi. ешь reduces to is.",
           "audio": "media/audio/p503.ogg"
         },
         {
@@ -1320,7 +1320,7 @@
       "quiz": [
         {
           "id": "q501",
-          "question": "'Про́бка' is…",
+          "question": "Про́бка is…",
           "options": [
             "traffic jam",
             "parking",
@@ -1331,7 +1331,7 @@
         },
         {
           "id": "q502",
-          "question": "'Води́тель' means…",
+          "question": "Води́тель means…",
           "options": [
             "driver",
             "waiter",
@@ -1364,7 +1364,7 @@
         },
         {
           "id": "q505",
-          "question": "'Чае́вые' are…",
+          "question": "Чае́вые are…",
           "options": [
             "a tip",
             "tickets",
@@ -1525,7 +1525,7 @@
           "ru": "У ва́с е́сть бро́нь?",
           "en": "Do you have a reservation?",
           "ipa": "",
-          "hint": "BRON' — stress on О, soft final sign.",
+          "hint": "BRON — stress on О, soft final sign.",
           "audio": "media/audio/p601.ogg"
         },
         {
@@ -1585,7 +1585,7 @@
       "quiz": [
         {
           "id": "q601",
-          "question": "'Вы́езд' means…",
+          "question": "Вы́езд means…",
           "options": [
             "checkout",
             "checkin",
@@ -1596,7 +1596,7 @@
         },
         {
           "id": "q602",
-          "question": "'За́втрак вклю́чён' — breakfast is…",
+          "question": "За́втрак вклю́чён — breakfast is…",
           "options": [
             "included",
             "closed",
@@ -1625,11 +1625,11 @@
             "бронь"
           ],
           "correct": 0,
-          "explain": "BRON' — one syllable word basically; stress on о."
+          "explain": "BRON — one syllable word basically; stress on о."
         },
         {
           "id": "q605",
-          "question": "'Ма́стер' придё́т — a … will come",
+          "question": "Ма́стер придё́т — a … will come",
           "options": [
             "technician",
             "chef",
@@ -1825,7 +1825,7 @@
           "answer": "ва́ми",
           "transcript": "Я и́з кварти́ры на́д ва́ми.",
           "en": "I'm from the flat above you.",
-          "hint": "Instrumental of 'вы'.",
+          "hint": "Instrumental of вы.",
           "audio": "media/audio/s701.ogg"
         },
         {
@@ -1850,7 +1850,7 @@
       "quiz": [
         {
           "id": "q701",
-          "question": "'Соседи́' — э́то…",
+          "question": "Соседи́ — э́то…",
           "options": [
             "neighbours",
             "landlords",
@@ -1861,14 +1861,14 @@
         },
         {
           "id": "q702",
-          "question": "'Шуме́ть' means…",
+          "question": "Шуме́ть means…",
           "options": [
             "to be noisy",
             "to clean",
             "to sleep"
           ],
           "correct": 0,
-          "explain": "Не шумите́! = Don't make noise!"
+          "explain": "Не шумите́! = Dont make noise!"
         },
         {
           "id": "q703",
@@ -1894,7 +1894,7 @@
         },
         {
           "id": "q705",
-          "question": "'Коммуна́лка' includes…",
+          "question": "Коммуна́лка includes…",
           "options": [
             "utilities",
             "insurance",
@@ -2067,7 +2067,7 @@
           "ru": "Два́ килогра́мма",
           "en": "Two kilos",
           "ipa": "",
-          "hint": "DVA ki-la-GRAM-ma. 'два' is dyeh.",
+          "hint": "DVA ki-la-GRAM-ma. два is dyeh.",
           "audio": "media/audio/p801.ogg"
         },
         {
@@ -2127,7 +2127,7 @@
       "quiz": [
         {
           "id": "q801",
-          "question": "'Бато́н' is…",
+          "question": "Бато́н is…",
           "options": [
             "a white loaf",
             "a baguette sandwich",
@@ -2138,7 +2138,7 @@
         },
         {
           "id": "q802",
-          "question": "'Полкилогра́мма сы́ра' = ",
+          "question": "Полкилогра́мма сы́ра =",
           "options": [
             "500 g of cheese",
             "5 kg",
@@ -2156,7 +2156,7 @@
             "Где …"
           ],
           "correct": 0,
-          "explain": "'С вас + money' = total due."
+          "explain": "С вас + money = total due."
         },
         {
           "id": "q804",
@@ -2171,7 +2171,7 @@
         },
         {
           "id": "q805",
-          "question": "'Ка́сса' — э́то…",
+          "question": "Ка́сса — э́то…",
           "options": [
             "checkout",
             "cashier's smile",
@@ -2386,7 +2386,7 @@
       "quiz": [
         {
           "id": "q901",
-          "question": "'Торгова́ться' means…",
+          "question": "Торгова́ться means…",
           "options": [
             "to bargain",
             "to tip",
@@ -2397,7 +2397,7 @@
         },
         {
           "id": "q902",
-          "question": "'Дорогова́то' is…",
+          "question": "Дорогова́то is…",
           "options": [
             "slightly expensive",
             "very cheap",
@@ -2430,7 +2430,7 @@
         },
         {
           "id": "q905",
-          "question": "'Вме́сте' means…",
+          "question": "Вме́сте means…",
           "options": [
             "altogether",
             "separately",
@@ -2621,7 +2621,7 @@
           "ru": "Откры́ть счё́т",
           "en": "Open an account",
           "ipa": "",
-          "hint": "a-TKRIT' SCHOOT. 'откры́ть' contracts.",
+          "hint": "a-TKRIT SCHOOT. откры́ть contracts.",
           "audio": "media/audio/p1004.ogg"
         }
       ],
@@ -2657,7 +2657,7 @@
       "quiz": [
         {
           "id": "q1001",
-          "question": "'Ку́рс' at a bank means…",
+          "question": "Ку́рс at a bank means…",
           "options": [
             "exchange rate",
             "course of lectures",
@@ -2668,7 +2668,7 @@
         },
         {
           "id": "q1002",
-          "question": "'Счёт' is…",
+          "question": "Счёт is…",
           "options": [
             "an account",
             "a bill/check",
@@ -2701,7 +2701,7 @@
         },
         {
           "id": "q1005",
-          "question": "'Око́шко' — this is…",
+          "question": "Око́шко — this is…",
           "options": [
             "a teller window",
             "a small eye",
@@ -2934,7 +2934,7 @@
       "quiz": [
         {
           "id": "q1101",
-          "question": "'Та́риф' means…",
+          "question": "Та́риф means…",
           "options": [
             "mobile plan",
             "tax office",
@@ -2956,7 +2956,7 @@
         },
         {
           "id": "q1103",
-          "question": "'Пополни́ть счёт' — э́то…",
+          "question": "Пополни́ть счёт — э́то…",
           "options": [
             "top up",
             "close account",
@@ -3170,9 +3170,9 @@
       "speechBlanks": [
         {
           "id": "s1201",
-          "sentence_ru": "Одно́ на «Парк Ку́льтуры».",
+          "sentence_ru": "Одно́ на Парк Ку́льтуры.",
           "answer": "одно",
-          "transcript": "Одно́ на́ «Па́рк Ку́льтуры».",
+          "transcript": "Одно́ на́ Па́рк Ку́льтуры.",
           "en": "One ticket to Gorky Park area.",
           "hint": "Numeral for one ticket.",
           "audio": "media/audio/s1201.ogg"
@@ -3199,7 +3199,7 @@
       "quiz": [
         {
           "id": "q1201",
-          "question": "'Переса́дка' means…",
+          "question": "Переса́дка means…",
           "options": [
             "transfer",
             "delay",
@@ -3212,16 +3212,16 @@
           "id": "q1202",
           "question": "Tickets at metro cashier: ask…",
           "options": [
-            "«Одно́ на …»",
-            "«Хочу́ по́езд»",
-            "«Где ваго́н»"
+            "Одно́ на …",
+            "Хочу́ по́езд",
+            "Где ваго́н"
           ],
           "correct": 0,
           "explain": "Fixed shopping phrase."
         },
         {
           "id": "q1203",
-          "question": "'Ваго́н' is…",
+          "question": "Ваго́н is…",
           "options": [
             "train carriage",
             "bus driver",
@@ -3404,7 +3404,7 @@
           "ru": "Отправи́ть",
           "en": "To send",
           "ipa": "",
-          "hint": "AT-pra-vit'. Silent 'в'? No: a-Tpra-vit'.",
+          "hint": "AT-pra-vit. Silent в? No: a-Tpra-vit.",
           "audio": "media/audio/p1301.ogg"
         },
         {
@@ -3464,7 +3464,7 @@
       "quiz": [
         {
           "id": "q1301",
-          "question": "'Трек-но́мер' ну́жен что́бы…",
+          "question": "Трек-но́мер ну́жен что́бы…",
           "options": [
             "track the parcel",
             "pay taxes",
@@ -3475,7 +3475,7 @@
         },
         {
           "id": "q1302",
-          "question": "'Получа́тель' — э́то…",
+          "question": "Получа́тель — э́то…",
           "options": [
             "the recipient",
             "the sender",
@@ -3486,7 +3486,7 @@
         },
         {
           "id": "q1303",
-          "question": "'Наложе́нный платё́ж' = ",
+          "question": "Наложе́нный платё́ж =",
           "options": [
             "cash on delivery",
             "prepaid box",
@@ -3741,7 +3741,7 @@
       "quiz": [
         {
           "id": "q1401",
-          "question": "'Апте́ка' stress is on…",
+          "question": "Апте́ка stress is on…",
           "options": [
             "first syllable",
             "second",
@@ -3752,7 +3752,7 @@
         },
         {
           "id": "q1402",
-          "question": "'Без реце́пта' means…",
+          "question": "Без реце́пта means…",
           "options": [
             "over the counter",
             "very expensive",
@@ -3763,7 +3763,7 @@
         },
         {
           "id": "q1403",
-          "question": "'Дважды́ в день' = ",
+          "question": "Дважды́ в день =",
           "options": [
             "twice a day",
             "every two days",
@@ -3774,7 +3774,7 @@
         },
         {
           "id": "q1404",
-          "question": "'Сиро́п' usually treats…",
+          "question": "Сиро́п usually treats…",
           "options": [
             "a cough",
             "a fracture",
@@ -4006,7 +4006,7 @@
       "quiz": [
         {
           "id": "q1501",
-          "question": "'Терапе́вт' в Росси́и — э́то…",
+          "question": "Терапе́вт в Росси́и — э́то…",
           "options": [
             "a GP",
             "a therapist-psychologist",
@@ -4017,7 +4017,7 @@
         },
         {
           "id": "q1502",
-          "question": "'Больни́чный лист' ну́жен для…",
+          "question": "Больни́чный лист ну́жен для…",
           "options": [
             "sick leave at work",
             "hospital parking",
@@ -4283,7 +4283,7 @@
       "quiz": [
         {
           "id": "q1601",
-          "question": "'Заявле́ние' о поте́ре — э́то…",
+          "question": "Заявле́ние о поте́ре — э́то…",
           "options": [
             "a police report",
             "a visa",
@@ -4305,7 +4305,7 @@
         },
         {
           "id": "q1603",
-          "question": "'Талон-уведомлени́е' подтверждае́т…",
+          "question": "Талон-уведомлени́е подтверждае́т…",
           "options": [
             "that you filed a report",
             "your hotel booking",
@@ -4565,7 +4565,7 @@
       "quiz": [
         {
           "id": "q1701",
-          "question": "'МФЦ' помога́ет…",
+          "question": "МФЦ помога́ет…",
           "options": [
             "get many services at one place",
             "fix phones",
@@ -4587,7 +4587,7 @@
         },
         {
           "id": "q1703",
-          "question": "'Госуслуги́' — э́то…",
+          "question": "Госуслуги́ — э́то…",
           "options": [
             "state services portal",
             "bus company",
@@ -4836,7 +4836,7 @@
       "quiz": [
         {
           "id": "q1801",
-          "question": "'Собесе́дование' — э́то…",
+          "question": "Собесе́дование — э́то…",
           "options": [
             "a job interview",
             "a meeting of friends",
@@ -4847,7 +4847,7 @@
         },
         {
           "id": "q1802",
-          "question": "'Окла́д' means…",
+          "question": "Окла́д means…",
           "options": [
             "base salary",
             "bonus",
@@ -4858,7 +4858,7 @@
         },
         {
           "id": "q1803",
-          "question": "'Графи́к пя́ть два' = ",
+          "question": "Графи́к пя́ть два =",
           "options": [
             "Mon–Fri",
             "5 days off",
@@ -5113,7 +5113,7 @@
       "quiz": [
         {
           "id": "q1901",
-          "question": "'Зачё́т' — э́то…",
+          "question": "Зачё́т — э́то…",
           "options": [
             "a pass/fail credit",
             "a discount",
@@ -5135,7 +5135,7 @@
         },
         {
           "id": "q1903",
-          "question": "'К пя́тнице' means…",
+          "question": "К пя́тнице means…",
           "options": [
             "by Friday",
             "on Saturday",
@@ -5157,7 +5157,7 @@
         },
         {
           "id": "q1905",
-          "question": "Teacher praise: 'Моло́дцы!' = ",
+          "question": "Teacher praise: Моло́дцы! =",
           "options": [
             "Well done!",
             "Sit down!",
@@ -5324,7 +5324,7 @@
           "ru": "Воспита́тель",
           "en": "Daycare teacher",
           "ipa": "",
-          "hint": "vas-pi-TA-tel'. Stress shifts vs преподава́тель!",
+          "hint": "vas-pi-TA-tel. Stress shifts vs преподава́тель!",
           "audio": "media/audio/p2001.ogg"
         },
         {
@@ -5384,7 +5384,7 @@
       "quiz": [
         {
           "id": "q2001",
-          "question": "'Са́дик' — разгово́рное сло́во для…",
+          "question": "Са́дик — разгово́рное сло́во для…",
           "options": [
             "kindergarten",
             "schoolyard",
@@ -5395,7 +5395,7 @@
         },
         {
           "id": "q2002",
-          "question": "'Сменна́я обу́вь' means…",
+          "question": "Сменна́я обу́вь means…",
           "options": [
             "indoor shoes",
             "spare laces",
@@ -5406,7 +5406,7 @@
         },
         {
           "id": "q2003",
-          "question": "'Оче́редь' электронна́я — you're…",
+          "question": "Оче́редь электронна́я — youre…",
           "options": [
             "on a digital waitlist",
             "holding paper tickets",
@@ -5428,7 +5428,7 @@
         },
         {
           "id": "q2005",
-          "question": "'Утре́нник' usually happens…",
+          "question": "Утре́нник usually happens…",
           "options": [
             "for holidays with parents",
             "at night",
@@ -5589,7 +5589,7 @@
           "ru": "Де́нь рожде́ния",
           "en": "Birthday",
           "ipa": "",
-          "hint": "dyen' razh-DYE-ni-ya. Even though 'день' masc., stress inside second word.",
+          "hint": "dyen razh-DYE-ni-ya. Even though день masc., stress inside second word.",
           "audio": "media/audio/p2101.ogg"
         },
         {
@@ -5671,7 +5671,7 @@
         },
         {
           "id": "q2103",
-          "question": "'К семи́' means…",
+          "question": "К семи́ means…",
           "options": [
             "by seven",
             "at seven sharp",
@@ -5682,7 +5682,7 @@
         },
         {
           "id": "q2104",
-          "question": "Toast 'За тебя́!' = ",
+          "question": "Toast За тебя́! =",
           "options": [
             "To you!",
             "About you!",
@@ -5693,7 +5693,7 @@
         },
         {
           "id": "q2105",
-          "question": "'Поздрави́ть с Новы́м годо́м' — to…",
+          "question": "Поздрави́ть с Новы́м годо́м — to…",
           "options": [
             "congratulate for New Year",
             "invite to NY party",
@@ -5925,7 +5925,7 @@
         },
         {
           "id": "q2202",
-          "question": "'Ско́рая' — э́то…",
+          "question": "Ско́рая — э́то…",
           "options": [
             "ambulance",
             "express train",
@@ -5936,7 +5936,7 @@
         },
         {
           "id": "q2203",
-          "question": "'Без созна́ния' means…",
+          "question": "Без созна́ния means…",
           "options": [
             "unconscious",
             "speechless",
@@ -5958,7 +5958,7 @@
         },
         {
           "id": "q2205",
-          "question": "'Пострада́вший' — э́то…",
+          "question": "Пострада́вший — э́то…",
           "options": [
             "victim",
             "hero",
@@ -6125,7 +6125,7 @@
           "ru": "Продли́ть",
           "en": "To extend",
           "ipa": "",
-          "hint": "prod-LIT'. Cluster дл hard — slow drill.",
+          "hint": "prod-LIT. Cluster дл hard — slow drill.",
           "audio": "media/audio/p2301.ogg"
         },
         {
@@ -6185,7 +6185,7 @@
       "quiz": [
         {
           "id": "q2301",
-          "question": "'Госпошлина́' — э́то…",
+          "question": "Госпошлина́ — э́то…",
           "options": [
             "state fee",
             "gift tax",
@@ -6196,7 +6196,7 @@
         },
         {
           "id": "q2302",
-          "question": "'Продли́ть пребыва́ние' means…",
+          "question": "Продли́ть пребыва́ние means…",
           "options": [
             "extend stay",
             "shorten trip",
@@ -6289,7 +6289,7 @@
         "lines": [
           {
             "speaker": "Консультант",
-            "ru": "Заполняе́м графу́ «ФИО»: фами́лия, имя́, отче́ство.",
+            "ru": "Заполняе́м графу́ ФИО: фами́лия, имя́, отче́ство.",
             "en": "Fill the full-name field: surname, first name, patronymic.",
             "hint": ""
           },
@@ -6301,13 +6301,13 @@
           },
           {
             "speaker": "Консультант",
-            "ru": "Да. Графа́ «дата́ рожде́ния»: день, ме́сяц, го́д цифрами́.",
+            "ru": "Да. Графа́ дата́ рожде́ния: день, ме́сяц, го́д цифрами́.",
             "en": "Yes. Date of birth: day, month, year in digits.",
             "hint": ""
           },
           {
             "speaker": "Клие́нт",
-            "ru": "А «адре́с регистраци́и» отли́чается от фактическо́го?",
+            "ru": "А адре́с регистраци́и отли́чается от фактическо́го?",
             "en": "Does registered address differ from actual one?",
             "hint": ""
           },
@@ -6319,7 +6319,7 @@
           },
           {
             "speaker": "Клие́нт",
-            "ru": "«Семейное положени́е»: холо́ст. По́дпись и дата́ внизу́?",
+            "ru": "Семейное положени́е: холо́ст. По́дпись и дата́ внизу́?",
             "en": "Marital status: single. Signature and date below?",
             "hint": ""
           },
@@ -6452,9 +6452,9 @@
       "speechBlanks": [
         {
           "id": "s2401",
-          "sentence_ru": "Графа́ «___ »: фами́лия, имя́, отче́ство.",
+          "sentence_ru": "Графа́ ___ : фами́лия, имя́, отче́ство.",
           "answer": "ФИО",
-          "transcript": "Графа́ «ФИО́»: фами́лия, имя́, отче́ство.",
+          "transcript": "Графа́ ФИО́: фами́лия, имя́, отче́ство.",
           "en": "Full-name field.",
           "hint": "Initials for full name.",
           "audio": "media/audio/s2401.ogg"
@@ -6481,7 +6481,7 @@
       "quiz": [
         {
           "id": "q2401",
-          "question": "'ФИО' расшифровывае́тся как…",
+          "question": "ФИО расшифровывае́тся как…",
           "options": [
             "surname-name-patronymic",
             "form-in-out",
@@ -6503,7 +6503,7 @@
         },
         {
           "id": "q2403",
-          "question": "'Печатны́ми буква́ми' means…",
+          "question": "Печатны́ми буква́ми means…",
           "options": [
             "block letters",
             "bold font",
@@ -6752,7 +6752,7 @@
       "quiz": [
         {
           "id": "q2501",
-          "question": "'Представьтесь' means…",
+          "question": "Представьтесь means…",
           "options": [
             "introduce yourself",
             "take a break",
@@ -6774,7 +6774,7 @@
         },
         {
           "id": "q2503",
-          "question": "'Ли́чный каби́нет' — э́то…",
+          "question": "Ли́чный каби́нет — э́то…",
           "options": [
             "your online account",
             "private office toilet",
@@ -6796,7 +6796,7 @@
         },
         {
           "id": "q2505",
-          "question": "Finished exam: 'Испыта́ние заверше́но' = ",
+          "question": "Finished exam: Испыта́ние заверше́но =",
           "options": [
             "test completed",
             "test cancelled",
@@ -7142,7 +7142,7 @@
           },
           {
             "speaker": "Ма́рк",
-            "ru": "«Повторите, пожа́луйста» спасло́ меня́ сто ра́з.",
+            "ru": "Повторите, пожа́луйста спасло́ меня́ сто ра́з.",
             "en": "'Repeat please' saved me a hundred times.",
             "hint": ""
           },
@@ -7244,7 +7244,7 @@
           "ru": "Переспроси́те, пожа́луйста",
           "en": "Could you repeat, please",
           "ipa": "",
-          "hint": "pe-ri-spro-SIT'-sa. Prefix пе- reduces.",
+          "hint": "pe-ri-spro-SIT-sa. Prefix пе- reduces.",
           "audio": "media/audio/p2701.ogg"
         },
         {
@@ -7284,9 +7284,9 @@
         },
         {
           "id": "s2702",
-          "sentence_ru": "«Повтори́те, пожа́луйста» меня́ ___ .",
+          "sentence_ru": "Повтори́те, пожа́луйста меня́ ___ .",
           "answer": "спасло́",
-          "transcript": "«Повторите́, пожа́луйста» меня́ спасло́.",
+          "transcript": "Повторите́, пожа́луйста меня́ спасло́.",
           "en": "'Repeat please' saved me.",
           "hint": "Past neuter: saved.",
           "audio": "media/audio/s2702.ogg"
@@ -7304,7 +7304,7 @@
       "quiz": [
         {
           "id": "q2701",
-          "question": "'Переспраши́вать' means…",
+          "question": "Переспраши́вать means…",
           "options": [
             "ask to repeat",
             "answer fast",
@@ -7326,7 +7326,7 @@
         },
         {
           "id": "q2703",
-          "question": "'Спасло́' here means…",
+          "question": "Спасло́ here means…",
           "options": [
             "saved (figuratively)",
             "boiled",
@@ -7401,7 +7401,7 @@
           },
           {
             "speaker": "Лена́",
-            "ru": "Я живу́ у метро́ «Соку́л». Я программист.",
+            "ru": "Я живу́ у метро́ Соку́л. Я программист.",
             "en": "I live near Sokol metro. I'm a programmer.",
             "hint": ""
           },
@@ -7575,14 +7575,14 @@
       "quiz": [
         {
           "id": "q2801",
-          "question": "'Здесь' means…",
+          "question": "Здесь means…",
           "options": [
             "here",
             "there",
             "now"
           ],
           "correct": 0,
-          "explain": "Здесь = here (soft з')."
+          "explain": "Здесь = here (soft з)."
         },
         {
           "id": "q2802",
@@ -7593,11 +7593,11 @@
             "У меня ___."
           ],
           "correct": 0,
-          "explain": "Nominative after 'я': Я врач."
+          "explain": "Nominative after я: Я врач."
         },
         {
           "id": "q2803",
-          "question": "'Новы́й' agrees with…",
+          "question": "Новы́й agrees with…",
           "options": [
             "masculine noun",
             "feminine noun",
@@ -7608,7 +7608,7 @@
         },
         {
           "id": "q2804",
-          "question": "Correct stress of 'живёшь':",
+          "question": "Correct stress of живёшь:",
           "options": [
             "живЁшь",
             "жиВёшь",
@@ -7619,7 +7619,7 @@
         },
         {
           "id": "q2805",
-          "question": "'Преподава́тель' works at…",
+          "question": "Преподава́тель works at…",
           "options": [
             "a school/university",
             "a hospital",
@@ -7847,11 +7847,11 @@
             "шесть"
           ],
           "correct": 1,
-          "explain": "Лет = 'years', not a number."
+          "explain": "Лет = years, not a number."
         },
         {
           "id": "q2902",
-          "question": "Full formal name of 'Ва́ня':",
+          "question": "Full formal name of Ва́ня:",
           "options": [
             "Василий",
             "Иван",
@@ -7880,11 +7880,11 @@
             "У меня лет N"
           ],
           "correct": 0,
-          "explain": "Dative 'мне'."
+          "explain": "Dative мне."
         },
         {
           "id": "q2905",
-          "question": "'Сестра́' means…",
+          "question": "Сестра́ means…",
           "options": [
             "sister",
             "brother",
@@ -8067,7 +8067,7 @@
           "ru": "Ча́й с лимоно́м",
           "en": "tea with lemon",
           "ipa": "",
-          "hint": "chai s lee-MA-nom. 'с л' links smoothly.",
+          "hint": "chai s lee-MA-nom. с л links smoothly.",
           "audio": "media/audio/p3003.ogg"
         },
         {
@@ -8133,7 +8133,7 @@
         },
         {
           "id": "q3003",
-          "question": "'Выпе́чка' means…",
+          "question": "Выпе́чка means…",
           "options": [
             "pastry",
             "soup",
@@ -8144,7 +8144,7 @@
         },
         {
           "id": "q3004",
-          "question": "Stress of 'вкусно':",
+          "question": "Stress of вкусно:",
           "options": [
             "ВКУСно",
             "вКУСно",
@@ -8274,7 +8274,7 @@
         {
           "id": "g31a",
           "title": "Мо́жно + acc.?",
-          "summary": "'Мо́жно счёт?' — polite infinitive-style request.",
+          "summary": "Мо́жно счёт? — polite infinitive-style request.",
           "examples": [
             {
               "ru": "Мо́жно ка́рту? Мо́жно ещё кофе?",
@@ -8362,7 +8362,7 @@
       "quiz": [
         {
           "id": "q3101",
-          "question": "'Сдача́' is…",
+          "question": "Сдача́ is…",
           "options": [
             "the change",
             "the tip",
@@ -8395,7 +8395,7 @@
         },
         {
           "id": "q3104",
-          "question": "'Приходи́те ещё' means…",
+          "question": "Приходи́те ещё means…",
           "options": [
             "come again",
             "pay more",
@@ -8621,7 +8621,7 @@
       "quiz": [
         {
           "id": "q3201",
-          "question": "'Ря́дом с' needs…",
+          "question": "Ря́дом с needs…",
           "options": [
             "instrumental",
             "genitive",
@@ -8632,7 +8632,7 @@
         },
         {
           "id": "q3202",
-          "question": "'Значи́т' means…",
+          "question": "Значи́т means…",
           "options": [
             "so/means",
             "yes",
@@ -8782,7 +8782,7 @@
         {
           "id": "g33a",
           "title": "На + transport (no verb needed)",
-          "summary": "'Я на метро́' — on = by.",
+          "summary": "Я на метро́ — on = by.",
           "examples": [
             {
               "ru": "Еду́ на авто́бусе. / Мы на такси́.",
@@ -8859,7 +8859,7 @@
         },
         {
           "id": "s3303",
-          "sentence_ru": "Мне ___ авто́бус. ",
+          "sentence_ru": "Мне ___ авто́бус.",
           "answer": "ну́жен",
           "transcript": "Мне́ ну́жен авто́бус.",
           "en": "I need a bus.",
@@ -8870,7 +8870,7 @@
       "quiz": [
         {
           "id": "q3301",
-          "question": "'Пешко́м' vs 'на метро́':",
+          "question": "Пешко́м vs на метро́:",
           "options": [
             "walk vs metro",
             "bike vs car",
@@ -8914,7 +8914,7 @@
         },
         {
           "id": "q3305",
-          "question": "'Расписа́ние' shows…",
+          "question": "Расписа́ние shows…",
           "options": [
             "times",
             "prices",
@@ -9050,7 +9050,7 @@
         },
         {
           "id": "g34b",
-          "title": "Дательный для 'мне ну́жно'",
+          "title": "Дательный для мне ну́жно",
           "summary": "Personal need uses dative subject.",
           "examples": [
             {
@@ -9149,7 +9149,7 @@
         },
         {
           "id": "q3403",
-          "question": "'Заде́ржка' means…",
+          "question": "Заде́ржка means…",
           "options": [
             "delay",
             "gate",
@@ -9289,7 +9289,7 @@
       "grammar": [
         {
           "id": "g35a",
-          "title": "Формы с 'не' + verb",
+          "title": "Формы с не + verb",
           "summary": "Simple negation before verb.",
           "examples": [
             {
@@ -9400,7 +9400,7 @@
         },
         {
           "id": "q3503",
-          "question": "'Внизу́' means…",
+          "question": "Внизу́ means…",
           "options": [
             "upstairs",
             "downstairs",
@@ -9619,7 +9619,7 @@
           "answer": "будет",
           "transcript": "Цено́й бу́дет около́ четырёхсо́т.",
           "en": "It will cost about 400.",
-          "hint": "Future of 'быть'.",
+          "hint": "Future of быть.",
           "audio": "media/audio/s3602.ogg"
         },
         {
@@ -9635,7 +9635,7 @@
       "quiz": [
         {
           "id": "q3601",
-          "question": "'Подожди́те' means…",
+          "question": "Подожди́те means…",
           "options": [
             "drive faster",
             "wait",
@@ -9905,7 +9905,7 @@
         },
         {
           "id": "q3702",
-          "question": "'Ошибка́' is…",
+          "question": "Ошибка́ is…",
           "options": [
             "a mistake",
             "a receipt",
@@ -10071,7 +10071,7 @@
         {
           "id": "g38a",
           "title": "На + accusative for naming under",
-          "summary": " бронь на и́мя Smith",
+          "summary": "бронь на и́мя Smith",
           "examples": [
             {
               "ru": "Бронь на фами́лию Иванов.",
@@ -10429,7 +10429,7 @@
         },
         {
           "id": "q3902",
-          "question": "'Полоте́нце' is…",
+          "question": "Полоте́нце is…",
           "options": [
             "towel",
             "pillow",
@@ -10451,7 +10451,7 @@
         },
         {
           "id": "q3904",
-          "question": "'Придёт' from verb…",
+          "question": "Придёт from verb…",
           "options": [
             "прийти́",
             "приносить",
@@ -10936,7 +10936,7 @@
       "quiz": [
         {
           "id": "q4101",
-          "question": "'Снизу́' means…",
+          "question": "Снизу́ means…",
           "options": [
             "from below",
             "above",
@@ -10969,7 +10969,7 @@
         },
         {
           "id": "q4104",
-          "question": "'Заходи́те вече́ром' invites you to…",
+          "question": "Заходи́те вече́ром invites you to…",
           "options": [
             "visit",
             "sleep",
@@ -11366,7 +11366,7 @@
         {
           "id": "g43a",
           "title": "Где + verb 3pl impersonal",
-          "summary": "'Where do they…' uses они-form.",
+          "summary": "Where do they… uses они-form.",
           "examples": [
             {
               "ru": "где взве́шивают / упаковывают",
@@ -11468,7 +11468,7 @@
         },
         {
           "id": "q4303",
-          "question": "'Ровно́' means…",
+          "question": "Ровно́ means…",
           "options": [
             "exactly",
             "approximately",
@@ -11747,7 +11747,7 @@
         },
         {
           "id": "q4405",
-          "question": "'Торг' means…",
+          "question": "Торг means…",
           "options": [
             "bargaining",
             "packing",
@@ -11973,7 +11973,7 @@
         },
         {
           "id": "q4502",
-          "question": "'Мягкий' = …",
+          "question": "Мягкий = …",
           "options": [
             "soft",
             "sweet",
@@ -12559,7 +12559,7 @@
           },
           {
             "speaker": "Опера́тор",
-            "ru": "«Онлайн» — шестьсо́т, пятнадцать гигабайт, безлими́т звонки́.",
+            "ru": "Онлайн — шестьсо́т, пятнадцать гигабайт, безлими́т звонки́.",
             "en": "Online plan: 600, 15 GB, unlimited calls.",
             "hint": ""
           },
@@ -12571,13 +12571,13 @@
           },
           {
             "speaker": "Опера́тор",
-            "ru": "Да. И опция «Музыка» плюс сто.",
+            "ru": "Да. И опция Музыка плюс сто.",
             "en": "Yes. Plus Music option for 100.",
             "hint": ""
           },
           {
             "speaker": "Клиент",
-            "ru": "Не ну́жно. Подключи́те просто «Онлайн».",
+            "ru": "Не ну́жно. Подключи́те просто Онлайн.",
             "en": "Not needed. Just connect Online.",
             "hint": ""
           },
@@ -12719,9 +12719,9 @@
         },
         {
           "id": "s4802",
-          "sentence_ru": "___ «Онлайн», пожа́луйста.",
+          "sentence_ru": "___ Онлайн, пожа́луйста.",
           "answer": "подключите",
-          "transcript": "Подключите́ «Онла́йн», пожа́луйста.",
+          "transcript": "Подключите́ Онла́йн, пожа́луйста.",
           "en": "Connect 'Online', please.",
           "hint": "Polite imperative.",
           "audio": "media/audio/s4802.ogg"
@@ -12741,9 +12741,9 @@
           "id": "q4801",
           "question": "15GB plan named…",
           "options": [
-            "«Онлайн»",
-            "«Мега»",
-            "«Турбо»"
+            "Онлайн",
+            "Мега",
+            "Турбо"
           ],
           "correct": 0,
           "explain": "From dialogue."
@@ -13330,19 +13330,19 @@
         "lines": [
           {
             "speaker": "Дина́мик",
-            "ru": "Осторожно, двери закрыва́ются. Сле́дующая станция — «Кузне́цкий мост».",
+            "ru": "Осторожно, двери закрыва́ются. Сле́дующая станция — Кузне́цкий мост.",
             "en": "Careful, doors closing. Next station — Kuznetsky Most.",
             "hint": ""
           },
           {
             "speaker": "Тури́ст",
-            "ru": "Услышал «осторожно». Это про дверу́?",
+            "ru": "Услышал осторожно. Это про дверу́?",
             "en": "Heard 'careful'. Is it about doors?",
             "hint": ""
           },
           {
             "speaker": "Местны́й",
-            "ru": "Да. И «не прислоня́йтесь» — не стой у дверей.",
+            "ru": "Да. И не прислоня́йтесь — не стой у дверей.",
             "en": "Yes. And 'don't lean' — don't stand at doors.",
             "hint": ""
           },
@@ -13354,7 +13354,7 @@
           },
           {
             "speaker": "Местны́й",
-            "ru": "Да: «Конечная станция — «Плане́рная».",
+            "ru": "Да: Конечная станция — Плане́рная.",
             "en": "Yes: 'Final station Planernaya.'",
             "hint": ""
           },
@@ -13522,7 +13522,7 @@
       "quiz": [
         {
           "id": "q5101",
-          "question": "'Осторожно' warns about…",
+          "question": "Осторожно warns about…",
           "options": [
             "closing doors",
             "tickets",
@@ -14310,7 +14310,7 @@
         },
         {
           "id": "q5402",
-          "question": "'Полоска́ние' means…",
+          "question": "Полоска́ние means…",
           "options": [
             "gargling",
             "injection",
@@ -15173,7 +15173,7 @@
           },
           {
             "speaker": "Потерпевший",
-            "ru": "В метро́, около восьми́, станция «Автозаво́дская».",
+            "ru": "В метро́, около восьми́, станция Автозаво́дская.",
             "en": "In metro, around eight, Avtozavodskaya.",
             "hint": ""
           },
@@ -15707,7 +15707,7 @@
           },
           {
             "speaker": "Администратор",
-            "ru": "Па́спорт, заявление, форма́ OWNER'a — бланк тут.",
+            "ru": "Па́спорт, заявление, форма́ OWNERa — бланк тут.",
             "en": "Passport, application, owner form — blank here.",
             "hint": ""
           }
@@ -17451,7 +17451,7 @@
         },
         {
           "id": "q6605",
-          "question": "'Свяжемся' promises…",
+          "question": "Свяжемся promises…",
           "options": [
             "a call if needed",
             "goodbye forever",
@@ -18212,7 +18212,7 @@
         },
         {
           "id": "q6903",
-          "question": "'С нас' means…",
+          "question": "С нас means…",
           "options": [
             "we'll bring/pay",
             "we refuse",
@@ -18477,7 +18477,7 @@
         },
         {
           "id": "q7003",
-          "question": "'Расчёт' means…",
+          "question": "Расчёт means…",
           "options": [
             "emergency crew",
             "calculator",
@@ -18755,7 +18755,7 @@
         },
         {
           "id": "q7104",
-          "question": "'Встретим у ворот' helps…",
+          "question": "Встретим у ворот helps…",
           "options": [
             "find address quickly",
             "pay less",
@@ -19296,7 +19296,7 @@
         },
         {
           "id": "q7305",
-          "question": "'Своевре́менно' = …",
+          "question": "Своевре́менно = …",
           "options": [
             "on time",
             "rarely",
@@ -19602,7 +19602,7 @@
           },
           {
             "speaker": "Сотрудник",
-            "ru": "Верно. Подпись в поле «заявитель», расшифровка фамилией.",
+            "ru": "Верно. Подпись в поле заявитель, расшифровка фамилией.",
             "en": "Correct. Sign in 'applicant' field, print surname.",
             "hint": ""
           },
@@ -19863,7 +19863,7 @@
         "lines": [
           {
             "speaker": "Экзаменатор",
-            "ru": "Тема: «Мой район». Рассказывайте.",
+            "ru": "Тема: Мой район. Рассказывайте.",
             "en": "Topic: 'My neighborhood'. Speak.",
             "hint": ""
           },
@@ -20066,7 +20066,7 @@
         },
         {
           "id": "q7602",
-          "question": "'Зато́' expresses…",
+          "question": "Зато́ expresses…",
           "options": [
             "but positive tradeoff",
             "because",
@@ -20232,7 +20232,7 @@
         {
           "id": "g77a",
           "title": "Самокоррекция",
-          "summary": "Graceful self-correction: «…точнее, …».",
+          "summary": "Graceful self-correction: …точнее, ….",
           "examples": [
             {
               "ru": "из Москвы… точне́е, из Каза́ни",
@@ -20949,7 +20949,7 @@
           },
           {
             "speaker": "Студент",
-            "ru": "Картой. Извини́те, вы сказали «наличные»? Повтори́те, пожа́луйста.",
+            "ru": "Картой. Извини́те, вы сказали наличные? Повтори́те, пожа́луйста.",
             "en": "Card. Sorry, did you say cash? Repeat please.",
             "hint": ""
           },
@@ -21137,7 +21137,7 @@
         },
         {
           "id": "q8003",
-          "question": "Joke reply to 'хорошего дня':",
+          "question": "Joke reply to хорошего дня:",
           "options": [
             "и вам не хвора́ть",
             "до свида́ния",
@@ -21194,7 +21194,7 @@
           },
           {
             "speaker": "Студент",
-            "ru": "Спрошу у прохожего: «Подскажите, как пройти́ к метро́?»",
+            "ru": "Спрошу у прохожего: Подскажите, как пройти́ к метро́?",
             "en": "Ask passerby: 'How to walk to metro?'",
             "hint": ""
           },
@@ -21206,7 +21206,7 @@
           },
           {
             "speaker": "Студент",
-            "ru": "«Говори́те поме́дленнее, пожа́луйста» и покажу адрес на бума́ге.",
+            "ru": "Говори́те поме́дленнее, пожа́луйста и покажу адрес на бума́ге.",
             "en": "'Speak slower, please' and show address on paper.",
             "hint": ""
           },

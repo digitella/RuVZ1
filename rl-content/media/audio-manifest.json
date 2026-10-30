@@ -653,7 +653,7 @@
     {
       "id": "s1201",
       "path": "media/audio/s1201.ogg",
-      "text": "Одно́ на́ «Па́рк Ку́льтуры».",
+      "text": "Одно́ на́ Па́рк Ку́льтуры.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1325,7 +1325,7 @@
     {
       "id": "s2401",
       "path": "media/audio/s2401.ogg",
-      "text": "Графа́ «ФИО́»: фами́лия, имя́, отче́ство.",
+      "text": "Графа́ ФИО́: фами́лия, имя́, отче́ство.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -1501,7 +1501,7 @@
     {
       "id": "s2702",
       "path": "media/audio/s2702.ogg",
-      "text": "«Повторите́, пожа́луйста» меня́ спасло́.",
+      "text": "Повторите́, пожа́луйста меня́ спасло́.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"
@@ -2669,7 +2669,7 @@
     {
       "id": "s4802",
       "path": "media/audio/s4802.ogg",
-      "text": "Подключите́ «Онла́йн», пожа́луйста.",
+      "text": "Подключите́ Онла́йн, пожа́луйста.",
       "exists": true,
       "placeholder": false,
       "ttsEngine": "web-speech (browser) at runtime; OGG kept as fallback"

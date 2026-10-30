@@ -9,11 +9,23 @@ single item fails, so the pipeline never breaks.
 Usage:  python3 scripts/generate_audio.py [--voice ru-RU-SvetlanaNeural] [--workers 4]
 Then:   python3 scripts/build_all.py
 """
-import argparse, asyncio, json, os, subprocess, sys, tempfile, shutil
+import argparse, asyncio, json, os, re, subprocess, sys, tempfile, shutil
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "rl-content")
 AUDIO_DIR = os.path.join(CONTENT, "media", "audio")
+
+
+def clean_ru(s):
+    """Remove quotation marks and stray backslashes from Russian display/TTS text.
+
+    Quotes must never appear on screen and must never be spoken by TTS."""
+    if not isinstance(s, str):
+        return s
+    for q in ('\u00ab', '\u00bb', '\u201c', '\u201d', '\u201e'):
+        s = s.replace(q, '')
+    s = s.replace('"', '').replace("'", '').replace('\u2019', '').replace('\\', '')
+    return re.sub(r'\s{2,}', ' ', s).strip()
 
 def collect_items():
     c = json.load(open(os.path.join(CONTENT, "course.json"), encoding="utf-8"))
@@ -21,10 +33,10 @@ def collect_items():
     for l in c["lessons"]:
         for p in l.get("pronunciation", []):
             if p.get("audio"):
-                items.append((p["id"], p["audio"].replace(".wav", ".ogg"), p["ru"]))
+                items.append((p["id"], p["audio"].replace(".wav", ".ogg"), clean_ru(p["ru"])))
         for s in l.get("speechBlanks", []):
             if s.get("audio"):
-                items.append((s["id"], s["audio"].replace(".wav", ".ogg"), s.get("transcript", "")))
+                items.append((s["id"], s["audio"].replace(".wav", ".ogg"), clean_ru(s.get("transcript", ""))))
     return items
 
 def strip_for_tts(text):

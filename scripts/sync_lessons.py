@@ -25,6 +25,18 @@ CONTENT = os.path.join(ROOT, "rl-content", "course.json")
 # ---------------------------------------------------------------- helpers --
 VOWELS = "аеёиоуыэюя"
 
+
+def clean_ru(s):
+    """Remove quotation marks and stray backslashes from Russian display/TTS text.
+
+    Quotes must never appear on screen and must never be spoken by TTS."""
+    if not isinstance(s, str):
+        return s
+    for q in ('\u00ab', '\u00bb', '\u201c', '\u201d', '\u201e'):
+        s = s.replace(q, '')
+    s = s.replace('"', '').replace("'", '').replace('\u2019', '').replace('\\', '')
+    return re.sub(r'\s{2,}', ' ', s).strip()
+
 def stressed_word(w):
     """True if a Russian word already carries a combining acute (U+0301)."""
     return "\u0301" in w
@@ -69,14 +81,14 @@ def convert_lesson(l, order):
         "id": f"d{base}",
         "title": l.get("situation", l["title"]),
         "lines": [
-            {"speaker": sp, "ru": ru, "en": en, "hint": ""}
+            {"speaker": sp, "ru": clean_ru(ru), "en": en, "hint": ""}
             for (sp, ru, en) in l["dialogue"]
         ],
     }
 
     gloss_terms = {t[0].strip().lower() for t in l.get("glossary", []) if isinstance(t, (list, tuple)) and t}
     vocabulary = [
-        {"id": num_id("v", base, i + 1), "ru": ensure_stress(ru), "en": en,
+        {"id": num_id("v", base, i + 1), "ru": clean_ru(ensure_stress(ru)), "en": en,
          "pos": "word", "hint": "",
          "immigration": ru.strip().lower() in gloss_terms}
         for i, (ru, en) in enumerate(l["vocab"])
@@ -93,7 +105,7 @@ def convert_lesson(l, order):
         ru, en, hint = p3[:3]
         pid = num_id("p", base, i + 1)
         pronunciation.append({
-            "id": pid, "ru": ensure_stress(ru), "en": en, "ipa": "",
+            "id": pid, "ru": clean_ru(ensure_stress(ru)), "en": en, "ipa": "",
             "hint": hint, "audio": f"media/audio/{pid}.ogg",
         })
 
@@ -101,8 +113,8 @@ def convert_lesson(l, order):
     for i, (sent, answer, transcript, en, hint) in enumerate(l["blanks"]):
         sid = num_id("s", base, i + 1)
         speechBlanks.append({
-            "id": sid, "sentence_ru": sent, "answer": answer,
-            "transcript": ensure_stress(transcript), "en": en, "hint": hint,
+            "id": sid, "sentence_ru": clean_ru(sent), "answer": answer,
+            "transcript": clean_ru(ensure_stress(transcript)), "en": en, "hint": hint,
             "audio": f"media/audio/{sid}.ogg",
         })
 
