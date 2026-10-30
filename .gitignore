@@ -1,1 +1,6 @@
+.git-credentials-token
 __pycache__/
+*.pyc
+rl-cmi5/dist/
+rl-scorm/dist_unpacked/
+rl-xapi/dist/

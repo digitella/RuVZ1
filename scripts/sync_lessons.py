@@ -16,6 +16,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import lessons_data as LD  # noqa: E402
 try:
+    from stress_dict import STRESS as _STRESS_DICT  # word -> 1-based vowel index
+except Exception:
+    _STRESS_DICT = {}
+try:
     import lessons_extra as LX  # noqa: E402
 except Exception:
     LX = None
@@ -26,6 +30,53 @@ CONTENT = os.path.join(ROOT, "rl-content", "course.json")
 VOWELS = "аеёиоуыэюя"
 
 
+_LAT_ACC_TO_CYR = {
+    'á':'а','à':'а','â':'а','ä':'а','ā':'а','ą':'а','ǎ':'а',
+    'é':'е','è':'е','ě':'е','ê':'е','ë':'е','ē':'е','ę':'е','ė':'е',
+    'í':'и','ì':'и','î':'и','ï':'и','ī':'и','į':'и',
+    'ó':'о','ò':'о','ô':'о','ö':'о','ō':'о','ő':'о',
+    'ú':'у','ù':'у','û':'у','ü':'у','ū':'у','ů':'у','ű':'у',
+    'ý':'ы','ÿ':'ы','ń':'н','ñ':'н','ś':'с','ş':'с','š':'ш','ž':'ж','ź':'з',
+    'ł':'л','đ':'д','ď':'д','ť':'т','ř':'р','ľ':'л','ç':'ч',
+}
+_LAT_PLAIN_HOMO = {'a':'а','A':'А','c':'с','C':'С','e':'е','E':'Е','o':'о','O':'О',
+                   'p':'р','P':'Р','x':'х','X':'Х','y':'у','Y':'У','k':'к','K':'К',
+                   'm':'м','M':'М','t':'т','T':'Т','h':'н','H':'Н'}
+_CYR_RE = re.compile(r'[\u0400-\u04FF]')
+
+def _fix_mixed_word(w):
+    """Convert Latin look-alikes inside a Cyrillic word to real Cyrillic letters,
+    preserving U+0301 stress (latin+0301 -> cyr base + 0301)."""
+    if not _CYR_RE.search(w):
+        return w
+    out = []
+    i = 0
+    while i < len(w):
+        ch = w[i]
+        nxt = w[i + 1] if i + 1 < len(w) else ''
+        if ch.isascii() and ch.isalpha() and nxt == '\u0301':
+            rep = _LAT_ACC_TO_CYR.get(ch.lower(), ch.lower())
+            out.append((rep.upper() if ch.isupper() else rep) + '\u0301')
+            i += 2
+            continue
+        if ch in _LAT_ACC_TO_CYR:
+            rep = _LAT_ACC_TO_CYR[ch]
+            out.append(rep.upper() if ch.isupper() else rep)
+        elif ch.isascii() and ch.isalpha():
+            prev = w[i - 1] if i else ''
+            following = w[i + 1] if i + 1 < len(w) else ''
+            near = bool(_CYR_RE.match(prev or '\x00')) or bool(_CYR_RE.match(following or '\x00'))
+            out.append(_LAT_PLAIN_HOMO.get(ch, ch) if near else ch)
+        else:
+            out.append(ch)
+        i += 1
+    return ''.join(out)
+
+def normalize_homoglyphs(s):
+    if not isinstance(s, str):
+        return s
+    return re.sub(r'\S+', lambda m: _fix_mixed_word(m.group(0)), s)
+
 def clean_ru(s):
     """Remove quotation marks and stray backslashes from Russian display/TTS text.
 
@@ -35,6 +86,7 @@ def clean_ru(s):
     for q in ('\u00ab', '\u00bb', '\u201c', '\u201d', '\u201e'):
         s = s.replace(q, '')
     s = s.replace('"', '').replace("'", '').replace('\u2019', '').replace('\\', '')
+    s = normalize_homoglyphs(s)
     return re.sub(r'\s{2,}', ' ', s).strip()
 
 def stressed_word(w):
@@ -61,9 +113,20 @@ def ensure_stress(text):
     out_words = []
     for tok in text.split(" "):
         core = re.sub(r"[^\u0400-\u04FF\u0301]", "", tok)
-        if len(re.sub(r"\u0301", "", core)) > 1 and not stressed_word(core):
-            fixed_core = auto_stress(core)
-            tok = tok.replace(core, fixed_core, 1)
+        plain = re.sub(r"\u0301", "", core).lower()
+        # never auto-stress short function words (monosyllabic prepositions/conjunctions)
+        if len(plain) > 2 and not stressed_word(core):
+            vi = _STRESS_DICT.get(plain)
+            if vi is not None:
+                # place accent on the vi-th VOWEL of core using original casing
+                vowels = [i for i, ch in enumerate(core) if ch.lower() in VOWELS]
+                if 1 <= vi <= len(vowels):
+                    idx = vowels[vi - 1]
+                    fixed_core = core[:idx] + core[idx] + "\u0301" + core[idx + 1:]
+                    tok = tok.replace(core, fixed_core, 1)
+            else:
+                fixed_core = auto_stress(core)
+                tok = tok.replace(core, fixed_core, 1)
         out_words.append(tok)
     return " ".join(out_words)
 

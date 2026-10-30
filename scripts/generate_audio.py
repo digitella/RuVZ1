@@ -39,8 +39,49 @@ def collect_items():
                 items.append((s["id"], s["audio"].replace(".wav", ".ogg"), clean_ru(s.get("transcript", ""))))
     return items
 
+_LAT_ACC_TO_CYR = {
+    'á':'а','à':'а','â':'а','ä':'а','ā':'а','ą':'а','ǎ':'а',
+    'é':'е','è':'е','ě':'е','ê':'е','ë':'е','ē':'е','ę':'е','ė':'е',
+    'í':'и','ì':'и','î':'и','ï':'и','ī':'и','į':'и',
+    'ó':'о','ò':'о','ô':'о','ö':'о','ō':'о','ő':'о',
+    'ú':'у','ù':'у','û':'у','ü':'у','ū':'у','ů':'у','ű':'у',
+    'ý':'ы','ÿ':'ы','ń':'н','ñ':'н','ś':'с','ş':'с','š':'ш','ž':'ж','ź':'з','ł':'л','đ':'д','ď':'д','ť':'т','ř':'р','ľ':'л','ç':'ч',
+}
+
 def strip_for_tts(text):
-    # edge-tts handles U+0301; remove ellipsis/odd chars that confuse it
+    import re as _re
+    # NFD sequences like Latin letter + U+0301 become precomposed, then mapped to Cyrillic
+    def _fix_word(w):
+        has_cyr = _re.search(r'[\u0400-\u04FF]', w)
+        if not has_cyr:
+            return w
+        out = []
+        i = 0
+        while i < len(w):
+            ch = w[i]
+            nxt = w[i+1] if i+1 < len(w) else ''
+            if ch.isascii() and ch.isalpha() and nxt == '\u0301':
+                base = ch.lower()
+                rep = _LAT_ACC_TO_CYR.get(base, base)
+                out.append((rep.upper() if ch.isupper() else rep) + '\u0301')
+                i += 2
+                continue
+            if ch in _LAT_ACC_TO_CYR:
+                rep = _LAT_ACC_TO_CYR[ch]
+                out.append(rep.upper() if ch.isupper() else rep)
+            elif ch.isascii() and ch.isalpha():
+                # plain latin homoglyph adjacent to cyrillic letters
+                prev = w[i-1] if i else ''
+                following = w[i+1] if i+1 < len(w) else ''
+                near = (_re.match(r'[\u0400-\u04FF]', prev or '') or _re.match(r'[\u0400-\u04FF]', following or ''))
+                homo = {'a':'а','A':'А','c':'с','C':'С','e':'е','E':'Е','o':'о','O':'О','p':'р','P':'Р','x':'х','X':'Х','y':'у','Y':'У','k':'к','K':'К','m':'м','M':'М','t':'т','T':'Т','h':'н','H':'Н','s':'ѕ','S':'Ѕ'}
+                out.append(homo.get(ch, ch) if near else ch)
+            else:
+                out.append(ch)
+            i += 1
+        return ''.join(out)
+    text = _re.sub(r'\S+', lambda m: _fix_word(m.group(0)), text)
+    # edge-tts handles Cyrillic U+0301 stress; remove ellipsis that confuses it
     return text.replace("\u2026", "...").strip()
 
 async def synth_one(item_id, rel_path, text, voice, sem):

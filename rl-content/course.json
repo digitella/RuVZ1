@@ -132,7 +132,7 @@
         },
         {
           "id": "v105",
-          "ru": "ро́дом и́з",
+          "ru": "ро́дом из",
           "en": "come from",
           "pos": "word",
           "hint": "",
@@ -208,7 +208,7 @@
         },
         {
           "id": "p104",
-          "ru": "До́ свида́ния",
+          "ru": "До свида́ния",
           "en": "Goodbye (formal)",
           "ipa": "",
           "hint": "The 'o' reduces: da-svi-DA-ni-ya.",
@@ -229,7 +229,7 @@
           "id": "s102",
           "sentence_ru": "Я ___ из Кана́ды.",
           "answer": "родом",
-          "transcript": "Я ро́дом и́з Кана́ды.",
+          "transcript": "Я ро́дом из Кана́ды.",
           "en": "I come from Canada.",
           "hint": "Word used with countries: Ya ~ iz...",
           "audio": "media/audio/s102.ogg"
@@ -373,7 +373,7 @@
         },
         {
           "id": "v202",
-          "ru": "пожалуйста́",
+          "ru": "пожа́луйста",
           "en": "please",
           "pos": "word",
           "hint": "",
@@ -381,7 +381,7 @@
         },
         {
           "id": "v203",
-          "ru": "сколько́ сто́ит",
+          "ru": "ско́лько сто́ит",
           "en": "how much does it cost",
           "pos": "word",
           "hint": "",
@@ -494,7 +494,7 @@
           "id": "s202",
           "sentence_ru": "___ сто́ит э́то?",
           "answer": "сколько",
-          "transcript": "Сколько́ сто́ит э́то?",
+          "transcript": "Ско́лько сто́ит э́то?",
           "en": "How much is this?",
           "hint": "Question word for price.",
           "audio": "media/audio/s202.ogg"
@@ -503,7 +503,7 @@
           "id": "s203",
           "sentence_ru": "Мо́жно запла́тить ___?",
           "answer": "ка́ртой",
-          "transcript": "Можно́ запла́тить ка́ртой?",
+          "transcript": "Мо́жно запла́тить ка́ртой?",
           "en": "Can I pay by card?",
           "hint": "Instrumental case: karTOY.",
           "audio": "media/audio/s203.ogg"
@@ -648,7 +648,7 @@
         },
         {
           "id": "v304",
-          "ru": "направо́",
+          "ru": "напра́во",
           "en": "to the right",
           "pos": "word",
           "hint": "",
@@ -761,7 +761,7 @@
           "id": "s302",
           "sentence_ru": "Иди́те ___ и поверни́те напра́во.",
           "answer": "прямо",
-          "transcript": "Идите́ прямо́ и поверни́те напра́во.",
+          "transcript": "Иди́те прямо́ и поверни́те напра́во.",
           "en": "Go straight and turn right.",
           "hint": "Adverb: straight ahead.",
           "audio": "media/audio/s302.ogg"
@@ -770,7 +770,7 @@
           "id": "s303",
           "sentence_ru": "Де́сять мину́т ___?",
           "answer": "пешко́м",
-          "transcript": "Деся́ть мину́т пешко́м?",
+          "transcript": "Де́сять мину́т пешко́м?",
           "en": "Ten minutes on foot?",
           "hint": "Instrumental: by walking.",
           "audio": "media/audio/s303.ogg"
@@ -913,7 +913,7 @@
         },
         {
           "id": "v403",
-          "ru": "посадка́",
+          "ru": "поса́дка",
           "en": "boarding",
           "pos": "word",
           "hint": "",
@@ -921,7 +921,7 @@
         },
         {
           "id": "v404",
-          "ru": "выхо́д",
+          "ru": "вы́ход",
           "en": "gate/exit",
           "pos": "word",
           "hint": "",
@@ -1026,7 +1026,7 @@
           "id": "s402",
           "sentence_ru": "То́лько ___ кла́дь.",
           "answer": "ручная",
-          "transcript": "Только́ ручна́я кла́дь.",
+          "transcript": "То́лько ручна́я кла́дь.",
           "en": "Only carry-on.",
           "hint": "Opposite of checked baggage.",
           "audio": "media/audio/s402.ogg"
@@ -1181,7 +1181,7 @@
         },
         {
           "id": "v502",
-          "ru": "водите́ль",
+          "ru": "води́тель",
           "en": "driver",
           "pos": "word",
           "hint": "",
@@ -1189,7 +1189,7 @@
         },
         {
           "id": "v503",
-          "ru": "пробка́",
+          "ru": "про́бка",
           "en": "traffic jam",
           "pos": "word",
           "hint": "",
@@ -1293,7 +1293,7 @@
           "id": "s501",
           "sentence_ru": "___ бу́дет сто́ить до аэропо́рта?",
           "answer": "сколько",
-          "transcript": "Сколько́ бу́дет сто́ить до́ аэропо́рта?",
+          "transcript": "Ско́лько бу́дет сто́ить до аэропо́рта?",
           "en": "How much to the airport?",
           "hint": "Price question word.",
           "audio": "media/audio/s501.ogg"
@@ -1302,7 +1302,7 @@
           "id": "s502",
           "sentence_ru": "Есть ___? Мы опазды́ваем.",
           "answer": "пробки",
-          "transcript": "Е́сть про́бки? Мы́ опазды́ваем.",
+          "transcript": "Е́сть про́бки? Мы опазды́ваем.",
           "en": "Any traffic? We're late.",
           "hint": "Plural: traffic jams.",
           "audio": "media/audio/s502.ogg"
@@ -1311,7 +1311,7 @@
           "id": "s503",
           "sentence_ru": "Остано́вьте у ___, пожа́луйста.",
           "answer": "входа",
-          "transcript": "Остановьте́ у входа́, пожа́луйста.",
+          "transcript": "Остано́вьте у входа́, пожа́луйста.",
           "en": "Stop at the entrance, please.",
           "hint": "Genitive after у.",
           "audio": "media/audio/s503.ogg"
@@ -1538,7 +1538,7 @@
         },
         {
           "id": "p603",
-          "ru": "До́ двенадца́ти часо́в",
+          "ru": "До двенадца́ти часо́в",
           "en": "Until twelve",
           "ipa": "",
           "hint": "dva-NAD-tsi chi-SOF. Big number drill.",
@@ -1546,7 +1546,7 @@
         },
         {
           "id": "p604",
-          "ru": "Не́ работа́ет кондиционе́р",
+          "ru": "Не работа́ет кондиционе́р",
           "en": "The AC doesn't work",
           "ipa": "",
           "hint": "kon-di-tsi-O-ner — long word, chunk it.",
@@ -1558,7 +1558,7 @@
           "id": "s601",
           "sentence_ru": "У вас есть ___ на имя́ Сми́та?",
           "answer": "бронь",
-          "transcript": "У ва́с е́сть бро́нь на́ имя́ Сми́та?",
+          "transcript": "У ва́с е́сть бро́нь на имя́ Сми́та?",
           "en": "Do you have a booking under Smith?",
           "hint": "Reservation.",
           "audio": "media/audio/s601.ogg"
@@ -1576,7 +1576,7 @@
           "id": "s603",
           "sentence_ru": "В номе́ре не работа́ет ___.",
           "answer": "кондиционе́р",
-          "transcript": "В номе́ре не́ работа́т кондиционе́р.",
+          "transcript": "В номе́ре не работа́т кондиционе́р.",
           "en": "The AC in the room doesn't work.",
           "hint": "Appliance word.",
           "audio": "media/audio/s603.ogg"
@@ -1751,7 +1751,7 @@
         },
         {
           "id": "v707",
-          "ru": "догово́р",
+          "ru": "дого́вор",
           "en": "contract",
           "pos": "word",
           "hint": "",
@@ -1823,7 +1823,7 @@
           "id": "s701",
           "sentence_ru": "Я из кварти́ры над ___ .",
           "answer": "ва́ми",
-          "transcript": "Я и́з кварти́ры на́д ва́ми.",
+          "transcript": "Я из кварти́ры на́д ва́ми.",
           "en": "I'm from the flat above you.",
           "hint": "Instrumental of вы.",
           "audio": "media/audio/s701.ogg"
@@ -1832,7 +1832,7 @@
           "id": "s702",
           "sentence_ru": "Сего́дня шуми́т стиральна́я ___ .",
           "answer": "машина́",
-          "transcript": "Сегодня́ шуми́т стиральна́я машина́.",
+          "transcript": "Сего́дня шуми́т стиральна́я машина́.",
           "en": "Today the washing machine is noisy.",
           "hint": "Machine.",
           "audio": "media/audio/s702.ogg"
@@ -1841,7 +1841,7 @@
           "id": "s703",
           "sentence_ru": "Кто плати́т за ___ ?",
           "answer": "коммуна́лку",
-          "transcript": "Кто́ плати́т за́ коммуна́лку?",
+          "transcript": "Кто́ плати́т за коммуна́лку?",
           "en": "Who pays the utilities?",
           "hint": "Colloquial for коммуна́льные плате́жи.",
           "audio": "media/audio/s703.ogg"
@@ -2080,7 +2080,7 @@
         },
         {
           "id": "p803",
-          "ru": "На́ ка́ссе",
+          "ru": "На ка́ссе",
           "en": "At the till",
           "ipa": "",
           "hint": "na KA-se.",
@@ -2255,7 +2255,7 @@
         },
         {
           "id": "v903",
-          "ru": "дороговато́",
+          "ru": "дорогова́то",
           "en": "a bit too expensive",
           "pos": "word",
           "hint": "",
@@ -2287,7 +2287,7 @@
         },
         {
           "id": "v907",
-          "ru": "вместе́",
+          "ru": "вме́сте",
           "en": "altogether",
           "pos": "word",
           "hint": "",
@@ -2359,7 +2359,7 @@
           "id": "s901",
           "sentence_ru": "Ско́лько ___ ? — Сто пятьдеся́т.",
           "answer": "пучок",
-          "transcript": "Сколько́ пучо́к?",
+          "transcript": "Ско́лько пучо́к?",
           "en": "How much is the bunch?",
           "hint": "Bundle of herbs.",
           "audio": "media/audio/s901.ogg"
@@ -2368,7 +2368,7 @@
           "id": "s902",
           "sentence_ru": "Дорогова́то. Мо́жно ___ ?",
           "answer": "де́вяносто",
-          "transcript": "Дороговато́. Мо́жно де́вяносто?",
+          "transcript": "Дорогова́то. Мо́жно де́вяносто?",
           "en": "Too much. Can it be ninety?",
           "hint": "Number 90.",
           "audio": "media/audio/s902.ogg"
@@ -2377,7 +2377,7 @@
           "id": "s903",
           "sentence_ru": "Помидо́ры, пожа́луйста, ___ .",
           "answer": "спелы́е",
-          "transcript": "Помидоры́ спелы́е, пожа́луйста.",
+          "transcript": "Помидо́ры спелы́е, пожа́луйста.",
           "en": "Ripe tomatoes, please.",
           "hint": "Ready to eat today.",
           "audio": "media/audio/s903.ogg"
@@ -2639,7 +2639,7 @@
           "id": "s1002",
           "sentence_ru": "Ну́жен ___ .",
           "answer": "па́спорт",
-          "transcript": "Нуже́н па́спорт.",
+          "transcript": "Ну́жен па́спорт.",
           "en": "A passport is required.",
           "hint": "ID document.",
           "audio": "media/audio/s1002.ogg"
@@ -2803,7 +2803,7 @@
         },
         {
           "id": "v1103",
-          "ru": "трафи́к",
+          "ru": "тра́фик",
           "en": "data traffic",
           "pos": "word",
           "hint": "",
@@ -2916,7 +2916,7 @@
           "id": "s1102",
           "sentence_ru": "Како́й ___ вы предлага́ете?",
           "answer": "тариф",
-          "transcript": "Како́й та́риф вы́ предлага́ете?",
+          "transcript": "Како́й та́риф вы предлага́ете?",
           "en": "Which plan do you offer?",
           "hint": "Price plan.",
           "audio": "media/audio/s1102.ogg"
@@ -3060,7 +3060,7 @@
         },
         {
           "id": "v1202",
-          "ru": "линия́",
+          "ru": "ли́ния",
           "en": "line",
           "pos": "word",
           "hint": "",
@@ -3068,7 +3068,7 @@
         },
         {
           "id": "v1203",
-          "ru": "пересадка́",
+          "ru": "переса́дка",
           "en": "transfer",
           "pos": "word",
           "hint": "",
@@ -3076,7 +3076,7 @@
         },
         {
           "id": "v1204",
-          "ru": "пое́зд",
+          "ru": "по́езд",
           "en": "train",
           "pos": "word",
           "hint": "",
@@ -3172,7 +3172,7 @@
           "id": "s1201",
           "sentence_ru": "Одно́ на Парк Ку́льтуры.",
           "answer": "одно",
-          "transcript": "Одно́ на́ Па́рк Ку́льтуры.",
+          "transcript": "Одно́ на Па́рк Ку́льтуры.",
           "en": "One ticket to Gorky Park area.",
           "hint": "Numeral for one ticket.",
           "audio": "media/audio/s1201.ogg"
@@ -3181,7 +3181,7 @@
           "id": "s1202",
           "sentence_ru": "___ переса́дка?",
           "answer": "какая",
-          "transcript": "Какая́ переса́дка?",
+          "transcript": "Кака́я переса́дка?",
           "en": "Which transfer?",
           "hint": "Asking which line.",
           "audio": "media/audio/s1202.ogg"
@@ -3190,7 +3190,7 @@
           "id": "s1203",
           "sentence_ru": "Сле́дующая ___ — Павеле́цкая?",
           "answer": "остановка",
-          "transcript": "Следующая́ остано́вка — Павеле́цкая?",
+          "transcript": "Сле́дующая остано́вка — Павеле́цкая?",
           "en": "Is the next stop Paveletskaya?",
           "hint": "Bus/tram stop word.",
           "audio": "media/audio/s1203.ogg"
@@ -3349,7 +3349,7 @@
         },
         {
           "id": "v1305",
-          "ru": "наложинны́й платё́ж",
+          "ru": "наложи́нный платё́ж",
           "en": "cash on delivery",
           "pos": "word",
           "hint": "",
@@ -3446,7 +3446,7 @@
           "id": "s1302",
           "sentence_ru": "___ получа́теля то́чный?",
           "answer": "Индекс",
-          "transcript": "Инде́кс получа́теля то́чный?",
+          "transcript": "И́ндекс получа́теля то́чный?",
           "en": "Is the recipient's zip code exact?",
           "hint": "Postal code.",
           "audio": "media/audio/s1302.ogg"
@@ -3455,7 +3455,7 @@
           "id": "s1303",
           "sentence_ru": "Ско́лько ___ посы́лка?",
           "answer": "идёт",
-          "transcript": "Сколько́ идё́т посы́лка?",
+          "transcript": "Ско́лько идё́т посы́лка?",
           "en": "How long does the parcel take?",
           "hint": "Verb 'to go' for duration.",
           "audio": "media/audio/s1303.ogg"
@@ -3618,7 +3618,7 @@
         },
         {
           "id": "v1404",
-          "ru": "доза́",
+          "ru": "до́за",
           "en": "dose",
           "pos": "word",
           "hint": "",
@@ -3626,7 +3626,7 @@
         },
         {
           "id": "v1405",
-          "ru": "о́т голо́вной бо́ли",
+          "ru": "от голо́вной бо́ли",
           "en": "for headache",
           "pos": "word",
           "hint": "",
@@ -3634,7 +3634,7 @@
         },
         {
           "id": "v1406",
-          "ru": "сиро́п о́т кашля́",
+          "ru": "сиро́п от кашля́",
           "en": "cough syrup",
           "pos": "word",
           "hint": "",
@@ -3714,7 +3714,7 @@
           "id": "s1401",
           "sentence_ru": "Что-ни́будь от ___ бо́ли?",
           "answer": "головной",
-          "transcript": "Что-нибудь о́т голо́вной бо́ли?",
+          "transcript": "Что-нибудь от голо́вной бо́ли?",
           "en": "Something for a headache?",
           "hint": "Head-related adjective.",
           "audio": "media/audio/s1401.ogg"
@@ -3723,7 +3723,7 @@
           "id": "s1402",
           "sentence_ru": "Э́то без ___ .",
           "answer": "реце́пта",
-          "transcript": "Это́ бе́з реце́пта.",
+          "transcript": "Э́то бе́з реце́пта.",
           "en": "This is without prescription.",
           "hint": "Rx-free.",
           "audio": "media/audio/s1402.ogg"
@@ -3732,7 +3732,7 @@
           "id": "s1403",
           "sentence_ru": "Прини́мать ___ еды́.",
           "answer": "после",
-          "transcript": "Принима́ть после́ еды́.",
+          "transcript": "Прини́мать после́ еды́.",
           "en": "Take after meals.",
           "hint": "Preposition: after.",
           "audio": "media/audio/s1403.ogg"
@@ -3979,7 +3979,7 @@
           "id": "s1501",
           "sentence_ru": "На что ___ ?",
           "answer": "жалуе́тесь",
-          "transcript": "На́ что́ жалуе́тесь?",
+          "transcript": "На что́ жалуе́тесь?",
           "en": "What are your complaints?",
           "hint": "Doctor's classic opener.",
           "audio": "media/audio/s1501.ogg"
@@ -3997,7 +3997,7 @@
           "id": "s1503",
           "sentence_ru": "Ну́жен ___ лист.",
           "answer": "больни́чный",
-          "transcript": "Нуже́н больни́чный ли́ст.",
+          "transcript": "Ну́жен больни́чный ли́ст.",
           "en": "I need a sick-note.",
           "hint": "For work absence.",
           "audio": "media/audio/s1503.ogg"
@@ -4168,7 +4168,7 @@
         },
         {
           "id": "v1605",
-          "ru": "консульство́",
+          "ru": "консу́льство",
           "en": "consulate",
           "pos": "word",
           "hint": "",
@@ -4176,7 +4176,7 @@
         },
         {
           "id": "v1606",
-          "ru": "дежурны́й",
+          "ru": "дежу́рный",
           "en": "duty officer",
           "pos": "word",
           "hint": "",
@@ -4265,7 +4265,7 @@
           "id": "s1602",
           "sentence_ru": "Заполни́те ___ .",
           "answer": "заявле́ние",
-          "transcript": "Заполните́ заявле́ние.",
+          "transcript": "Заполни́те заявле́ние.",
           "en": "Fill out the report.",
           "hint": "Formal written request.",
           "audio": "media/audio/s1602.ogg"
@@ -4274,7 +4274,7 @@
           "id": "s1603",
           "sentence_ru": "Мы выдади́м ___-уведомлени́е.",
           "answer": "талон",
-          "transcript": "Мы́ выдади́м талон-уведомлени́е.",
+          "transcript": "Мы выдади́м талон-уведомлени́е.",
           "en": "We'll issue a filing receipt.",
           "hint": "Small voucher.",
           "audio": "media/audio/s1603.ogg"
@@ -4547,7 +4547,7 @@
           "id": "s1702",
           "sentence_ru": "Мне ну́жна ___ по месту́ пребывани́я.",
           "answer": "регистрация",
-          "transcript": "Мне́ ну́жна регистра́ция по́ месту́ пребывани́я.",
+          "transcript": "Мне́ ну́жна регистра́ция по месту́ пребывани́я.",
           "en": "I need stay registration.",
           "hint": "Official address registration.",
           "audio": "media/audio/s1702.ogg"
@@ -4809,7 +4809,7 @@
           "id": "s1801",
           "sentence_ru": "Расскажи́те о ___ .",
           "answer": "себе́",
-          "transcript": "Расскажите́ о себе́.",
+          "transcript": "Расскажи́те о себе́.",
           "en": "Tell me about yourself.",
           "hint": "Classic opener.",
           "audio": "media/audio/s1801.ogg"
@@ -4974,7 +4974,7 @@
         },
         {
           "id": "v1902",
-          "ru": "записаться́",
+          "ru": "записа́ться",
           "en": "to enroll",
           "pos": "word",
           "hint": "",
@@ -5086,7 +5086,7 @@
           "id": "s1901",
           "sentence_ru": "Хочу́ ___ на ку́рсы.",
           "answer": "записаться",
-          "transcript": "Хочу́ записа́ться на́ ку́рсы.",
+          "transcript": "Хочу́ записа́ться на ку́рсы.",
           "en": "I want to enroll in courses.",
           "hint": "Reflexive: sign up.",
           "audio": "media/audio/s1901.ogg"
@@ -5104,7 +5104,7 @@
           "id": "s1903",
           "sentence_ru": "Дома́шнее задани́е сдава́ть к ___ .",
           "answer": "пя́тнице",
-          "transcript": "Домашнее́ задани́е сдава́ть к пя́тнице.",
+          "transcript": "Дома́шнее задани́е сдава́ть к пя́тнице.",
           "en": "Homework is due by Friday.",
           "hint": "Weekday.",
           "audio": "media/audio/s1903.ogg"
@@ -5357,7 +5357,7 @@
           "id": "s2001",
           "sentence_ru": "Ну́жна ___ и медка́рта.",
           "answer": "путёвка",
-          "transcript": "Нужна́ путё́вка и медка́рта.",
+          "transcript": "Ну́жна путё́вка и медка́рта.",
           "en": "A voucher and medical card are needed.",
           "hint": "Kindergarten placement paper.",
           "audio": "media/audio/s2001.ogg"
@@ -5366,7 +5366,7 @@
           "id": "s2002",
           "sentence_ru": "Ребё́нок заболе́л — сообщи́те ___ .",
           "answer": "воспита́телю",
-          "transcript": "Ребёно́к заболе́л — сообщи́те воспита́телю.",
+          "transcript": "Ребё́нок заболе́л — сообщи́те воспита́телю.",
           "en": "Tell the daycare teacher if a child is ill.",
           "hint": "Dative case.",
           "audio": "media/audio/s2002.ogg"
@@ -5375,7 +5375,7 @@
           "id": "s2003",
           "sentence_ru": "___ нача́инается в де́сять.",
           "answer": "Утренник",
-          "transcript": "Утренни́к начина́ется в де́сять.",
+          "transcript": "Утре́нник начина́ется в де́сять.",
           "en": "The matinee starts at ten.",
           "hint": "Kids' show.",
           "audio": "media/audio/s2003.ogg"
@@ -5542,7 +5542,7 @@
         },
         {
           "id": "v2106",
-          "ru": "за́ тебя́!",
+          "ru": "за тебя́!",
           "en": "cheers to you!",
           "pos": "word",
           "hint": "",
@@ -5610,7 +5610,7 @@
         },
         {
           "id": "p2104",
-          "ru": "За́ твоё́ здоровье́!",
+          "ru": "За твоё́ здоровье́!",
           "en": "To your health!",
           "ipa": "",
           "hint": "za tva-YO zda-RO-vye.",
@@ -5631,7 +5631,7 @@
           "id": "s2102",
           "sentence_ru": "___ по-ру́сски — це́лое искусство́.",
           "answer": "Тосты",
-          "transcript": "Тосты́ по-ру́сски — це́лое искусство́.",
+          "transcript": "То́сты по-ру́сски — це́лое искусство́.",
           "en": "Russian toasts are an art.",
           "hint": "Speeches before drinking.",
           "audio": "media/audio/s2102.ogg"
@@ -5775,7 +5775,7 @@
         },
         {
           "id": "v2202",
-          "ru": "скорая́ по́мощь",
+          "ru": "ско́рая по́мощь",
           "en": "ambulance",
           "pos": "word",
           "hint": "",
@@ -5783,7 +5783,7 @@
         },
         {
           "id": "v2203",
-          "ru": "пострадавши́й",
+          "ru": "пострада́вший",
           "en": "casualty/victim",
           "pos": "word",
           "hint": "",
@@ -5815,7 +5815,7 @@
         },
         {
           "id": "v2207",
-          "ru": "опасно́сть",
+          "ru": "опа́сность",
           "en": "danger",
           "pos": "word",
           "hint": "",
@@ -5887,7 +5887,7 @@
           "id": "s2201",
           "sentence_ru": "___! Пожа́р в соседне́й кварти́ре!",
           "answer": "Помогите",
-          "transcript": "Помогите́! Пожа́р в соседне́й кварти́ре!",
+          "transcript": "Помоги́те! Пожа́р в соседне́й кварти́ре!",
           "en": "Help! Fire next door!",
           "hint": "Emergency call word.",
           "audio": "media/audio/s2201.ogg"
@@ -5896,7 +5896,7 @@
           "id": "s2202",
           "sentence_ru": "Он ___ созна́ния.",
           "answer": "без",
-          "transcript": "О́н бе́з созна́ния.",
+          "transcript": "Он бе́з созна́ния.",
           "en": "He's unconscious.",
           "hint": "Preposition: without.",
           "audio": "media/audio/s2202.ogg"
@@ -5905,7 +5905,7 @@
           "id": "s2203",
           "sentence_ru": "Не по́льзуйтесь ___ !",
           "answer": "лифто́м",
-          "transcript": "Не́ по́льзуйтесь лифто́м!",
+          "transcript": "Не по́льзуйтесь лифто́м!",
           "en": "Don't use the elevator!",
           "hint": "Imperative warning.",
           "audio": "media/audio/s2203.ogg"
@@ -6062,7 +6062,7 @@
         },
         {
           "id": "v2304",
-          "ru": "постано́вка на́ учё́",
+          "ru": "постано́вка на учё́",
           "en": "registration",
           "pos": "word",
           "hint": "",
@@ -6078,7 +6078,7 @@
         },
         {
           "id": "v2306",
-          "ru": "решение́",
+          "ru": "реше́ние",
           "en": "decision",
           "pos": "word",
           "hint": "",
@@ -6146,7 +6146,7 @@
         },
         {
           "id": "p2304",
-          "ru": "Постано́вка на́ учё́",
+          "ru": "Постано́вка на учё́",
           "en": "Registration",
           "ipa": "",
           "hint": "pa-STAN-of-ka na UCHOT.",
@@ -6167,7 +6167,7 @@
           "id": "s2302",
           "sentence_ru": "Ну́жен че́к за ___ .",
           "answer": "госпошлину́",
-          "transcript": "Нуже́н че́к за́ госпошлину́.",
+          "transcript": "Ну́жен че́к за госпошлину́.",
           "en": "Receipt for the state fee is needed.",
           "hint": "Official payment.",
           "audio": "media/audio/s2302.ogg"
@@ -6176,7 +6176,7 @@
           "id": "s2303",
           "sentence_ru": "___ за наруше́ние сро́ков — серьё́зные.",
           "answer": "Штрафы",
-          "transcript": "Штрафы́ за́ наруше́ние сро́ков — серьё́зные.",
+          "transcript": "Штра́фы за наруше́ние сро́ков — серьё́зные.",
           "en": "Overstay fines are serious.",
           "hint": "Penalties.",
           "audio": "media/audio/s2303.ogg"
@@ -6342,7 +6342,7 @@
         },
         {
           "id": "v2402",
-          "ru": "отчество́",
+          "ru": "отче́ство",
           "en": "patronymic",
           "pos": "word",
           "hint": "",
@@ -6374,7 +6374,7 @@
         },
         {
           "id": "v2406",
-          "ru": "печатными́ буква́ми",
+          "ru": "печатны́ми буква́ми",
           "en": "in block letters",
           "pos": "word",
           "hint": "",
@@ -6454,7 +6454,7 @@
           "id": "s2401",
           "sentence_ru": "Графа́ ___ : фами́лия, имя́, отче́ство.",
           "answer": "ФИО",
-          "transcript": "Графа́ ФИО́: фами́лия, имя́, отче́ство.",
+          "transcript": "Графа́ ФИО: фами́лия, имя́, отче́ство.",
           "en": "Full-name field.",
           "hint": "Initials for full name.",
           "audio": "media/audio/s2401.ogg"
@@ -6472,7 +6472,7 @@
           "id": "s2403",
           "sentence_ru": "Ста́вьте ___ и дату́ внизу́.",
           "answer": "подпись",
-          "transcript": "Ставьте́ по́дпись и дату́ внизу́.",
+          "transcript": "Ста́вьте по́дпись и дату́ внизу́.",
           "en": "Put signature and date below.",
           "hint": "Sign here.",
           "audio": "media/audio/s2403.ogg"
@@ -6613,7 +6613,7 @@
         },
         {
           "id": "v2502",
-          "ru": "представиться́",
+          "ru": "предста́виться",
           "en": "to introduce oneself",
           "pos": "word",
           "hint": "",
@@ -6653,7 +6653,7 @@
         },
         {
           "id": "v2507",
-          "ru": "личны́й каби́нет",
+          "ru": "ли́чный каби́нет",
           "en": "personal account",
           "pos": "word",
           "hint": "",
@@ -6689,7 +6689,7 @@
       "pronunciation": [
         {
           "id": "p2501",
-          "ru": "Представьте́сь",
+          "ru": "Представьтесь",
           "en": "Introduce yourself",
           "ipa": "",
           "hint": "pit-STVIT'-sa. Consonant cluster!",
@@ -6725,7 +6725,7 @@
           "id": "s2501",
           "sentence_ru": "___ , пожа́луйста.",
           "answer": "Представьтесь",
-          "transcript": "Представьте́сь, пожа́луйста.",
+          "transcript": "Представьтесь, пожа́луйста.",
           "en": "Please introduce yourself.",
           "hint": "Exam opener.",
           "audio": "media/audio/s2501.ogg"
@@ -6734,7 +6734,7 @@
           "id": "s2502",
           "sentence_ru": "На фо́то семья́ ___ .",
           "answer": "у́жинает",
-          "transcript": "На́ фо́то семья́ у́жинает.",
+          "transcript": "На фо́то семья́ у́жинает.",
           "en": "In the photo a family is having dinner.",
           "hint": "Verb: eat dinner.",
           "audio": "media/audio/s2502.ogg"
@@ -6743,7 +6743,7 @@
           "id": "s2503",
           "sentence_ru": "Результа́ты в ли́чном ___ .",
           "answer": "кабине́те",
-          "transcript": "Результаты́ в ли́чном кабине́те.",
+          "transcript": "Результа́ты в ли́чном кабине́те.",
           "en": "Results are in the personal account.",
           "hint": "Online dashboard.",
           "audio": "media/audio/s2503.ogg"
@@ -6884,7 +6884,7 @@
         },
         {
           "id": "v2602",
-          "ru": "Выборы́",
+          "ru": "Выбо́ры",
           "en": "elections",
           "pos": "word",
           "hint": "",
@@ -6900,7 +6900,7 @@
         },
         {
           "id": "v2604",
-          "ru": "Федерация́",
+          "ru": "Федераци́я",
           "en": "Federation",
           "pos": "word",
           "hint": "",
@@ -7014,7 +7014,7 @@
           "id": "s2603",
           "sentence_ru": "Президента́ избира́ют на ___ .",
           "answer": "выбора́х",
-          "transcript": "Президента́ избира́ют на́ выбора́х.",
+          "transcript": "Президента́ избира́ют на выбора́х.",
           "en": "The president is elected in elections.",
           "hint": "Prepositional plural.",
           "audio": "media/audio/s2603.ogg"
@@ -7277,7 +7277,7 @@
           "id": "s2701",
           "sentence_ru": "Не бо́йся ___ , е́сли непоня́тно.",
           "answer": "переспрашивать",
-          "transcript": "Не́ бо́йся переспраши́вать, е́сли непоня́тно.",
+          "transcript": "Не бо́йся переспраши́вать, е́сли непоня́тно.",
           "en": "Don't be afraid to ask again.",
           "hint": "Conversation repair verb.",
           "audio": "media/audio/s2701.ogg"
@@ -7286,7 +7286,7 @@
           "id": "s2702",
           "sentence_ru": "Повтори́те, пожа́луйста меня́ ___ .",
           "answer": "спасло́",
-          "transcript": "Повторите́, пожа́луйста меня́ спасло́.",
+          "transcript": "Повтори́те, пожа́луйста меня́ спасло́.",
           "en": "'Repeat please' saved me.",
           "hint": "Past neuter: saved.",
           "audio": "media/audio/s2702.ogg"
@@ -7295,7 +7295,7 @@
           "id": "s2703",
           "sentence_ru": "Complete: Ты говори́шь по-ру́сски — ___ !",
           "answer": "поздравля́ю",
-          "transcript": "Ты́ говори́шь по-ру́сски — поздравля́ю!",
+          "transcript": "Ты говори́шь по-ру́сски — поздравля́ю!",
           "en": "You speak Russian — congrats!",
           "hint": "Celebration word.",
           "audio": "media/audio/s2703.ogg"
@@ -7436,7 +7436,7 @@
         },
         {
           "id": "v2802",
-          "ru": "зде́сь",
+          "ru": "здесь",
           "en": "here",
           "pos": "word",
           "hint": "",
@@ -7512,7 +7512,7 @@
       "pronunciation": [
         {
           "id": "p2801",
-          "ru": "А где́ ты́ живё́шь зде́сь?",
+          "ru": "А где́ ты живё́шь здесь?",
           "en": "And where do you live here?",
           "ipa": "",
           "hint": "gdye ty zhiv-YOSH zDES'. 'zh' like 's' in measure.",
@@ -7528,7 +7528,7 @@
         },
         {
           "id": "p2803",
-          "ru": "Трудно́, но́ интере́сно!",
+          "ru": "Трудно́, но интере́сно!",
           "en": "Difficult, but interesting!",
           "ipa": "",
           "hint": "in-tye-RYES-na. The soft sign makes 's' soft.",
@@ -7557,7 +7557,7 @@
           "id": "s2802",
           "sentence_ru": "Я ___ на Та́ганке.",
           "answer": "живу",
-          "transcript": "Я живу́ на́ Та́ганке.",
+          "transcript": "Я живу́ на Та́ганке.",
           "en": "I live in Taganka.",
           "hint": "Verb жить: я живу́, ты живёшь.",
           "audio": "media/audio/s2802.ogg"
@@ -7566,7 +7566,7 @@
           "id": "s2803",
           "sentence_ru": "Ру́сский ___?",
           "answer": "сло́жный",
-          "transcript": "Русски́й сло́жный?",
+          "transcript": "Ру́сский сло́жный?",
           "en": "Is Russian hard?",
           "hint": "Adjective short form not needed here.",
           "audio": "media/audio/s2803.ogg"
@@ -7831,7 +7831,7 @@
           "id": "s2903",
           "sentence_ru": "Ива́н до́ма — это ___ .",
           "answer": "Ва́ня",
-          "transcript": "Ива́н до́ма — это́ Ва́ня.",
+          "transcript": "Ива́н до́ма — э́то Ва́ня.",
           "en": "Ivan at home is Vanya.",
           "hint": "Diminutive of Ivan.",
           "audio": "media/audio/s2903.ogg"
@@ -8084,7 +8084,7 @@
           "id": "s3001",
           "sentence_ru": "Что у вас есть на ___ ?",
           "answer": "завтра́к",
-          "transcript": "Что́ у ва́с е́сть на́ завтра́к?",
+          "transcript": "Что́ у ва́с е́сть на завтра́к?",
           "en": "What's for breakfast?",
           "hint": "Morning meal.",
           "audio": "media/audio/s3001.ogg"
@@ -8093,7 +8093,7 @@
           "id": "s3002",
           "sentence_ru": "Сырники́ из ___ .",
           "answer": "творога",
-          "transcript": "Сырники́ и́з творога́.",
+          "transcript": "Сырники́ из творога́.",
           "en": "Syrniki from curd.",
           "hint": "Genitive: tvaroGA.",
           "audio": "media/audio/s3002.ogg"
@@ -8335,7 +8335,7 @@
           "id": "s3101",
           "sentence_ru": "Мо́жно ___, пожа́луйста?",
           "answer": "счёт",
-          "transcript": "Можно́ счё́т, пожа́луйста?",
+          "transcript": "Мо́жно счё́т, пожа́луйста?",
           "en": "The bill, please.",
           "hint": "Noun: the check.",
           "audio": "media/audio/s3101.ogg"
@@ -8582,7 +8582,7 @@
         },
         {
           "id": "p3204",
-          "ru": "Не́ совсе́м",
+          "ru": "Не совсе́м",
           "en": "not exactly",
           "ipa": "",
           "hint": "ni sa-FSEHM.",
@@ -8594,7 +8594,7 @@
           "id": "s3201",
           "sentence_ru": "Апте́ка ___ мага́зина.",
           "answer": "напротив",
-          "transcript": "Аптека́ напро́тив мага́зина.",
+          "transcript": "Апте́ка напро́тив мага́зина.",
           "en": "The pharmacy is opposite the store.",
           "hint": "Preposition + genitive.",
           "audio": "media/audio/s3201.ogg"
@@ -8747,7 +8747,7 @@
         },
         {
           "id": "v3303",
-          "ru": "пробка́",
+          "ru": "про́бка",
           "en": "traffic jam",
           "pos": "word",
           "hint": "",
@@ -8771,7 +8771,7 @@
         },
         {
           "id": "v3306",
-          "ru": "нуже́н",
+          "ru": "ну́жен",
           "en": "needed",
           "pos": "word",
           "hint": "",
@@ -8807,7 +8807,7 @@
       "pronunciation": [
         {
           "id": "p3301",
-          "ru": "Дое́хать до́ центра́",
+          "ru": "Дое́хать до центра́",
           "en": "get to the center",
           "ipa": "",
           "hint": "da-YEH-khat' do TSENTRA",
@@ -8852,7 +8852,7 @@
           "id": "s3302",
           "sentence_ru": "Авто́бус стои́т в ___ .",
           "answer": "пробке́",
-          "transcript": "Автобу́с стои́т в пробке́.",
+          "transcript": "Авто́бус стои́т в пробке́.",
           "en": "The bus is in traffic.",
           "hint": "Prepositional of пробка.",
           "audio": "media/audio/s3302.ogg"
@@ -9351,7 +9351,7 @@
           "id": "s3501",
           "sentence_ru": "Мой чемода́н не ___ .",
           "answer": "прие́хал",
-          "transcript": "Мо́й чемода́н не́ прие́хал.",
+          "transcript": "Мо́й чемода́н не прие́хал.",
           "en": "My suitcase didn't arrive.",
           "hint": "Past masculine of прие́хать.",
           "audio": "media/audio/s3501.ogg"
@@ -9360,7 +9360,7 @@
           "id": "s3502",
           "sentence_ru": "Заполните ___.",
           "answer": "фо́рму",
-          "transcript": "Заполните́ фо́рму.",
+          "transcript": "Заполни́те фо́рму.",
           "en": "Fill out the form.",
           "hint": "Accusative of форма.",
           "audio": "media/audio/s3502.ogg"
@@ -9504,7 +9504,7 @@
         },
         {
           "id": "v3602",
-          "ru": "пробки́",
+          "ru": "про́бки",
           "en": "traffic",
           "pos": "word",
           "hint": "",
@@ -9608,7 +9608,7 @@
           "id": "s3601",
           "sentence_ru": "___ налево у светофо́ра.",
           "answer": "поверните",
-          "transcript": "Поверните́ налево́ у светофо́ра.",
+          "transcript": "Поверни́те нале́во у светофо́ра.",
           "en": "Turn left at the light.",
           "hint": "Polite imperative.",
           "audio": "media/audio/s3601.ogg"
@@ -9876,7 +9876,7 @@
           "id": "s3702",
           "sentence_ru": "Води́тель е́хал ___ .",
           "answer": "кру́гом",
-          "transcript": "Водите́ль е́хал кру́гом.",
+          "transcript": "Води́тель е́хал кру́гом.",
           "en": "Driver took the long way.",
           "hint": "Adverb 'around'.",
           "audio": "media/audio/s3702.ogg"
@@ -10020,7 +10020,7 @@
         },
         {
           "id": "v3802",
-          "ru": "вые́зд",
+          "ru": "вы́езд",
           "en": "checkout",
           "pos": "word",
           "hint": "",
@@ -10036,7 +10036,7 @@
         },
         {
           "id": "v3804",
-          "ru": "включё́н",
+          "ru": "вклю́чён",
           "en": "included",
           "pos": "word",
           "hint": "",
@@ -10132,7 +10132,7 @@
           "id": "s3801",
           "sentence_ru": "У вас ___ на и́мя Смит?",
           "answer": "бронь",
-          "transcript": "У ва́с бро́нь на́ и́мя Сми́т?",
+          "transcript": "У ва́с бро́нь на и́мя Сми́т?",
           "en": "Do you have a booking under Smith?",
           "hint": "Noun: reservation.",
           "audio": "media/audio/s3801.ogg"
@@ -10141,7 +10141,7 @@
           "id": "s3802",
           "sentence_ru": "Завтра́к ___ .",
           "answer": "включён",
-          "transcript": "Завтра́к включё́н.",
+          "transcript": "Завтра́к вклю́чён.",
           "en": "Breakfast is included.",
           "hint": "Short passive form.",
           "audio": "media/audio/s3802.ogg"
@@ -10150,7 +10150,7 @@
           "id": "s3803",
           "sentence_ru": "Па́спорт для ___ .",
           "answer": "регистра́ции",
-          "transcript": "Паспо́рт для́ регистра́ции.",
+          "transcript": "Па́спорт для́ регистра́ции.",
           "en": "Passport for registration.",
           "hint": "Genitive of регистра́ция.",
           "audio": "media/audio/s3803.ogg"
@@ -10295,7 +10295,7 @@
         },
         {
           "id": "v3904",
-          "ru": "масте́р",
+          "ru": "ма́стер",
           "en": "maintenance man",
           "pos": "word",
           "hint": "",
@@ -10355,7 +10355,7 @@
       "pronunciation": [
         {
           "id": "p3901",
-          "ru": "Не́ рабо́тает ду́ш",
+          "ru": "Не рабо́тает ду́ш",
           "en": "the shower doesn't work",
           "ipa": "",
           "hint": "ne ra-BO-ta-yet DOOSH",
@@ -10391,7 +10391,7 @@
           "id": "s3901",
           "sentence_ru": "В номе́ре не ___ душ.",
           "answer": "рабо́тает",
-          "transcript": "В номе́ре не́ рабо́тает ду́ш.",
+          "transcript": "В номе́ре не рабо́тает ду́ш.",
           "en": "Shower doesn't work.",
           "hint": "Present verb 'works'.",
           "audio": "media/audio/s3901.ogg"
@@ -10400,7 +10400,7 @@
           "id": "s3902",
           "sentence_ru": "Мо́жно ещё ___ ?",
           "answer": "одея́ло",
-          "transcript": "Можно́ ещё́ одея́ло?",
+          "transcript": "Мо́жно ещё́ одея́ло?",
           "en": "Another blanket, please?",
           "hint": "Noun: blanket.",
           "audio": "media/audio/s3902.ogg"
@@ -10409,7 +10409,7 @@
           "id": "s3903",
           "sentence_ru": "Спаси́бо за ___ .",
           "answer": "помо́щь",
-          "transcript": "Спасибо́ за́ помо́щь.",
+          "transcript": "Спасибо́ за помо́щь.",
           "en": "Thanks for the help.",
           "hint": "Accusative of помо́щь.",
           "audio": "media/audio/s3903.ogg"
@@ -10546,7 +10546,7 @@
         },
         {
           "id": "v4003",
-          "ru": "коммунальные́",
+          "ru": "коммуна́льные",
           "en": "utilities",
           "pos": "word",
           "hint": "",
@@ -10638,7 +10638,7 @@
         },
         {
           "id": "p4004",
-          "ru": "Переки́ньте на́ ка́рту",
+          "ru": "Переки́ньте на ка́рту",
           "en": "send to the card",
           "ipa": "",
           "hint": "pi-ri-KIN-tye na KAR-tu",
@@ -10659,7 +10659,7 @@
           "id": "s4002",
           "sentence_ru": "На ку́хне ___ труба́.",
           "answer": "течёт",
-          "transcript": "На́ ку́хне течё́т труба́.",
+          "transcript": "На ку́хне течё́т труба́.",
           "en": "The pipe leaks.",
           "hint": "Present of течь.",
           "audio": "media/audio/s4002.ogg"
@@ -10889,7 +10889,7 @@
         },
         {
           "id": "p4103",
-          "ru": "Одолжи́ть на́ мину́ту",
+          "ru": "Одолжи́ть на мину́ту",
           "en": "borrow for a minute",
           "ipa": "",
           "hint": "a-dal-ZHIT' na mi-NU-tu",
@@ -11096,7 +11096,7 @@
         },
         {
           "id": "v4207",
-          "ru": "приложение́",
+          "ru": "приложе́ние",
           "en": "app",
           "pos": "word",
           "hint": "",
@@ -11168,7 +11168,7 @@
           "id": "s4201",
           "sentence_ru": "Скидка на моло́ко ___ ?",
           "answer": "действу́ет",
-          "transcript": "Скидка́ на́ моло́ко действу́ет?",
+          "transcript": "Скидка́ на моло́ко действу́ет?",
           "en": "Is the milk discount active?",
           "hint": "Verb 'works/is valid'.",
           "audio": "media/audio/s4201.ogg"
@@ -11177,7 +11177,7 @@
           "id": "s4202",
           "sentence_ru": "Опла́чу по ___ .",
           "answer": "QR-коду",
-          "transcript": "Опла́чу по́ QR-коду́.",
+          "transcript": "Опла́чу по QR-ко́ду.",
           "en": "I'll pay by QR code.",
           "hint": "Dative of код.",
           "audio": "media/audio/s4202.ogg"
@@ -11366,7 +11366,7 @@
         {
           "id": "g43a",
           "title": "Где + verb 3pl impersonal",
-          "summary": "Where do they… uses они-form.",
+          "summary": "Where do they… (impersonal 3pl).",
           "examples": [
             {
               "ru": "где взве́шивают / упаковывают",
@@ -11572,7 +11572,7 @@
         },
         {
           "id": "v4402",
-          "ru": "полкилограмма́",
+          "ru": "полкилогра́мма",
           "en": "half a kilo",
           "pos": "word",
           "hint": "",
@@ -11656,7 +11656,7 @@
         },
         {
           "id": "p4403",
-          "ru": "Взве́сьте полкилограмма́",
+          "ru": "Взве́сьте полкилогра́мма",
           "en": "weigh half a kilo",
           "ipa": "",
           "hint": "zvYES-tye pal-ki-la-GRA-ma",
@@ -11676,7 +11676,7 @@
           "id": "s4401",
           "sentence_ru": "Сколько ___ клубники́?",
           "answer": "кило",
-          "transcript": "Сколько́ кило́ клубники́?",
+          "transcript": "Ско́лько кило́ клубники́?",
           "en": "Price per kilo?",
           "hint": "Unit of weight.",
           "audio": "media/audio/s4401.ogg"
@@ -11685,7 +11685,7 @@
           "id": "s4402",
           "sentence_ru": "___ , пожа́луйста, полкилограмма.",
           "answer": "взве́сьте",
-          "transcript": "Взвесьте́, пожа́луйста, полкилограмма́.",
+          "transcript": "Взвесьте́, пожа́луйста, полкилогра́мма.",
           "en": "Weigh half a kilo, please.",
           "hint": "Polite imperative.",
           "audio": "media/audio/s4402.ogg"
@@ -11694,7 +11694,7 @@
           "id": "s4403",
           "sentence_ru": "Двести се́мьдесят — ___ .",
           "answer": "беру",
-          "transcript": "Беру́: двести́ се́мьдесят.",
+          "transcript": "Беру́: две́сти се́мьдесят.",
           "en": "I'll take them at 270.",
           "hint": "First-person decision verb.",
           "audio": "media/audio/s4403.ogg"
@@ -11823,7 +11823,7 @@
         },
         {
           "id": "v4502",
-          "ru": "сегодня́",
+          "ru": "сего́дня",
           "en": "today",
           "pos": "word",
           "hint": "",
@@ -11873,7 +11873,7 @@
       "grammar": [
         {
           "id": "g45a",
-          "title": "Ли-questions without ли",
+          "title": "Yes/no questions without \"ли\"",
           "summary": "Intonation-only yes/no.",
           "examples": [
             {
@@ -11935,7 +11935,7 @@
           "id": "s4501",
           "sentence_ru": "Помидо́ры вчера́шние или ___ ?",
           "answer": "сего́дняшние",
-          "transcript": "Помидоры́ вчера́шние или́ сего́дняшние?",
+          "transcript": "Помидо́ры вчера́шние или́ сего́дняшние?",
           "en": "Yesterday's or today's?",
           "hint": "Adjective from today.",
           "audio": "media/audio/s4501.ogg"
@@ -11953,7 +11953,7 @@
           "id": "s4503",
           "sentence_ru": "Скиньте за ___ .",
           "answer": "вид",
-          "transcript": "Скиньте́ за́ ви́д.",
+          "transcript": "Скиньте́ за ви́д.",
           "en": "Discount for looks.",
           "hint": "Noun: appearance.",
           "audio": "media/audio/s4503.ogg"
@@ -12106,7 +12106,7 @@
         },
         {
           "id": "v4605",
-          "ru": "комиссия́",
+          "ru": "коми́ссия",
           "en": "fee",
           "pos": "word",
           "hint": "",
@@ -12174,7 +12174,7 @@
         },
         {
           "id": "p4603",
-          "ru": "Кому́ссия за́ перево́д",
+          "ru": "Кому́ссия за перево́д",
           "en": "fee for transfer",
           "ipa": "",
           "hint": "ka-MI-si-ya za pe-re-VOT",
@@ -12182,7 +12182,7 @@
         },
         {
           "id": "p4604",
-          "ru": "За́ грани́цу",
+          "ru": "За грани́цу",
           "en": "abroad",
           "ipa": "",
           "hint": "za gra-NI-tsu",
@@ -12203,7 +12203,7 @@
           "id": "s4602",
           "sentence_ru": "Комиссия ___ перево́д.",
           "answer": "за",
-          "transcript": "Комиссия́ за́ перево́д.",
+          "transcript": "Коми́ссия за перево́д.",
           "en": "Fee for transfer.",
           "hint": "Preposition + accusative.",
           "audio": "media/audio/s4602.ogg"
@@ -12462,7 +12462,7 @@
           "id": "s4702",
           "sentence_ru": "Обменя́ть евро на ___ .",
           "answer": "рублу́",
-          "transcript": "Обменя́ть евро́ на́ рублу́.",
+          "transcript": "Обме́нять евро́ на рублу́.",
           "en": "Exchange euros to rubles.",
           "hint": "Accusative plural.",
           "audio": "media/audio/s4702.ogg"
@@ -12471,7 +12471,7 @@
           "id": "s4703",
           "sentence_ru": "Курс сейча́с девяносто ___ .",
           "answer": "два",
-          "transcript": "Ку́рс сейча́с девяносто́ два́.",
+          "transcript": "Ку́рс сейча́с де́вяносто два́.",
           "en": "Rate is 92 now.",
           "hint": "Number.",
           "audio": "media/audio/s4703.ogg"
@@ -12592,7 +12592,7 @@
       "vocabulary": [
         {
           "id": "v4801",
-          "ru": "тари́ф",
+          "ru": "та́риф",
           "en": "plan/tariff",
           "pos": "word",
           "hint": "",
@@ -12640,7 +12640,7 @@
         },
         {
           "id": "v4807",
-          "ru": "операто́р",
+          "ru": "опера́тор",
           "en": "operator",
           "pos": "word",
           "hint": "",
@@ -12692,7 +12692,7 @@
         },
         {
           "id": "p4803",
-          "ru": "Подключи́те тари́ф",
+          "ru": "Подключи́те та́риф",
           "en": "connect the plan",
           "ipa": "",
           "hint": "pat-klu-ChI-tye ta-RIF",
@@ -12712,7 +12712,7 @@
           "id": "s4801",
           "sentence_ru": "Хочу смени́ть ___ .",
           "answer": "тариф",
-          "transcript": "Хочу́ смени́ть тари́ф.",
+          "transcript": "Хочу́ смени́ть та́риф.",
           "en": "I want to change plan.",
           "hint": "Noun: plan.",
           "audio": "media/audio/s4801.ogg"
@@ -13158,7 +13158,7 @@
         },
         {
           "id": "v5007",
-          "ru": "следи́ть за́",
+          "ru": "следи́ть за",
           "en": "to watch",
           "pos": "word",
           "hint": "",
@@ -13218,7 +13218,7 @@
         },
         {
           "id": "p5004",
-          "ru": "Сле́дите за́ табло́",
+          "ru": "Сле́дите за табло́",
           "en": "watch the board",
           "ipa": "",
           "hint": "SLE-di-tye za tab-LA",
@@ -13230,7 +13230,7 @@
           "id": "s5001",
           "sentence_ru": "___ Тро́йку на триста.",
           "answer": "пополни́те",
-          "transcript": "Пополните́ Тро́йку на́ триста́.",
+          "transcript": "Пополните́ Тро́йку на три́ста.",
           "en": "Top up Troika with 300.",
           "hint": "Polite imperative.",
           "audio": "media/audio/s5001.ogg"
@@ -13239,7 +13239,7 @@
           "id": "s5002",
           "sentence_ru": "Ну́жна первая ___ .",
           "answer": "платфо́рма",
-          "transcript": "Нужна́ первая́ платфо́рма.",
+          "transcript": "Ну́жна первая́ платфо́рма.",
           "en": "First platform needed.",
           "hint": "Noun: platform.",
           "audio": "media/audio/s5002.ogg"
@@ -13248,7 +13248,7 @@
           "id": "s5003",
           "sentence_ru": "С ___ на Таганскую.",
           "answer": "переса́дки",
-          "transcript": "С переса́дкой на́ Таганскую́.",
+          "transcript": "С переса́дкой на Таганскую́.",
           "en": "With a transfer to Taganskaya.",
           "hint": "Noun: transfer.",
           "audio": "media/audio/s5003.ogg"
@@ -13318,7 +13318,7 @@
       "order": 51,
       "situation": "Метро́ — Part C: announcements",
       "title": "Lesson 12C · Understanding Announcements",
-      "titleRu": "Уро́к 12C · Объявле́ния в.metro",
+      "titleRu": "Уро́к 12C · Объявле́ния в метро",
       "objectives": [
         "Parse station announcements",
         "React to 'mind the gap'",
@@ -13467,7 +13467,7 @@
         },
         {
           "id": "p5102",
-          "ru": "Не́ прислоня́йтесь",
+          "ru": "Не прислоня́йтесь",
           "en": "don't lean",
           "ipa": "",
           "hint": "ni pris-la-NYAY-tes'",
@@ -13475,7 +13475,7 @@
         },
         {
           "id": "p5103",
-          "ru": "Коне́чная станция́",
+          "ru": "Коне́чная станци́я",
           "en": "terminal station",
           "ipa": "",
           "hint": "ka-NECH-na-ya STAN-tsi-ya",
@@ -13504,7 +13504,7 @@
           "id": "s5102",
           "sentence_ru": "Не ___ к дверям.",
           "answer": "прислоня́йтесь",
-          "transcript": "Не́ прислоня́йтесь к дверя́м.",
+          "transcript": "Не прислоня́йтесь к дверя́м.",
           "en": "Don't lean on doors.",
           "hint": "Negative imperative plural.",
           "audio": "media/audio/s5102.ogg"
@@ -13513,7 +13513,7 @@
           "id": "s5103",
           "sentence_ru": "Вы́ход по ___ на табло́.",
           "answer": "стрелке",
-          "transcript": "Выхо́д по́ стре́лке на́ табло́.",
+          "transcript": "Вы́ход по стре́лке на табло́.",
           "en": "Exit by arrow on board.",
           "hint": "Dative of стрелка́.",
           "audio": "media/audio/s5103.ogg"
@@ -13692,7 +13692,7 @@
       "grammar": [
         {
           "id": "g52a",
-          "title": "Или-alternatives in questions",
+          "title": "Choice questions with \"или\"",
           "summary": "Choice questions intonation.",
           "examples": [
             {
@@ -13763,7 +13763,7 @@
           "id": "s5202",
           "sentence_ru": "___ быстрее, но доро́же.",
           "answer": "авиа",
-          "transcript": "Авиа́ быстрее́, но́ доро́же.",
+          "transcript": "Авиа́ быстрее́, но доро́же.",
           "en": "Air is faster but pricier.",
           "hint": "Mail type.",
           "audio": "media/audio/s5202.ogg"
@@ -13772,7 +13772,7 @@
           "id": "s5203",
           "sentence_ru": "Номер отсле́живания — это ___ .",
           "answer": "трек-но́мер",
-          "transcript": "Номе́р отсле́живания — это́ трек-но́мер.",
+          "transcript": "Но́мер отсле́живания — э́то трек-но́мер.",
           "en": "Tracking number.",
           "hint": "Term.",
           "audio": "media/audio/s5203.ogg"
@@ -13893,7 +13893,7 @@
       "vocabulary": [
         {
           "id": "v5301",
-          "ru": "инде́кс",
+          "ru": "и́ндекс",
           "en": "zip code",
           "pos": "word",
           "hint": "",
@@ -14022,7 +14022,7 @@
           "id": "s5302",
           "sentence_ru": "Составьте ___ на поврежде́ние.",
           "answer": "акт",
-          "transcript": "Составьте́ а́кт на́ поврежде́ние.",
+          "transcript": "Составьте́ а́кт на поврежде́ние.",
           "en": "Make a damage report.",
           "hint": "Noun: official act.",
           "audio": "media/audio/s5302.ogg"
@@ -14031,7 +14031,7 @@
           "id": "s5303",
           "sentence_ru": "___ на сосе́дей.",
           "answer": "переадресуйте",
-          "transcript": "Переадресуйте́ на́ сосе́дей.",
+          "transcript": "Переадресуйте́ на сосе́дей.",
           "en": "Redirect to neighbours.",
           "hint": "Polite imperative.",
           "audio": "media/audio/s5303.ogg"
@@ -14200,7 +14200,7 @@
         },
         {
           "id": "v5407",
-          "ru": "доза́",
+          "ru": "до́за",
           "en": "dose",
           "pos": "word",
           "hint": "",
@@ -14531,7 +14531,7 @@
           "id": "s5501",
           "sentence_ru": "Реце́пт от ___ .",
           "answer": "врача́",
-          "transcript": "Реце́пт о́т врача́.",
+          "transcript": "Реце́пт от врача́.",
           "en": "Prescription from a doctor.",
           "hint": "Genitive of врач.",
           "audio": "media/audio/s5501.ogg"
@@ -14678,7 +14678,7 @@
         },
         {
           "id": "v5602",
-          "ru": "регистратура́",
+          "ru": "регистрату́ра",
           "en": "front desk",
           "pos": "word",
           "hint": "",
@@ -14770,7 +14770,7 @@
         },
         {
           "id": "p5603",
-          "ru": "Выпи́шет на́ приёме́",
+          "ru": "Выпи́шет на приёме́",
           "en": "will prescribe at visit",
           "ipa": "",
           "hint": "VI-pi-shet na pri-YO-mye",
@@ -14790,7 +14790,7 @@
           "id": "s5601",
           "sentence_ru": "Записа́ться к ___ .",
           "answer": "терапевту",
-          "transcript": "Записа́ться к терапевту́.",
+          "transcript": "Записа́ться к терапе́вту.",
           "en": "Book a GP.",
           "hint": "Dative of терапевт.",
           "audio": "media/audio/s5601.ogg"
@@ -14943,7 +14943,7 @@
         },
         {
           "id": "v5702",
-          "ru": "температура́",
+          "ru": "температу́ра",
           "en": "temperature",
           "pos": "word",
           "hint": "",
@@ -14951,7 +14951,7 @@
         },
         {
           "id": "v5703",
-          "ru": "больничны́й ли́ст",
+          "ru": "больни́чный ли́ст",
           "en": "sick note",
           "pos": "word",
           "hint": "",
@@ -14975,7 +14975,7 @@
         },
         {
           "id": "v5706",
-          "ru": "лекарство́",
+          "ru": "лека́рство",
           "en": "medicine",
           "pos": "word",
           "hint": "",
@@ -15019,7 +15019,7 @@
       "pronunciation": [
         {
           "id": "p5701",
-          "ru": "Тридца́ть се́мь",
+          "ru": "Три́дцать се́мь",
           "en": "37",
           "ipa": "",
           "hint": "trid-TSAT' SYEM'",
@@ -15035,7 +15035,7 @@
         },
         {
           "id": "p5703",
-          "ru": "Офо́ррим на́ три́ дня́",
+          "ru": "Офо́ррим на три́ дня́",
           "en": "we'll issue 3 days",
           "ipa": "",
           "hint": "a-FOR-im na tri DNYA",
@@ -15055,7 +15055,7 @@
           "id": "s5701",
           "sentence_ru": "Жа́лобы? Температу́ра ___ ?",
           "answer": "была́",
-          "transcript": "Температура́ была́?",
+          "transcript": "Температу́ра была́?",
           "en": "Was there fever?",
           "hint": "Feminine past of быть.",
           "audio": "media/audio/s5701.ogg"
@@ -15300,7 +15300,7 @@
         },
         {
           "id": "p5803",
-          "ru": "Номе́р дела́",
+          "ru": "Но́мер дела́",
           "en": "case number",
           "ipa": "",
           "hint": "NO-mer di-LA",
@@ -15465,7 +15465,7 @@
       "vocabulary": [
         {
           "id": "v5901",
-          "ru": "спра́вка и́з поли́ции",
+          "ru": "спра́вка из поли́ции",
           "en": "police certificate",
           "pos": "word",
           "hint": "",
@@ -15565,7 +15565,7 @@
         },
         {
           "id": "p5904",
-          "ru": "По́ месту́ пребыва́ния",
+          "ru": "По месту́ пребыва́ния",
           "en": "at place of stay",
           "ipa": "",
           "hint": "pa MYES-tu prie-by-VAH-ni-ya",
@@ -15577,7 +15577,7 @@
           "id": "s5901",
           "sentence_ru": "Спра́вка из поли́цийского ___ .",
           "answer": "отделе́ния",
-          "transcript": "Справка́ и́з отделе́ния.",
+          "transcript": "Справка́ из отделе́ния.",
           "en": "Certificate from the station.",
           "hint": "Genitive of отделе́ние.",
           "audio": "media/audio/s5901.ogg"
@@ -15595,7 +15595,7 @@
           "id": "s5903",
           "sentence_ru": "Докуме́нты ___ по месту пребыва́ния.",
           "answer": "подавать",
-          "transcript": "Документы́ подава́ть по́ месту́ пребыва́ния.",
+          "transcript": "Докуме́нты подава́ть по месту́ пребыва́ния.",
           "en": "Submit docs at stay address.",
           "hint": "Infinitive directive.",
           "audio": "media/audio/s5903.ogg"
@@ -15724,7 +15724,7 @@
         },
         {
           "id": "v6002",
-          "ru": "очере́дь",
+          "ru": "оче́редь",
           "en": "queue",
           "pos": "word",
           "hint": "",
@@ -15732,7 +15732,7 @@
         },
         {
           "id": "v6003",
-          "ru": "регистра́ция по́ месту́ пребывания́",
+          "ru": "регистра́ция по месту́ пребывани́я",
           "en": "address registration",
           "pos": "word",
           "hint": "",
@@ -15748,7 +15748,7 @@
         },
         {
           "id": "v6005",
-          "ru": "окно́",
+          "ru": "о́кно",
           "en": "service window",
           "pos": "word",
           "hint": "",
@@ -15800,7 +15800,7 @@
         },
         {
           "id": "p6002",
-          "ru": "Регистра́ция по́ ме́сту",
+          "ru": "Регистра́ция по ме́сту",
           "en": "registration at place",
           "ipa": "",
           "hint": "ri-gi-STRA-tsi-ya pa MYESTU",
@@ -15828,7 +15828,7 @@
           "id": "s6001",
           "sentence_ru": "Как получи́ть ___ в очередь?",
           "answer": "тало́н",
-          "transcript": "Ка́к получи́ть тало́н в очере́дь?",
+          "transcript": "Ка́к получи́ть тало́н в оче́редь?",
           "en": "How to get queue ticket?",
           "hint": "Noun: ticket.",
           "audio": "media/audio/s6001.ogg"
@@ -15837,7 +15837,7 @@
           "id": "s6002",
           "sentence_ru": "Мне ну́жна ___ по месту пребывания.",
           "answer": "регистра́ция",
-          "transcript": "Мне́ ну́жна регистра́ция по́ месту́ пребывания́.",
+          "transcript": "Мне́ ну́жна регистра́ция по месту́ пребывани́я.",
           "en": "Address registration needed.",
           "hint": "Noun: registration.",
           "audio": "media/audio/s6002.ogg"
@@ -15846,7 +15846,7 @@
           "id": "s6003",
           "sentence_ru": "Готовность ___ семь дней.",
           "answer": "через",
-          "transcript": "Готовно́сть чере́з се́мь дне́й.",
+          "transcript": "Готовно́сть че́рез се́мь дне́й.",
           "en": "Ready in seven days.",
           "hint": "Preposition of future time.",
           "audio": "media/audio/s6003.ogg"
@@ -16015,7 +16015,7 @@
         },
         {
           "id": "v6107",
-          "ru": "электронная́ по́дпись",
+          "ru": "электронна́я по́дпись",
           "en": "digital signature",
           "pos": "word",
           "hint": "",
@@ -16059,7 +16059,7 @@
         },
         {
           "id": "p6102",
-          "ru": "Запро́с чере́з порта́л",
+          "ru": "Запро́с че́рез порта́л",
           "en": "request via portal",
           "ipa": "",
           "hint": "za-PROS CHYR-y-ez por-TAL",
@@ -16087,7 +16087,7 @@
           "id": "s6101",
           "sentence_ru": "Запрос через ___ .",
           "answer": "Госуслуги́",
-          "transcript": "Запро́с чере́з Госуслуги́.",
+          "transcript": "Запро́с че́рез Госуслуги́.",
           "en": "Request via portal.",
           "hint": "Brand portal name.",
           "audio": "media/audio/s6101.ogg"
@@ -16096,7 +16096,7 @@
           "id": "s6102",
           "sentence_ru": "Докуме́нт не ___ .",
           "answer": "ска́чивается",
-          "transcript": "Докуме́нт не́ ска́чивается.",
+          "transcript": "Докуме́нт не ска́чивается.",
           "en": "Document won't download.",
           "hint": "Imperfective reflexive.",
           "audio": "media/audio/s6102.ogg"
@@ -16105,7 +16105,7 @@
           "id": "s6103",
           "sentence_ru": "Проверка подписи по ___ .",
           "answer": "QR-коду",
-          "transcript": "Проверка́ подписи́ по́ QR-коду́.",
+          "transcript": "Проверка́ подписи́ по QR-ко́ду.",
           "en": "Verify signature via QR.",
           "hint": "Dative of QR code.",
           "audio": "media/audio/s6103.ogg"
@@ -16316,7 +16316,7 @@
       "pronunciation": [
         {
           "id": "p6201",
-          "ru": "Рассказа́ть о́б опы́те",
+          "ru": "Рассказа́ть об опы́те",
           "en": "tell about experience",
           "ipa": "",
           "hint": "ras-ska-ZAT' ab OP-yi-tye",
@@ -16352,7 +16352,7 @@
           "id": "s6201",
           "sentence_ru": "Расскажите о ___ .",
           "answer": "опы́те",
-          "transcript": "Расскажите́ о опы́те.",
+          "transcript": "Расскажи́те о опы́те.",
           "en": "Tell about experience.",
           "hint": "Prepositional of опыт.",
           "audio": "media/audio/s6201.ogg"
@@ -16370,7 +16370,7 @@
           "id": "s6203",
           "sentence_ru": "Есть ли испыты́тельный ___ ?",
           "answer": "срок",
-          "transcript": "Е́сть ли́ испы́тательный сро́к?",
+          "transcript": "Е́сть ли испы́тательный сро́к?",
           "en": "Is there probation?",
           "hint": "Noun: term/period.",
           "audio": "media/audio/s6203.ogg"
@@ -16599,7 +16599,7 @@
         },
         {
           "id": "p6304",
-          "ru": "Переры́в чере́з полчаса́",
+          "ru": "Переры́в че́рез полчаса́",
           "en": "break in 30 min",
           "ipa": "",
           "hint": "pi-ri-RYF chY-rez pal-TSA",
@@ -16629,7 +16629,7 @@
           "id": "s6303",
           "sentence_ru": "Перерыв ___ полчаса.",
           "answer": "через",
-          "transcript": "Переры́в чере́з полчаса́.",
+          "transcript": "Переры́в че́рез полчаса́.",
           "en": "Break in half hour.",
           "hint": "Preposition 'in'.",
           "audio": "media/audio/s6303.ogg"
@@ -16766,7 +16766,7 @@
         },
         {
           "id": "v6403",
-          "ru": "пробное́ заня́тие",
+          "ru": "пробно́е заня́тие",
           "en": "trial lesson",
           "pos": "word",
           "hint": "",
@@ -16826,7 +16826,7 @@
       "pronunciation": [
         {
           "id": "p6401",
-          "ru": "Записа́ться на́ ку́рсы",
+          "ru": "Записа́ться на ку́рсы",
           "en": "enroll in courses",
           "ipa": "",
           "hint": "za-pi-SAT' na KURS-y",
@@ -17121,7 +17121,7 @@
           "id": "s6501",
           "sentence_ru": "Каждый де́нь ___ пятна́дцать мину́т.",
           "answer": "по",
-          "transcript": "Кажды́й де́нь по́ пятна́дцать мину́т.",
+          "transcript": "Ка́ждый де́нь по пятна́дцать мину́т.",
           "en": "Fifteen minutes daily.",
           "hint": "Preposition distributing time.",
           "audio": "media/audio/s6501.ogg"
@@ -17139,7 +17139,7 @@
           "id": "s6503",
           "sentence_ru": "Пиши́те в ___ .",
           "answer": "блокно́т",
-          "transcript": "Пишите́ в блокно́т.",
+          "transcript": "Пиши́те в блокно́т.",
           "en": "Write in notebook.",
           "hint": "Accusative of блокно́т.",
           "audio": "media/audio/s6503.ogg"
@@ -17292,7 +17292,7 @@
         },
         {
           "id": "v6605",
-          "ru": "прогулка́",
+          "ru": "прогу́лка",
           "en": "walk/outdoor time",
           "pos": "word",
           "hint": "",
@@ -17308,7 +17308,7 @@
         },
         {
           "id": "v6607",
-          "ru": "аллергия́",
+          "ru": "алле́ргия",
           "en": "allergy",
           "pos": "word",
           "hint": "",
@@ -17380,7 +17380,7 @@
           "id": "s6601",
           "sentence_ru": "Мы ___ ребёнка мягко.",
           "answer": "адапти́руем",
-          "transcript": "Мы́ адапти́руем ребёнка́ мягко́.",
+          "transcript": "Мы адапти́руем ребё́нка мягко́.",
           "en": "We'll ease the child in.",
           "hint": "Verb 'adapt'.",
           "audio": "media/audio/s6601.ogg"
@@ -17389,7 +17389,7 @@
           "id": "s6602",
           "sentence_ru": "Сон ___ двенадцати до двух.",
           "answer": "с",
-          "transcript": "Со́н с двенадцати́ до́ дву́х.",
+          "transcript": "Со́н с двенадца́ти до дву́х.",
           "en": "Nap from twelve to two.",
           "hint": "Range preposition.",
           "audio": "media/audio/s6602.ogg"
@@ -17645,7 +17645,7 @@
           "id": "s6701",
           "sentence_ru": "Сын ___ на уроках.",
           "answer": "отвлека́ется",
-          "transcript": "Сы́н отвлека́ется на́ урока́х.",
+          "transcript": "Сы́н отвлека́ется на урока́х.",
           "en": "Son gets distracted in class.",
           "hint": "Reflexive verb.",
           "audio": "media/audio/s6701.ogg"
@@ -17832,7 +17832,7 @@
         },
         {
           "id": "v6807",
-          "ru": "за́ здоро́вье",
+          "ru": "за здоро́вье",
           "en": "to health (toast)",
           "pos": "word",
           "hint": "",
@@ -17892,7 +17892,7 @@
         },
         {
           "id": "p6804",
-          "ru": "За́ ваше́ здоро́вье!",
+          "ru": "За ваше́ здоро́вье!",
           "en": "to your health!",
           "ipa": "",
           "hint": "za VA-she zdah-RO-vye",
@@ -17922,7 +17922,7 @@
           "id": "s6803",
           "sentence_ru": "Садитесь за ___ .",
           "answer": "стол",
-          "transcript": "Садите́сь за́ сто́л!",
+          "transcript": "Садите́сь за сто́л!",
           "en": "Sit at the table!",
           "hint": "Accusative of стол.",
           "audio": "media/audio/s6803.ogg"
@@ -18051,7 +18051,7 @@
         },
         {
           "id": "v6902",
-          "ru": "де́нь рождения́",
+          "ru": "де́нь рожде́ния",
           "en": "birthday",
           "pos": "word",
           "hint": "",
@@ -18151,7 +18151,7 @@
         },
         {
           "id": "p6904",
-          "ru": "До́ суббо́ты!",
+          "ru": "До суббо́ты!",
           "en": "see you Saturday!",
           "ipa": "",
           "hint": "da SUB-ba-ty",
@@ -18163,7 +18163,7 @@
           "id": "s6901",
           "sentence_ru": "Приглаша́ю на ___ рождения.",
           "answer": "де́нь",
-          "transcript": "Приглашаю́ на́ де́нь рождения́.",
+          "transcript": "Приглашаю́ на де́нь рожде́ния.",
           "en": "Invite to birthday.",
           "hint": "Noun part of phrase.",
           "audio": "media/audio/s6901.ogg"
@@ -18172,7 +18172,7 @@
           "id": "s6902",
           "sentence_ru": "Во ___ нача́ло?",
           "answer": "сколько",
-          "transcript": "Во́ сколько́ нача́ло?",
+          "transcript": "Во ско́лько нача́ло?",
           "en": "What time does it start?",
           "hint": "Question 'how much'.",
           "audio": "media/audio/s6902.ogg"
@@ -18316,7 +18316,7 @@
         },
         {
           "id": "v7002",
-          "ru": "опасно́сть",
+          "ru": "опа́сность",
           "en": "danger",
           "pos": "word",
           "hint": "",
@@ -18416,7 +18416,7 @@
         },
         {
           "id": "p7004",
-          "ru": "Не́ возвраща́йтесь",
+          "ru": "Не возвраща́йтесь",
           "en": "don't return",
           "ipa": "",
           "hint": "ni var-va-SHAY-tyes'",
@@ -18428,7 +18428,7 @@
           "id": "s7001",
           "sentence_ru": "Пожа́р на восьмом ___ !",
           "answer": "эта́же",
-          "transcript": "Пожа́р на́ восьмо́м эта́же!",
+          "transcript": "Пожа́р на восьмо́м эта́же!",
           "en": "Fire on eighth floor!",
           "hint": "Prepositional of эта́ж.",
           "audio": "media/audio/s7001.ogg"
@@ -18437,7 +18437,7 @@
           "id": "s7002",
           "sentence_ru": "___ от зда́ния.",
           "answer": "отойдите",
-          "transcript": "Отойдите́ о́т зда́ния.",
+          "transcript": "Отойдите́ от зда́ния.",
           "en": "Move away from building.",
           "hint": "Polite imperative.",
           "audio": "media/audio/s7002.ogg"
@@ -18446,7 +18446,7 @@
           "id": "s7003",
           "sentence_ru": "Не ___ до разре́шения.",
           "answer": "возвращайтесь",
-          "transcript": "Не́ возвраща́йтесь до́ разре́шения.",
+          "transcript": "Не возвраща́йтесь до разре́шения.",
           "en": "Don't return until cleared.",
           "hint": "Negative imperative.",
           "audio": "media/audio/s7003.ogg"
@@ -18848,7 +18848,7 @@
         },
         {
           "id": "v7202",
-          "ru": "ви́д на́ жи́тельство",
+          "ru": "ви́д на жи́тельство",
           "en": "residence permit (VNZh)",
           "pos": "word",
           "hint": "",
@@ -18969,7 +18969,7 @@
           "id": "s7202",
           "sentence_ru": "Фото ___ на четыре.",
           "answer": "три",
-          "transcript": "Фото́ три́ на́ четы́ре.",
+          "transcript": "Фо́то три́ на четы́ре.",
           "en": "Photos 3×4.",
           "hint": "Number.",
           "audio": "media/audio/s7202.ogg"
@@ -18978,7 +18978,7 @@
           "id": "s7203",
           "sentence_ru": "Сроки проверки ___ четырёх неделе́.",
           "answer": "до",
-          "transcript": "Сроки́ до́ четырё́х неделе́.",
+          "transcript": "Сроки́ до четырё́х неделе́.",
           "en": "Up to four weeks.",
           "hint": "Limit preposition.",
           "audio": "media/audio/s7203.ogg"
@@ -19145,7 +19145,7 @@
         },
         {
           "id": "v7306",
-          "ru": "нарушение́",
+          "ru": "наруше́ние",
           "en": "violation",
           "pos": "word",
           "hint": "",
@@ -19225,7 +19225,7 @@
           "id": "s7301",
           "sentence_ru": "Зарегистри́рован по ___ арендода́теля.",
           "answer": "адресу",
-          "transcript": "Зарегистрирова́н по́ а́дресу арендода́теля.",
+          "transcript": "Зарегистрирова́н по а́дресу арендода́теля.",
           "en": "Registered at landlord's address.",
           "hint": "Dative of адрес.",
           "audio": "media/audio/s7301.ogg"
@@ -19234,7 +19234,7 @@
           "id": "s7302",
           "sentence_ru": "Работаю по трудовому ___ .",
           "answer": "догово́ру",
-          "transcript": "Работаю́ по́ трудовому́ догово́ру.",
+          "transcript": "Работа́ю по трудовому́ догово́ру.",
           "en": "Work under contract.",
           "hint": "Dative of догово́р.",
           "audio": "media/audio/s7302.ogg"
@@ -19370,7 +19370,7 @@
       "vocabulary": [
         {
           "id": "v7401",
-          "ru": "фамилия́",
+          "ru": "фами́лия",
           "en": "surname",
           "pos": "word",
           "hint": "",
@@ -19490,7 +19490,7 @@
           "id": "s7401",
           "sentence_ru": "Пиши́те ___ буквами.",
           "answer": "печа́тными",
-          "transcript": "Пишите́ печа́тными буквами́.",
+          "transcript": "Пиши́те печа́тными буква́ми.",
           "en": "Write in block letters.",
           "hint": "Adjective from печать.",
           "audio": "media/audio/s7401.ogg"
@@ -19651,7 +19651,7 @@
         },
         {
           "id": "v7503",
-          "ru": "подпи́сь",
+          "ru": "по́дпись",
           "en": "signature",
           "pos": "word",
           "hint": "",
@@ -19763,7 +19763,7 @@
           "id": "s7501",
           "sentence_ru": "Да́ту пишите ___ .",
           "answer": "цифра́ми",
-          "transcript": "Дату́ пишите́ цифра́ми.",
+          "transcript": "Дату́ пиши́те цифра́ми.",
           "en": "Write date in digits.",
           "hint": "Instrumental plural.",
           "audio": "media/audio/s7501.ogg"
@@ -19772,7 +19772,7 @@
           "id": "s7502",
           "sentence_ru": "Подпись и ___ фамилией.",
           "answer": "расшифровка",
-          "transcript": "Подпи́сь и расшифровка́ фамилие́й.",
+          "transcript": "По́дпись и расшифровка́ фамилие́й.",
           "en": "Signature and printed surname.",
           "hint": "Noun: deciphering.",
           "audio": "media/audio/s7502.ogg"
@@ -19781,7 +19781,7 @@
           "id": "s7503",
           "sentence_ru": "Опечатка — новый ___ .",
           "answer": "бла́нк",
-          "transcript": "Опечатка́ — новы́й бла́нк.",
+          "transcript": "Опечатка́ — но́вый бла́нк.",
           "en": "Typo — new form.",
           "hint": "Noun: blank form.",
           "audio": "media/audio/s7503.ogg"
@@ -19940,7 +19940,7 @@
         },
         {
           "id": "v7605",
-          "ru": "не́ нра́вится",
+          "ru": "не нра́вится",
           "en": "dislike",
           "pos": "word",
           "hint": "",
@@ -20257,7 +20257,7 @@
       "pronunciation": [
         {
           "id": "p7701",
-          "ru": "То́чнее, и́з Каза́ни",
+          "ru": "То́чнее, из Каза́ни",
           "en": "rather, from Kazan',' TOCH-nee iz ka-ZA-ni",
           "ipa": "",
           "hint": "",
@@ -20293,7 +20293,7 @@
           "id": "s7701",
           "sentence_ru": "Работа ___ с партнёрами.",
           "answer": "связа́на",
-          "transcript": "Работа́ связа́на с партнёрами́.",
+          "transcript": "Рабо́та связа́на с партнё́рами.",
           "en": "Work connected with partners.",
           "hint": "Short participle feminine.",
           "audio": "media/audio/s7701.ogg"
@@ -20311,7 +20311,7 @@
           "id": "s7703",
           "sentence_ru": "Опиши́те одними ___ .",
           "answer": "предложе́ниями",
-          "transcript": "Опишите́ одни́м предложе́нием.",
+          "transcript": "Опиши́те одни́м предложе́нием.",
           "en": "Describe in one sentence.",
           "hint": "Instrumental of предложе́ние.",
           "audio": "media/audio/s7703.ogg"
@@ -20711,7 +20711,7 @@
         },
         {
           "id": "v7902",
-          "ru": "государственны́й язы́к",
+          "ru": "госуда́рственный язы́к",
           "en": "state language",
           "pos": "word",
           "hint": "",
@@ -20795,7 +20795,7 @@
       "pronunciation": [
         {
           "id": "p7901",
-          "ru": "Государственны́й язы́к",
+          "ru": "Госуда́рственный язы́к",
           "en": "state language",
           "ipa": "",
           "hint": "ga-su-DAR-stvi-ny-ye ya-ZYK",
@@ -20840,7 +20840,7 @@
           "id": "s7902",
           "sentence_ru": "Гражда́нин обязан защища́ть ___ .",
           "answer": "Оте́чество",
-          "transcript": "Граждани́н обяза́н защища́ть Оте́чество.",
+          "transcript": "Гражда́нин обяза́н защища́ть Оте́чество.",
           "en": "Citizen must defend fatherland.",
           "hint": "Noun: fatherland.",
           "audio": "media/audio/s7902.ogg"
@@ -20984,7 +20984,7 @@
         },
         {
           "id": "v8002",
-          "ru": "сколько́ с меня́?",
+          "ru": "ско́лько с меня́?",
           "en": "how much do I owe?",
           "pos": "word",
           "hint": "",
@@ -21008,7 +21008,7 @@
         },
         {
           "id": "v8005",
-          "ru": "не́ хвора́ть",
+          "ru": "не хвора́ть",
           "en": "health to you (joke reply)",
           "pos": "word",
           "hint": "",
@@ -21076,7 +21076,7 @@
         },
         {
           "id": "p8004",
-          "ru": "И ва́м не́ хвора́ть!",
+          "ru": "И ва́м не хвора́ть!",
           "en": "same to you!",
           "ipa": "",
           "hint": "i vam ni hva-RAT'",
@@ -21097,7 +21097,7 @@
           "id": "s8002",
           "sentence_ru": "___ с меня?",
           "answer": "ско́лько",
-          "transcript": "Сколько́ с меня́?",
+          "transcript": "Ско́лько с меня́?",
           "en": "How much do I owe?",
           "hint": "Universal price question.",
           "audio": "media/audio/s8002.ogg"
@@ -21106,7 +21106,7 @@
           "id": "s8003",
           "sentence_ru": "Не расслы́шал: ___ , пожа́луйста.",
           "answer": "повторите",
-          "transcript": "Повторите́, пожа́луйста.",
+          "transcript": "Повтори́те, пожа́луйста.",
           "en": "Please repeat.",
           "hint": "Repair imperative.",
           "audio": "media/audio/s8003.ogg"
@@ -21370,7 +21370,7 @@
           "id": "s8102",
           "sentence_ru": "Говори́те ___ , пожа́луйста.",
           "answer": "помедленнее",
-          "transcript": "Говорите́ поме́дленнее, пожа́луйста.",
+          "transcript": "Говори́те поме́дленнее, пожа́луйста.",
           "en": "Speak slower, please.",
           "hint": "Comparative adverb.",
           "audio": "media/audio/s8102.ogg"
